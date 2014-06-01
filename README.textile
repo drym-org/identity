@@ -1,0 +1,21 @@
+h1. Note to the Reader
+
+Dear Reader:
+My intention when I first embarked on this project was for it to be accessible to "the person in the street." My reason for this stems from my firm belief that people are not determined by labels and accreditations and recognitions conferred by others -- but by their own unique curiosity and agency. The subject of this paper is something that is intimately familiar to every person on the planet, so it seemed essential that every person, and not just practicing scientists and philosophers and so on, should likewise be able to access the conclusions of my work.
+
+Unfortunately I fear I may have come up short in this particular goal; being precise necessarily meant employing abstract mathematics, and brevity required that the paper could not be self-contained in the treatment of these subjects. That notwithstanding, the general flavor and many specific conclusions are still, I believe, intuitive and accessible.
+
+Since your curiosity has brought you this far, I'm eager to equip you so you can successfully navigate the paper and hopefully get something of value from it. I suggest the following approach (especially if your math is rusty/nonexistent):
+
+1. First, know that while the ideas in the paper describe a familiar subject, they are themselves challenging to think about. Grab some coffee and sit in your favorite chair; as with anything worthwhile, this will take some time.
+
+2. Most of the math is in the first couple of sections. There isn't much math in the middle portion ("Interpretation") and almost none in the final portion ("Commentary").
+
+3. Even though you needn't read or understand the math, you should still skim the math sections and not skip them. You will need to know the terms there (which correspond to intuitive terms mostly, which is why you won't necessarily need to understand the math).
+
+4. Although the paper is intended to be read in order, the sections are usually self-contained topics in themselves, and so if you find yourself stuck somewhere you could jump directly to sections that are of interest to you and refer back for clarification if needed.
+
+5. If you have any other tips that may occur to you that helped you get through the paper, let me know and I'll include them here.
+
+And above all, keep an open mind: "there are more things in Heaven and Earth than are dreamt of in our philosophy."
+

@@ -1,0 +1,19 @@
+# vim noise
+*~
+*.sw?
+
+# osx noise
+.DS_Store
+profile
+
+# tex output
+*.log
+*.aux
+*.end
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.bbl
+*.blg
+*.fls
+

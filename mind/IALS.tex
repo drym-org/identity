@@ -94,7 +94,7 @@
 
 ``Identity architecture shows us what things ultimately are, and how they come together. It seems that Siddhartha Gautama (the Buddha), anticipating the essence of the present work by over two thousand years, told us what that thing is that they come together as. Awareness of that thing is the experience of Nirvana -- enlightenment -- the freedom from the cycle of birth and rebirth.''
 
-A model of identity is developed and applied to privacy, the brain, economics and government, intellectual property, and to natural phenomena. Religions are also addressed.
+A tree-based model of identity possessing fractal properties is developed. The model is grounded in the notion of an ``identity context'' which is related to the idea of a Grothendieck Universe in set theory. A natural basis for formal undecidability is introduced, with implications for the limits of empirical science. The model is applied to privacy, the brain, economics and government, intellectual property, and to natural phenomena. Religious traditions are also addressed.
 
 \end{abstract}
 
@@ -303,7 +303,7 @@ The identitree is a generalization of the multitree which eliminates the ``no-di
 \caption{\label{fig:bodhitree}Bodhitree}
 \end{figure}
 
-The only restriction in the identitree model is that an identity cannot unite with an ancestor node. The removal of this restriction results in the ``bodhitree,'' which it can be shown is equivalent to an acyclic graph\footnote{While structurally the bodhitree is equivalent to an acyclic graph, in application the former has an implicit notion of causality, and so, as a convention, all edges are directed downward to depict this (of course, there could be alternate depictions that capture this). In an acyclic graph, by contrast, there is no inherent preferred directionality.}. The ability to unite with an ancestor node seems of questionable value, but consider that in the other models with such a restriction in place, descendants are distinguished in the context of ancestors, violating our requirement for all identities to be qualitatively equivalent. We will return to this after further elaborating the mathematical model for identity. Let us first formalize the above development in precise definitions. Note that the bodhitree/acyclic graph is the most general model, with each preceding one above being a further specialization.
+The only restriction in the identitree model is that an identity cannot unite with an ancestor node. The removal of this restriction results in the ``bodhitree,'' which it can be shown is equivalent to an acyclic graph\footnote{While structurally the bodhitree is equivalent to an acyclic graph, in application the former has an implicit notion of causality, and so, as a convention, all edges flow in a particular direction to depict this (of course, there could be alternate depictions that capture this). In an acyclic graph, by contrast, there is no inherent preferred directionality.}. The ability to unite with an ancestor node seems of questionable value, but consider that in the other models with such a restriction in place, descendants are distinguished in the context of ancestors, violating our requirement for all identities to be qualitatively equivalent. We will return to this after further elaborating the mathematical model for identity. Let us first formalize the above development in precise definitions. Note that the bodhitree/acyclic graph is the most general model, with each preceding one above being a further specialization.
 
 \begin{defn}
 	A \emph{graph}\footnote{We will assume graphs are directed unless otherwise specified. Since undirected graphs may be modeled by directed graphs by treating edges as the unordered pair of directed edges $\{(u,v),(v,u)\}$\cite{chartrand}, directed graphs may be seen as a more general model, which motivates our choice of terminology.} $\Gamma$ is an ordered pair $(V, E)$ consisting of a finite nonempty set $V$ together with an irreflexive relation $E$ \cite{chartrand}. The elements of $V$ are called \emph{vertices}, or \emph{nodes}, and the elements of $E$ are ordered pairs of vertices called \emph{edges}. A (directed) sequence of linked edges connecting one vertex to another is called a \emph{path}.
@@ -365,7 +365,7 @@ Let's collect some observations, following which we'll develop the model:
 \end{defn}
 
 \begin{defn}
-	For any conceivable identity $q$, there exists a context to which it belongs (\emph{Axiom of Universes}\cite{maclane})
+	For any conceivable identity $q$, there exists a context to which it belongs. (\emph{Axiom of Universes}\cite{maclane})
 \end{defn}
 %TODO: the above axiom isn't currently used directly anywhere. This could be mentioned in conjecture as a possible axiom, and discuss implications there.
 
@@ -404,7 +404,7 @@ As a further clarification, note that the reaction sequence described here is a 
 	\end{center}
 \end{defn}
 
-More broadly, $\mu$ and $\omega$ can be considered to constitute a form of categorical equivalence (in the sense of category theory) between the mind and the world, and in particular an adjunction.
+More broadly, $\mu$ and $\omega$ can be considered to constitute a form of categorical equivalence (in the sense of category theory) between the mind and the world, and in particular should be generalized to an adjunction.
 %TODO: actually change the definition to be an adjunction instead of an isomorphism
 
 The nature of the action characterizes, and is characterized by, the nature of the identity. For example, if the action of an identity $Q$ is simply the trivial mapping of $\mathcal{M} \rightarrow hom(M,M)$, then the identity $Q$ is simply a set. With additional specification of the action, the identity is developed into more sophisticated structures such as monoids, groups, rings, etc. (\hyperref[app:algact]{appendix}), or even more complex structures that could serve as models for things in our experience that are not obviously algebraic.
@@ -856,7 +856,7 @@ Energy is an abstract, even philosophical concept in physics. It is considered t
 
 % temperature and time?
 
-Moving on from these cute observations, it is a natural question at this stage to ask where the notion of time fits in in identity architecture. We have causality or ``time'' in a world occurring ``downwards'' as discussed thus far in a 2-dimensional bodhitree representation, i.e. along the vertical axis. We could envision that the time evolution of mind contexts -- being imperceptible in the world -- occurs along an axis orthogonal to this world plane so that the world is unaware of such mind evolution (as intended), while at the same time capturing the mind-evolution that is occurring. Since world and mind are of course relative to a particular level, such a representation would have to be of uncountable dimension.
+Moving on from these cute observations, it is a natural question at this stage to ask where the notion of time fits in in identity architecture. We have causality or ``time'' in a world occurring in the direction defined by descent as discussed thus far in a 2-dimensional bodhitree representation, and can define this as the axis of time (e.g. the vertical axis). We could envision that the time evolution of mind contexts -- being imperceptible in the world -- occurs along an axis orthogonal to this world plane so that the world is unaware of such mind evolution (as intended), while at the same time capturing the mind-evolution that is occurring. Since world and mind are of course relative to a particular level, such a representation would have to be of uncountable dimension.
 
 We close with the observation that identity architecture as a model is scale-invariant. As such, the same principles that apply at one scale are the ones that apply at any other scale. A theory based on identities could therefore conceivably describe phenomena in widely varying regimes such as the subatomic, molecular, and biological regimes, all the way up to human and cosmological scales of experience -- and presumably, beyond. %cite buzz lightyear? :D
 
@@ -929,7 +929,211 @@ Identities correspond in history to human institutions, and few institutions hav
 
 Identity architecture shows us what things ultimately are, and how they come together. It seems that Siddhartha Gautama (the Buddha), anticipating the essence of the present work by over two thousand years, told us what that thing is that they come together as. Awareness of that thing is the experience of Nirvana -- enlightenment -- the freedom from the cycle of birth and rebirth\footnote{This appears to be explained in \cite{lankavatara}, where the Buddha enumerates each conception of ``liberation'' as held by the various philosophers, and then explains that Nirvana is none of those things; that the true realization is that ``all things are in Nirvana from the beginning.''}. This freedom is possible since one then has the ability to experience higher awarenesses in nature thereby leaving experience of this plane of living and embodying higher purposes that are not subject to cessation by death of the individual\footnote{based on the author's momentary experience of this awareness on April 24, 2014. This section may be treated as conjectural pending further verification; however, as this phenomenon appears to have been reported throughout history, the author does not presume to be the basis upon which its reality may be admitted.}. One suspects it possible that the claim of this kind of switch between the levels may be undecidable since it crosses the mind/world boundary.
 
-Indeed, while our development up to this point assumes the brain as the basis for reality and experience, the possibility of Nirvana experience suggests that it is not just the universe amenable to our intellect that is in terms of identities, but that Nature itself exhibits identity architecture. ``Nirvana'' is the term used by the Buddhists to describe this Ultimate structure. For in Buddhist literature the verb that is most commonly used in this connection is not ``attain'' but ``enter.'' One \textit{enters} Nirvana, and leaves the plane of life and death. This can be modeled in identity architecture as one's awareness withdrawing from the body to an ancestor node in the ``Ultimate Bodhitree,'' in the same sense as Fig.~\ref{fig:awareness}.
+Indeed, while our development up to this point assumes the brain as the basis for reality and experience, the possibility of Nirvana experience suggests that it is not just the universe amenable to our intellect that is in terms of identities, but that Nature itself exhibits identity architecture. ``Nirvana'' is the term used by the Buddhists to describe this Ultimate structure. For in Buddhist literature the verb that is most commonly used in this connection is not ``attain'' but ``enter.'' One \textit{enters} Nirvana, and leaves the plane of life and death. This can be modeled in identity architecture as one's awareness withdrawing from the body to an ancestor node in the ``Ultimate Bodhitree'' (depicted in Fig.~\ref{fig:nirvana}) in the same sense as Fig.~\ref{fig:awareness}.
+
+\begin{figure}
+	\centering
+	\begin{tikzpicture}[scale=0.75,transform shape]
+		%\tikzstyle{LabelStyle}=[fill=white,sloped]
+		%\draw[solid] (0,0) circle (2cm);
+		\GraphInit[vstyle=Normal]
+		{
+			\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.3cm,inner sep=0pt}}
+			\SetVertexNoLabel
+			\Vertex[x=1.7,y=0.6]{1}
+			\Vertex[x=1.5,y=1.5]{2}
+			\Vertex[x=0.6,y=2.0]{3}
+			\Vertex[x=1.1,y=2.3]{4}
+			\Vertex[x=2.0,y=2.6]{5}
+			\Vertex[x=0.4,y=2.9]{6}
+			\Vertex[x=0.3,y=3.6]{7}
+			\Vertex[x=0.9,y=2.8]{8}
+			\Vertex[x=1.0,y=3.5]{9}
+			\Vertex[x=0.8,y=4.1]{10}
+			\Vertex[x=1.8,y=3.1]{11}
+			\Vertex[x=1.7,y=3.7]{12}
+			\Vertex[x=3.0,y=0.3]{13}
+			\Vertex[x=2.2,y=1.1]{14}
+			\Vertex[x=2.1,y=2.0]{15}
+			\Vertex[x=3.9,y=0.5]{16}
+			\Vertex[x=3.0,y=1.1]{17}
+			\Vertex[x=3.7,y=1.4]{18}
+			\Vertex[x=3.2,y=2.0]{19}
+			\Vertex[x=2.8,y=2.7]{20}
+			\Vertex[x=2.5,y=3.4]{21}
+			\Vertex[x=2.0,y=4.1]{22}
+			\Vertex[x=2.2,y=4.3]{23}
+			\Vertex[x=1.5,y=4.8]{24}
+			\Vertex[x=2.1,y=5.0]{25}
+			\Vertex[x=1.1,y=5.3]{26}
+			\Vertex[x=1.5,y=5.6]{27}
+			\Vertex[x=3.9,y=2.2]{28}
+			\Vertex[x=3.3,y=3.0]{29}
+			\Vertex[x=3.6,y=3.3]{30}
+			\Vertex[x=3.1,y=3.9]{31}
+			\Vertex[x=3.4,y=4.0]{32}
+			\Vertex[x=3.0,y=4.5]{33}
+			\Vertex[x=5.0,y=1.0]{34}
+			\Vertex[x=4.4,y=1.3]{35}
+			\Vertex[x=4.3,y=2.1]{36}
+			\Vertex[x=4.3,y=2.6]{37}
+			\Vertex[x=6.1,y=0.6]{38}
+			\Vertex[x=5.5,y=1.0]{39}
+			\Vertex[x=6.1,y=1.5]{40}
+			\Vertex[x=5.2,y=1.4]{41}
+			\Vertex[x=5.6,y=1.9]{42}
+			\Vertex[x=5.0,y=2.0]{43}
+			\Vertex[x=8.7,y=1.9]{44}
+			\Vertex[x=7.8,y=1.9]{45}
+			\Vertex[x=7.2,y=2.0]{46}
+			\Vertex[x=6.4,y=2.1]{47}
+			\Vertex[x=5.9,y=2.3]{48}
+			\Vertex[x=5.3,y=2.7]{49}
+			\Vertex[x=4.8,y=3.1]{50}
+			\Vertex[x=4.1,y=3.5]{51}
+			\Vertex[x=3.9,y=4.3]{52}
+			\Vertex[x=3.8,y=5.1]{53}
+			\Vertex[x=3.4,y=5.2]{54}
+			\Vertex[x=3.0,y=5.3]{55}
+			\Vertex[x=3.6,y=5.9]{56}
+			{
+				\tikzset{VertexStyle/.append style = {fill=gray}}
+				\SetVertexLabel
+				\Vertex[x=3.2,y=6.3,L=You,LabelOut=true]{57}
+			}
+			\Vertex[x=8.5,y=2.6]{58}
+			\Vertex[x=8.0,y=3.0]{59}
+			\Vertex[x=7.5,y=2.7]{60}
+			\Vertex[x=7.1,y=3.1]{61}
+			\Vertex[x=7.2,y=3.5]{62}
+			\Vertex[x=6.3,y=3.2]{63}
+			\Vertex[x=5.5,y=3.4]{64}
+			\Vertex[x=6.9,y=2.4]{65}
+			\Vertex[x=6.3,y=2.4]{66}
+			\Vertex[x=5.9,y=2.8]{67}
+			\Vertex[x=4.9,y=3.5]{68}
+			\Vertex[x=4.3,y=4.0]{69}
+			\Vertex[x=4.3,y=4.9]{70}
+			\Vertex[x=4.2,y=5.8]{71}
+			\Vertex[x=8.9,y=3.5]{72}
+			\Vertex[x=7.9,y=3.9]{73}
+			\Vertex[x=7.6,y=4.7]{74}
+			\Vertex[x=8.0,y=6.0]{75}
+			\Vertex[x=8.3,y=4.4]{76}
+			\Vertex[x=8.1,y=5.3]{77}
+			%{
+				%\tikzset{VertexStyle/.append style = {fill=white, color=white}}
+				%\Vertex[x=8.1,y=5.5]{78}
+			%}
+		}
+		%\tikzset{VertexStyle/.append style = {draw=darkgray,text=darkgray}}
+%		{
+%			\tikzset{VertexStyle/.append style = {shape=circle,minimum size=24pt,inner sep=0pt}}
+%			%\SetVertexNoLabel
+%			\Vertex[x=0,y=-0.5,L=$Q'$,LabelOut=true]{Q'}
+%		}
+		\tikzstyle{EdgeStyle}=[post,very thin]
+		%\tikzset{EdgeStyle/.append style = {draw=darkgray,text=darkgray}}
+		\Edge[](1)(2)
+		\Edge[](2)(3)
+		\Edge[](2)(4)
+		\Edge[](2)(5)
+		\Edge[](3)(6)
+		\Edge[](6)(7)
+		\Edge[](4)(8)
+		\Edge[](8)(9)
+		\Edge[](9)(10)
+		\Edge[](8)(6)
+		\Edge[](5)(11)
+		\Edge[](11)(9)
+		\Edge[](11)(12)
+		\Edge[](12)(10)
+		\Edge[](13)(14)
+		\Edge[](14)(15)
+		\Edge[](15)(5)
+		\Edge[](16)(17)
+		\Edge[](16)(18)
+		\Edge[](17)(19)
+		\Edge[](18)(19)
+		\Edge[](19)(20)
+		\Edge[](20)(21)
+		\Edge[](5)(21)
+		\Edge[](17)(20)
+		\Edge[](21)(22)
+		\Edge[](21)(23)
+		\Edge[](22)(24)
+		\Edge[](23)(25)
+		\Edge[](24)(26)
+		\Edge[](24)(27)
+		\Edge[](25)(26)
+		\Edge[](25)(27)
+		\Edge[](18)(28)
+		\Edge[](19)(29)
+		\Edge[](29)(21)
+		\Edge[](28)(29)
+		\Edge[](29)(30)
+		\Edge[](30)(31)
+		\Edge[](30)(32)
+		\Edge[](31)(33)
+		\Edge[](32)(33)
+		\Edge[](34)(35)
+		\Edge[](35)(36)
+		\Edge[](36)(37)
+		\Edge[](36)(28)
+		\Edge[](37)(30)
+		\Edge[](38)(39)
+		\Edge[](39)(41)
+		\Edge[](40)(41)
+		\Edge[](40)(42)
+		\Edge[](41)(43)
+		\Edge[](42)(43)
+		\Edge[](43)(37)
+		\Edge[](44)(45)
+		\Edge[](45)(46)
+		\Edge[](46)(47)
+		\Edge[](47)(48)
+		\Edge[](48)(49)
+		\Edge[](49)(50)
+		\Edge[](50)(51)
+		\Edge[](51)(52)
+		\Edge[](52)(53)
+		\Edge[](53)(54)
+		\Edge[](54)(55)
+		\Edge[](53)(56)
+		\Edge[](56)(57)
+		\Edge[](37)(50)
+		\Edge[](44)(58)
+		\Edge[](58)(59)
+		\Edge[](59)(60)
+		\Edge[](45)(60)
+		\Edge[](60)(61)
+		\Edge[](59)(62)
+		\Edge[](61)(63)
+		\Edge[](62)(63)
+		\Edge[](63)(64)
+		\Edge[](46)(65)
+		\Edge[](65)(66)
+		\Edge[](66)(67)
+		\Edge[](67)(64)
+		\Edge[](64)(68)
+		\Edge[](67)(68)
+		\Edge[](68)(69)
+		\Edge[](68)(70)
+		\Edge[](69)(70)
+		\Edge[](70)(71)
+		\Edge[](70)(53)
+		\Edge[](71)(56)
+		\Edge[](50)(68)
+		\Edge[](72)(73)
+		\Edge[](73)(74)
+		\Edge[](74)(75)
+		\Edge[](72)(76)
+		\Edge[](76)(77)
+		\Edge[](77)(75)
+		\Edge[](73)(62)
+	\end{tikzpicture}
+	\caption{\label{fig:nirvana}Nirvana (conjectured)}
+\end{figure}
 
 The Dharmic\footnote{aka ``Indian tradition.'' While ``Dharmic'' isn't a great description either, it is the belief of this author that history should be studied in terms of identities and their actions, avoiding retrospective projection of modern identities onto historical ones and imposition of geographic bounds that may not apply to the identities in question, since due to the nonlinear, recursive unfolding of interactions such a characterization can only be imprecise at best, and usually misleading. Similarly if traditions from all parts of the world were dissociated from particular assumed modern identity descendants (e.g. ``Western civilization,'' ``ancient China/India/Greece/\ldots''), history might be discovered in terms of the actual identity tree evolution and not in a manner occluded by any particular nationalistic or other ideological perspectives.} tradition (consisting broadly of the Buddhist, Hindu, Jain and Sikh traditions) is one where, philosophically, the study of identity assumes primary importance. There is a rich vocabulary of ideas, some of which appear to anticipate notions described in this document. According to \cite{atmabodha}, the philosophers in this tradition ``wondered whether there was a First Principle or Ultimate Reality underlying the outside world, and also whether there was such a thing underlying man himself. If so, were the two the same?'' The various schools appear to differ on terminology and details, but they came to conclusions on the nature of this principle.
 
@@ -1043,7 +1247,7 @@ The Buddhists were perhaps the first to set aside the constraints of doctrine an
 	\item Development of a quantitative cognition model based on identity architecture.
 	\item In computer science: development of a programming paradigm based on identity architecture -- this would possibly resemble a functional, prototype-based Lisp.
 	\item Development of Identity Based Encryption (IBE) schemes that support the bodhitree model, and other cryptographic schemes that facilitate identity architecture.
-	\item Implementation of a publicly owned, decentralized, everywhere-curated, cryptographically ensured identity architecture.
+	\item Implementation of a user-/public-owned, decentralized, everywhere-curated, cryptographically ensured identity architecture.
 	\item A reorganizing of natural and human history in terms of fractal identity trees -- as direct and as emergent identity interactions at every scale.
 \end{enumerate}
 

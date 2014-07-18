@@ -64,6 +64,7 @@
 \theoremstyle{definition}
 \newtheorem{defn}{Definition}[section]
 
+% From http://tex.stackexchange.com/questions/140978/arrow-accented-with-a-dot-natural-transformation
 \newcommand{\naturalto}{%
 	\mathrel{\vbox{\offinterlineskip
 			\mathsurround=0pt
@@ -246,7 +247,7 @@ The polytree\cite{polytree} is a more general model than the arborescence and al
 \caption{\label{fig:multitree}Multitree}
 \end{figure}
 
-The multitree\cite{multitree} is a strengthening of the polytree, possessing only the constraint that no node can have parents that have a common ancestor, i.e. that there can be no set of nodes that form a ``diamond'' in the tree. This model expresses the ability of identities to form different child identities with the same parents. For example, two people can be friends as well as colleagues.
+The multitree\cite{multitree} is a strengthening of the polytree, possessing only the constraint that no node can have parents that have a common ancestor, i.e. that there can be no set of nodes that form a ``diamond'' in the tree. This model expresses the ability of identities to form different child identities with the same parents. For example, two people can be friends as well as colleagues. As another example, the same set of chemical elements can form two different molecules, or isomers.
 
 \subsection{``Identitree''} \label{sec:identitree}
 
@@ -365,16 +366,16 @@ Let's collect some observations, following which we'll develop the model:
 Due to the fractal nature of identity architecture, the definitions below may sometimes reference ideas that have not yet been defined, and which are then defined later. This apparent circularity can be resolved by imagining that at the level of each definition, the referenced concepts are either at a ``lower'' or ``higher'' level as the case may be, and as such are assumed to simply have been provided beforehand, similar to the case of set theory where the elements of sets are themselves sets.
 
 \begin{defn}[Identity Context]
-	An \emph{identity context}, or simply \emph{context}, is a universe $\mathcal{M}$ of identities (which for now can be thought of as sets) such that:
+	An \emph{identity context}, or simply \emph{context}, is a universe $\mathcal{W}$ of identities (which for now can be thought of as sets) such that:
 	\begin{itemize}
-		%\item Any root constituent $x \in I$ is a \emph{urelement}, i.e. an element of a set that is not itself a set, and cannot have members though it can constitute other sets
-		\item If $x \in_M \mathcal{M}$ and $y \in_W x$, then $y \in_M \mathcal{M}$ (\emph{Axiom of Transitivity})
-		\item If $x, y \in_M \mathcal{M}$, then $q = (\{x,y\},\phi) \in_M \mathcal{M}$ (\emph{Axiom of Pairing})
-		\item If $x \in_M \mathcal{M}$, then the power identity $q = (\mathscr{P}(x),\phi) \in_M \mathcal{M}$ (\emph{Axiom of Power Identity})
-		\item If $\{x_{\alpha}\}_{\alpha \in J}$ is a family of elements of $\mathcal{M}$ and if $J \in_M \mathcal{M}$, then the union $q = (\bigcup_{\alpha \in J} x_{\alpha}, \phi) \in_M \mathcal{M}$ (\emph{Axiom of Union});
+		\item There exists an identity with no ancestors: $\exists \varnothing_W \in \mathcal{W}$ (\emph{Axiom of Existence/Anonymous Identity})
+		\item If $x, y \in \mathcal{W}$, then $\exists q \in \mathcal{W} \mid \{x,y\} \rightarrow q$ (\emph{Axiom of Hive Identity}\footnote{Corresponds to the Axiom of Pairing in set theory.})
+		\item If $x \in \mathcal{W}$ and $y \rightarrow x$, then $y \in \mathcal{W}$ (\emph{Axiom of Transitivity})
+		\item If $x \in \mathcal{W}$, then $\exists q \in \mathcal{W} \mid \mathscr{P}(\chi(x)) \rightarrow q$ (\emph{Axiom of Power Identity}\footnote{Corresponds to the Axiom of Power Set in set theory.})
+		\item If $J \in \mathcal{W}$ where $J$ is a set, and $\{x_{\alpha}\}_{\alpha \in J}$ is a family of constituents of $\mathcal{W}$, then $\exists q \in \mathcal{W} \mid \bigcup_{\alpha \in J} {\chi(x)}_{\alpha} \rightarrow q$ (\emph{Axiom of Union});
 	\end{itemize}
-	where, in each case, $\phi$ is the most general definable action on the constituents of $q$. These axioms for sets define a \emph{Grothendieck Universe}\cite{grothendieck}\cite{foundcat}, a foundational construct in mathematics. In the terminology from set theory, subsets of $\mathcal{M}$ are called \emph{classes}. If a class is not itself a set in the universe, then it is called a \emph{proper class}.
-	Note that defining the identity context this way naturally entails a bodhitree hierarchy of identities (under the relation of constitution), as desired. Additionally, this characterization allows us to consider an identity context as a \emph{category of identities} (in the category theoretic sense).
+	where $\chi$ is a function on $\mathcal{W}$ mapping each identity to the set of its parents; $x \rightarrow y$ denotes that $x$ is a parent of $y$, i.e. $x \rightarrow y \iff x \in \chi(y)$; and the notation $\{x,y\} \rightarrow q$ is shorthand for ``$x \rightarrow q$ and $y \rightarrow q$.'' These axioms for sets define a \emph{Grothendieck Universe}\cite{grothendieck}\cite{foundcat}, a foundational construct in mathematics. In the terminology from set theory, subsets of $\mathcal{W}$ are called \emph{classes}. If a class is not itself a set in the universe, then it is called a \emph{proper class}.
+	Note that defining the identity context this way naturally entails a bodhitree hierarchy of identities (under the relation of constitution, $\rightarrow$), as desired. Additionally, this characterization allows us to consider an identity context as a \emph{category of identities} (in the category theoretic sense).
 \end{defn}
 
 \begin{defn}[Axiom of Worlds]
@@ -382,6 +383,7 @@ Due to the fractal nature of identity architecture, the definitions below may so
 	\begin{equation}
 		\forall Q \; \exists \mathcal{W} \mid Q \in \mathcal{W}. \nonumber
 	\end{equation}
+	In particular, this axiom guarantees the existence of a context $\mathcal{W}$ such that a proper class in a given context constitutes an identity in $\mathcal{W}$.
 \end{defn}
 
 \begin{defn}[Constituent]
@@ -404,10 +406,11 @@ For any identity, there is the context to which it belongs (the ``outside'') and
 
 \begin{defn}[i-morphism]
 	For identities $(X, \phi)$ and $(Y, \psi)$, an \emph{i-morphism} from $X$ to $Y$ is a mapping $f : X \rightarrow Y$ such that for $x_1, x_2 \in X$,
-\begin{equation}
+	\begin{equation}
 		f(\phi(x_1)(x_2)) = \psi(f(x_1))(f(x_2)) . %TODO i-morphism image ought to be isomorphic to a quotient of X by the kernel of f. Is "kernel" well-defined for i-morphism, in particular for set/magma? TODO: seems like assumption of a lower level already provided will ground this entire section in correct (i.e. non-provisional) definitions
-	\nonumber
-\end{equation}
+		\nonumber
+	\end{equation}
+	where $\phi$ and $\psi$ are the actions of the identities $X$ and $Y$ respectively.
 \end{defn}
 
 For example, if $(X, \phi)$ is a group, then under an i-morphism $f$, $(f(X), \psi)$ would be a group as well. The i-morphism can be seen as an abstraction of the ideas of monoid homomorphism, group homomorphism, ring homomorphism, and so on, and closely related to (but not quite the same as) the categorical notion of ``morphism.''
@@ -424,7 +427,7 @@ As a further clarification, note that the reaction sequence described here is a 
 The action of a hive identity can be specified directly in terms of the actions of its constituents. There is an antecedent result for sets that the action of a family of sets $(\Omega_i)_{i \in I}$ on a set $E$ can be specified as an action of the disjoint union of the $\Omega_i$ that extends each of the actions of the $\Omega_i$ on $E$\cite{bourbaki}. This can be seen to be a special case derivative of the more general categorical construction of \emph{coproduct} (of which the disjoint union is an instance, in the category of sets), and we can consider the action of a hive identity to be an action of a form of coproduct (i.e. one that generalizes the coproduct construction in terms of i-morphisms and not just (categorical) morphisms all of the same type) of all of its constituents.
 
 \begin{defn}[Identity]
-	In a world $(\mathcal{W}, \psi)$, an \emph{identity} is a tuple $(\mathcal{M}, \phi, \mu, \omega)$ where $\mathcal{M}$ is an identity context (the mind), $\phi$ is an identity action, $\mu : \mathcal{W} \rightarrow \mathcal{M}$ is a full functor (the ``\emph{mind functor}''), and $\omega : \mathcal{M} \rightarrow \mathcal{W}$ is a functor (the ``\emph{world functor}'') such that for $Q \in \mathcal{M}$ and $R \in \mathcal{W}$:
+	In a world $(\mathcal{W}, \psi)$, an \emph{identity} is a tuple $(\mathcal{M}, \phi, \mu, \omega)$ where $\mathcal{M}$ is an identity context (the mind), $\phi$ is an identity action, $\mu : \mathcal{W} \rightarrow \mathcal{M}$ is a faithful functor (the ``\emph{mind functor}''), and $\omega : \mathcal{M} \rightarrow \mathcal{W}$ is a functor (the ``\emph{world functor}'') such that for $Q \in \mathcal{M}$ and $R \in \mathcal{W}$:
 	\begin{equation}
 		\begin{split}
 			\omega(\phi(Q)(\mu(R))) &\naturalto \psi(\omega(Q))(R) \text{ and} \\
@@ -532,7 +535,7 @@ Now some cultures sustain polygamous marriages, and apparently these are functio
 
 When an anonymous act is performed within an identity $Q$, by definition it is an act for which no member will claim responsibility. Therefore it is unknown which of the known constituents of the identity was responsible for the act. But at the same time, clearly \textit{somebody in $Q$} did it. How can this be captured? Consider a simple 3-member identity where an anonymous act has been performed (Fig.~\ref{fig:anonymous}). Identity $A$ knows it didn't perform the act and so models it as derivative of the compound of $B$ and $C$. Say $C$ didn't perform the act either, so $C$ models it as derivative of the compound of $A$ and $B$. $B$ actually performed the act, but since it is not accepting responsibility for it, $B$ must within the context of the identity $Q$ model the act as derivative of the compound of $A$ and $C$. None of the models agree, and they can argue till the end of the world who was responsible for what, but there's simply no way to know who is ``lying'' and who isn't. Instead, the only way the models can be consistent is if the act is modeled to have been performed by the intersection of the three models $\{A, B\} \cap \{B, C\} \cap \{A, C\}$, which is the empty set. Therefore, anonymous acts are those corresponding to the empty set $\varnothing$ of identities. Note that this is the empty subset within the mind of $Q$, which can as such still be identified with ``some identity in $Q$.'' In this regard it is to be treated as different from the empty subset in the world external to $Q$. As such, while in set theory the empty set is unique, here an anonymous identity (as with all identities) is defined with respect to a particular identity context. Additionally, note that each of the individual identities are aware of the ``true'' model from their perspective, and this is the model that they will use \textit{internally} -- that is to say, in their own mind contexts.
 
-Now, in any context if we follow the known identity tree upward, we will eventually reach a set of identities for which there is no information about their genesis. These identities, following the same reasoning as in the previous paragraph, must also be modeled as anonymous, and derived from the empty set (which is assumed to exist by the definition of identity context). By considering the outermost world perceivable, we are led to conclude that all identities must ultimately derive from the anonymous identity of that world (reminiscent of the construction in set theory of all sets in a Grothendieck universe by iterating set operations on the empty set). Just as water takes the shape of any container, so does an anonymous identity take the forms of all identities. We will say more on the matter when we discuss below the ideas of ``energy'' and ``currency,'' which we consider as modeled by anonymous identity.
+Now, in any context if we follow the known identity tree upward, we will eventually reach a set of identities for which there is no information about their genesis. These identities, following the same reasoning as in the previous paragraph, must also be modeled as anonymous, and derived from the empty set (which is assumed to exist by the definition of identity context). By considering the outermost world perceivable, we are led to conclude that all identities must ultimately derive from the anonymous identity of that world (reminiscent of the construction in set theory, via the cumulative hierarchy, of all sets in a Grothendieck universe by iterating set operations on the empty set). Just as water takes the shape of any container, so does an anonymous identity take the forms of all identities. We will say more on the matter when we discuss below the ideas of ``energy'' and ``currency,'' which we consider as modeled by anonymous identity.
 
 \begin{figure}[htp]
 	\centering
@@ -594,6 +597,8 @@ Influence and wealth are related as:
 \end{equation}
 
 where $T$ is the duration for which the influence is applied. An edge in a bodhitree can be interpreted to entail such an influence. Influence and wealth are developed further in the section below on \hyperref[sec:ecogovintpro]{Economies}.
+
+% potentially add definition enclosures for wealth and influence above
 
 \subsection{Identity and the Brain} \label{sec:idebra}
 
@@ -664,8 +669,10 @@ As such, sentences represent computations that construct new identities from ava
 
 When an experience in the physical world $\mathcal{W}$ is apprehended by a person $p = (\mathcal{M}_{p}, \phi) \in \mathcal{W}$, it can be seen to be an action of identities in the representation (via the mind functor) of the world in the mind, on the self. This action translates in the mind of the self into actions on the identities -- that is, the thoughts -- of the self. This further translates into actions on the selves of the thoughts of the self, and so on (since we embody a particular (single) self at any point in time, it's likely that each computation is undertaken only when we embody a self affected by that action. This could represent the nature of the interactions that are described below in \hyperref[sec:dreams]{Dreams}). Each action gives rise to a reaction and to genesis, and these are all aggregated outward to form the reaction of the self in the mind, which, via the world functor, translates into the reaction of the person to the experience in the physical world. The nature of this aggregation could be modeled as corresponding to the extent that the identity of $p$ (in the sense of anonymous identity, i.e. ``quantity'' or wealth) is expressed in her constituent thoughts. All thoughts in the self, and thoughts within the minds within the self, weigh in on each issue in terms of their reactions to it, and are considered to the extent of their influence in the relevant contexts.
 
-Beyond representation of the physical architecture of the world, our minds also represent identities such as human motivations and communications that are present in minds within the physical world (note that communications exist not within a human mind but in the mind of the hive identity constituted by participants in the communication, which of course has a distributed representation in its constituents) that do not themselves have a faithful or persistent physical representation. We can understand this representation as existing in minds within our mind that are representations of those minds in the physical world. That we are able to construct these representations derives from the partial order defined by bodhitree evolution; that is, since new identities in a context manifest via actions of existing identities in the context, evolution of a context cannot simply occur arbitrarily within all possibilities supported in the universe. When an identity in the world is considered, therefore, we are able to inductively determine a heredity based on other known and inferred identities in the world and in minds within the world. This heredity construction of a given identity can be seen to correspond to our faculties of reasoning and cognition. Edges in a bodhitree as discussed earlier can be interpreted as entailing influence, and such a construction would include assignment of likely influence of each inferred ancestor. Since influence is in terms of fractions of a particular anonymous identity and therefore takes values between $0$ and $1$, this could naturally correspond to an interpretation as probabilities, and it's possible a Bayesian or other probabilistic model could inform this process of heredity construction. In particular, every identity in the world has a defined heredity in the mind, even if this is simply that that identity is anonymous (i.e. descended directly from the unique anonymous identity of the world).
+Beyond representation of the physical architecture of the world, our minds also represent identities such as human motivations and communications that are present in minds within the physical world (note that communications exist not within a human mind but in the mind of the hive identity constituted by participants in the communication, which of course has a distributed representation in its constituents) that do not themselves have a faithful or persistent physical representation. We can understand this representation as existing in minds within our mind that are representations of those minds in the physical world. That we are able to construct these representations derives from the partial order defined by bodhitree evolution; that is, since new identities in a context manifest via actions of existing identities in the context, evolution of a context cannot simply occur arbitrarily within all possibilities supported in the universe. When an identity in the world is considered, therefore, we are able to inductively determine a heredity based on other known and inferred identities in the world and in minds within the world. In particular, every identity in the world has a defined heredity in the mind, even if this is simply that that identity is anonymous (i.e. descended directly from the unique anonymous identity of the world). This heredity construction of a given identity can be seen to correspond to our faculties of reasoning and cognition.
 % clarify relationship to Kant's "thing-in-itself" and "noumena"
+
+Edges in a bodhitree as discussed earlier can be interpreted as entailing influence, and as such, heredity construction could include assignment of likely influence of each inferred ancestor. Since influence is in terms of fractions of a particular anonymous identity and therefore takes values between $0$ and $1$, this could naturally correspond to an interpretation as probabilities, and it's possible a Bayesian or other probabilistic model could inform this process of heredity construction. In general in probability theory, the likely occurrence of any event has an associated distribution, which itself has an associated ``confidence'' distribution, which in its turn can also have a confidence distribution, and so on. These nested confidence distributions appear to correspond to models as nested selves.
 
 Some of these ideas are discussed further in the section on \hyperref[sec:ecogovintpro]{Economies and Government}.
 
@@ -736,7 +743,7 @@ But so many other dreams make so much sense to us as we sleep, and then suddenly
 
 \subsubsection{Music} \label{sec:music}
 
-In music, tones of frequencies that are power-of-2 multiples apart have the same periodic structure and so sound the same to us, except ``higher'' or ``lower.'' This can be modeled as equivalence classes of pitches under the relation of ``sounding the same,'' and the classes under this conception then represent musical notes\footnote{In musical set theory such classes are called ``pitch classes'' but, unless we are mistaken, it seems that such a pitch class is just a formal model for the more informal idea of a note, and so we do not make this distinction for the moment and opt for the more familiar terminology.}. We can conceive musical notes to be identities. It follows that a collection of notes defines an identity context. Such a characterization is already extant in musical set theory\cite{musicalsettheory}, where such a context is called a musical set, or pitch-class set. The identity picture could be seen to provide a cognitive basis for studying music via musical set theory. It also motivates some generalizations which could conceivably inform further development.
+In music, tones of frequencies that are power-of-2 multiples apart have the same periodic structure and so sound the same to us, except ``higher'' or ``lower.'' This can be modeled as equivalence classes of pitches under the relation of ``sounding the same,'' and the classes under this conception then represent musical notes\footnote{In musical set theory such classes are called ``pitch classes'' but, unless we are mistaken, it seems that such a pitch class is just a formal model for the more informal idea of a note, and so we do not make this distinction for the moment and opt for the more familiar terminology.}. We can conceive musical notes to be identities. It follows that a collection of notes defines a hive identity (a ``chord'') and an identity context. Such a characterization is already extant in musical set theory\cite{musicalsettheory}, where such a context is called a musical set, or pitch-class set. The identity picture could be seen to provide a cognitive basis for studying music via musical set theory. It also motivates some generalizations which could conceivably inform further development.
 
 A musical context can express relationships between the constituent notes in the form of hive identities constituted by them. It is often desirable to have a preferred note -- called the ``tonic'' -- such that all other notes in a context are considered in terms of their relationship to this note. Such a construction could be captured as shown in Fig.~\ref{fig:key}, and corresponds to the notion of a musical key (note that, for example, the keys of C major and A minor are differentiated only by choice of tonic). One usually says that compositions are in a particular key, for example, ``Waltz in C-sharp minor.'' We can consider it equivalent to say that musical compositions are in a particular identity context. As such, some natural generalizations that could be explored include keys other than major and minor, and musical contexts composed of multiple keys (such contexts are no doubt already in use). Such a characterization could enable the study of the existing rules of music in a generalized form that could be applied in other non-standard tunings such as 19TET or forms of just temperament (musical set theory seems to be already applied in this manner).
 
@@ -856,7 +863,7 @@ We propose the following properties for the evolution of persistent identity con
 
 \end{enumerate}
 
-The first three properties are the core aspects, capturing and generalizing our everyday intuitions about privacy in human interactions. The first two enable Bruce Wayne and Batman to be two separate people to the world, and the same person to a few trusted aides. These can also be thought of as enabling an identity to act via a distinct ``identity proxy'' for each action it takes in the world, and further enabling the ability to associate or dissociate these proxies (and the associated actions) at any time. This type of pruning of one's identity tree could be seen as an explicit construction of one's so-called ``narrative identity''\cite{narrativeidentity} and is stronger than what we are practically able to achieve in human interactions in the physical world. The third property ensures our intuition that information in a particular context is not accessible to outsiders. This also ensures that, in general, no centralized authority having access to all information would exist. This and the last two properties ensure integrity of the identity architecture and may be accomplished cryptographically. For this purpose, schemes based on Identity-Based Encryption (IBE) as proposed by Shamir\cite{shamir} and developed by Boneh and Franklin\cite{boneh} and by Cocks\cite{cocks} may be applicable.
+The first three properties are the core aspects, capturing and generalizing our everyday intuitions about privacy in human interactions. The first two enable Bruce Wayne and Batman to be two separate people to the world, and the same person to a few trusted aides. These can also be thought of as enabling an identity to act via a distinct ``identity proxy'' for each action it takes in the world, and further enabling the ability to associate or dissociate these proxies (and the associated actions) at any time. This type of pruning of one's identity tree could be seen as an explicit construction of one's so-called ``narrative identity''\cite{narrativeidentity} and is stronger than what we are practically able to achieve in human interactions in the physical world. The third property ensures our intuition that information in a particular context is not accessible to outsiders. This also ensures that, in general, no centralized authority having access to all information would exist\footnote{The anonymous identity $\varnothing_M$ in the mind of an identity $Q = (\mathcal{M}, \phi)$ would indeed be ``omniscient'' in $\mathcal{M}$; i.e. the mind of $\varnothing_M$ contains a representation of all non-anonymous minds within $\mathcal{M}$. However this anonymous mind would only be accessible to the supremum of $Q$ in the world $\mathcal{W}$, and to its ancestors, and not to identities in $\mathcal{M}$. This supremum in $\mathcal{W}$ may be the anonymous world identity $\varnothing_W$ itself, in which case we would have to continue, possibly indefinitely, to outer worlds until a non-anonymous supremum is reached, in order to find a non-anonymous idenity that is omniscient in $\mathcal{M}$.}. This and the last two properties ensure integrity of the identity architecture and may be accomplished cryptographically. For this purpose, schemes based on Identity-Based Encryption (IBE) as proposed by Shamir\cite{shamir} and developed by Boneh and Franklin\cite{boneh} and by Cocks\cite{cocks} may be applicable.
 
 We also observe that while hive identities composed of humans is obviously a useful abstraction that has been applied throughout human history, it has seemingly always been dissociable in practice into its constituents, which can make the hive identity only implicit in some sense. But with the aid of cryptography we could \textit{guarantee} that such an identity is not dissociable into constituents, and so there would be no inherent way to distinguish an identity composed of $100$ humans (or a billion humans) from a single human, making such a hive identity as ``real'' a person as a human under any reasonable definition of personhood that could be conceived.
 
@@ -962,7 +969,7 @@ In the identity architecture, on the other hand, ideas and technologies are simp
 
 In software, similar principles have already been implemented in the form of Free Software (free as in ``freedom'') as defined and promoted by Stallman~\cite{fsf} and the Free Software Foundation. In the system promoted by them (as embodied in the GNU General Public License) all software creators should make source code freely available, and any modifications made by others to the source should also be made freely available by them. This does not preclude authors of such code from selling and profiting from their creations. This system approximates the behavior indicated in the identity-based model above, but does not provide any constraints or guarantees of fairness on the extent to which creators of derivative works profit from these works. With such free software being treated as identities, however, downstream wealth generated always contributes fairly to the wealth of all contributors in the chain. In particular, those who contribute the most (both in terms of code as well as any other contributions toward success) would derive the maximum proportion of wealth generated. Again, this proportion can be determined in public forum via human computation, but there may be quantitative methods that either aid in this determination (heuristics such as entropy measures) or determine it comprehensively (a full information-theoretic characterization of identity architecture, accounting for not just entropy but also novelty of contributions).
 
-We make a final observation on this subject. Anything in the world that is ``difficult'' to do immediately becomes ``easy'' when a single person does it. Yet, in the present state of affairs it is to the benefit of this person for it to remain difficult, since that puts him in a position to profit from his unique skills in this regard. Identity architecture instead incentivizes sharing of ideas and works to a maximal extent (as determined by these creators) as they derive a fair share of all wealth ever generated (and not bounded by an arbitrary $20$ years, for example) by their work. This system also incentivizes promotion and spread of these ideas since any action taken by any identity along the chain of wealth generation is rewarded fairly. Communicating the existence of a creation to someone in a position to use it, for example, is an act of value that will be recognized in the chain. Adversarial competition would no longer need to exist unless explicitly desired for its own sake\footnote{One only needs to examine one's own functioning to realize adversarial competition isn't right. Never has anyone's right arm competed with his left arm to reach a nice wristwatch, say. They cooperate as a team -- the best team ever, with no jealousy and no pride (right-handed people don't have left arms with wounded pride because the state of things is emergent as best for everyone in a fair system in the brain). This is the right way.}. Instead, cooperative competition emerges.
+We make a final observation on this subject. Anything in the world that is ``difficult'' to do immediately becomes ``easy'' when a single person does it. Yet, in the present state of affairs it is to the benefit of this person for it to remain difficult, since that puts him in a position to profit from his unique skills in this regard. Identity architecture instead incentivizes sharing of ideas and works to a maximal extent (as determined by these creators) as they derive a fair share of all wealth ever generated (and not bounded by an arbitrary $20$ years, for example) by their work. This system also incentivizes promotion and spread of these ideas since any action taken by any identity along the chain of wealth generation is rewarded fairly. Communicating the existence of a creation to someone in a position to use it, for example, is an act of value that will be recognized in the chain. Adversarial competition would no longer need to exist unless explicitly desired for its own sake\footnote{One only needs to examine one's own functioning to realize adversarial competition isn't right. Never has anyone's right arm competed with his left arm to reach a nice wristwatch, say. They cooperate as a team -- the best team ever, with no jealousy and no pride (right-handed people don't have left arms with ``wounded pride'' because the state of things is emergent as best for everyone in a fair system in the brain). This is the right way.}. Instead, cooperative competition emerges.
 
 %TODO: add a "Computer Science"/Implementation section here? Talk about many-worlds iteration and time travel (continuous "git repositories" in every (nested) mind, all translatable by requirement of time consistency to any world state).
 
@@ -1044,7 +1051,7 @@ Indeed, while our development up to this point implicates the brain as the basis
 		{
 			\tikzset{VertexStyle/.append style = {fill=gray}}
 			\SetVertexLabel
-			\Vertex[x=3.2,y=6.3,L=You,LabelOut=true,Ldist=5pt]{57}
+			\Vertex[x=3.15,y=6.35,L=``You'',LabelOut=true,Ldist=5pt]{57}
 		}
 		\Vertex[x=8.5,y=2.6]{58}
 		\Vertex[x=8.0,y=3.0]{59}
@@ -1070,22 +1077,22 @@ Indeed, while our development up to this point implicates the brain as the basis
 		{
 			%\tikzset{VertexStyle/.append style = {fill=white, color=white}}
 			\tikzset{VertexStyle/.append style = {minimum size=0.0cm,inner sep=0pt}}
-			\Vertex[x=9.3,y=3.3]{78}
-			\Vertex[x=9.1,y=3.1]{79}
-			\Vertex[x=9.1,y=1.7]{80}
-			\Vertex[x=9.0,y=1.5]{81}
+			\Vertex[x=9.5,y=3.2]{78}
+			\Vertex[x=9.2,y=2.9]{79}
+			\Vertex[x=9.3,y=1.6]{80}
+			\Vertex[x=9.1,y=1.3]{81}
 			\Vertex[x=7.0,y=1.0]{82}
-			\Vertex[x=6.4,y=0.2]{83}
-			\Vertex[x=6.6,y=0.4]{84}
+			\Vertex[x=6.5,y=0.0]{83}
+			\Vertex[x=6.8,y=0.3]{84}
 			\Vertex[x=5.3,y=0.4]{85}
-			\Vertex[x=4.2,y=0.1]{86}
-			\Vertex[x=3.3,y=0.0]{87}
+			\Vertex[x=4.3,y=-0.1]{86}
+			\Vertex[x=3.4,y=-0.2]{87}
 			\Vertex[x=1.8,y=0.1]{88}
 			\Vertex[x=2.4,y=0.1]{89}
 			\Vertex[x=1.4,y=0.0]{90}
 			\Vertex[x=0.5,y=1.0]{91}
 			\Vertex[x=8.2,y=7.3]{93}
-			\Vertex[x=8.4,y=6.2]{94}
+			\Vertex[x=8.5,y=6.1]{94}
 			\Vertex[x=9.8,y=-1.3]{96}
 			\Vertex[x=-1.5,y=5.0]{97}
 			\Vertex[x=2.0,y=10.0]{98}
@@ -1192,23 +1199,26 @@ Indeed, while our development up to this point implicates the brain as the basis
 		\Edge[](76)(77)
 		\Edge[](77)(75)
 		\Edge[](62)(73)
-		% beyond:
-		\Edge[](78)(72)
-		\Edge[](79)(72)
-		\Edge[](80)(44)
-		\Edge[](81)(44)
-		\Edge[](82)(40)
-		\Edge[](83)(38)
-		\Edge[](84)(38)
-		\Edge[](85)(34)
-		\Edge[](86)(16)
-		\Edge[](87)(13)
-		\Edge[](88)(1)
-		\Edge[](89)(1)
-		\Edge[](90)(1)
-		\Edge[](91)(3)
 		\Edge[](75)(92)
-		\Edge[](94)(92)
+		% beyond:
+		{
+			\tikzstyle{EdgeStyle}=[post,very thin,dash pattern=on 1.8pt off 1.2pt]
+			\Edge[](78)(72)
+			\Edge[](79)(72)
+			\Edge[](80)(44)
+			\Edge[](81)(44)
+			\Edge[](82)(40)
+			\Edge[](83)(38)
+			\Edge[](84)(38)
+			\Edge[](85)(34)
+			\Edge[](86)(16)
+			\Edge[](87)(13)
+			\Edge[](88)(1)
+			\Edge[](89)(1)
+			\Edge[](90)(1)
+			\Edge[](91)(3)
+			\Edge[](94)(92)
+		}
 		{
 			\tikzset{EdgeStyle/.style={-,very thin}}
 			\Edge[](92)(93)

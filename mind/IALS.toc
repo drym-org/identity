@@ -49,7 +49,7 @@
 \contentsline {subsection}{\numberline {B}On Natural Phenomena}{31}{section*.47}
 \contentsline {subsection}{\numberline {C}On Human Institutions}{33}{section*.48}
 \contentsline {subsubsection}{\numberline {1}Social and Political Systems}{33}{section*.49}
-\contentsline {subsubsection}{\numberline {2}Economic Systems}{34}{section*.50}
+\contentsline {subsubsection}{\numberline {2}Economic Systems}{35}{section*.50}
 \contentsline {subsubsection}{\numberline {3}Property}{36}{section*.51}
 \contentsline {subsubsection}{\numberline {4}A Universal System}{38}{section*.52}
 \contentsline {paragraph}{\numberline {a}Decision Making}{38}{section*.53}
@@ -59,10 +59,10 @@
 \contentsline {subsubsection}{\numberline {5}A Note on Conflict and War}{42}{section*.57}
 \contentsline {subsection}{\numberline {D}On Religious and Mystical Traditions}{43}{section*.58}
 \contentsline {subsubsection}{\numberline {1}Dharmic Tradition}{43}{section*.59}
-\contentsline {subsubsection}{\numberline {2}Abrahamic Tradition}{44}{section*.60}
+\contentsline {subsubsection}{\numberline {2}Abrahamic Tradition}{45}{section*.60}
 \contentsline {subsubsection}{\numberline {3}Additional Notes}{46}{section*.61}
 \contentsline {section}{\numberline {VIII}Future Directions}{47}{section*.62}
 \contentsline {section}{\numberline {IX}Acknowledgements}{48}{section*.63}
-\contentsline {section}{\numberline {}References}{48}{section*.64}
+\contentsline {section}{\numberline {}References}{49}{section*.64}
 \appendix 
 \contentsline {section}{\numberline {A}Algebra From Actions}{56}{section*.65}

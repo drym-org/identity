@@ -4,7 +4,7 @@
 identity: {name: Identity Architecture of Living Systems, uid: drym.org/ials}
 constituents: {{name: Siddhartha Kasivajhula, uid: sid@drym.org, influence:TBD}}
 date: 6/1/2014
-SHA1 hash (mind/*): c0da01f0dbf52c043b41840ca7a9c5b3e7b38ea4
+SHA1 hash (mind/*): c4f11f0d1d13e273f55079eb9fc5004be18ad233
 
 This work is currently hosted on GitHub at http://github.com/countvajhula/identity. The hope is that in the near future a publicly-owned, decentralized identity architecture will be implemented, and this work will be established there (which may not necessarily involve a change in hosting. The IA would ideally incorporate all existing websites non-cannibalistically) along with all other extant and future works.
 

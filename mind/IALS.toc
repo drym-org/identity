@@ -24,8 +24,8 @@
 \contentsline {subsection}{\numberline {A}The Relationship between Consciousness and Reality}{12}{section*.22}
 \contentsline {subsection}{\numberline {B}Categories of Knowledge}{13}{section*.23}
 \contentsline {subsection}{\numberline {C}Epistemic Priority}{14}{section*.24}
-\contentsline {subsection}{\numberline {D}Additional Notes}{16}{section*.25}
-\contentsline {paragraph}{\numberline {d}The Ultimate Primitive}{16}{section*.26}
+\contentsline {subsection}{\numberline {D}Additional Notes}{17}{section*.25}
+\contentsline {paragraph}{\numberline {d}The Ultimate Primitive}{17}{section*.26}
 \contentsline {paragraph}{\numberline {e}`Seamlessness' of Identity Architecture}{18}{section*.27}
 \contentsline {paragraph}{\numberline {f}On Universals}{18}{section*.28}
 \contentsline {paragraph}{\numberline {g}The `Acts-through' relationship}{18}{section*.29}
@@ -52,8 +52,8 @@
 \contentsline {subsubsection}{\numberline {2}Economic Systems}{35}{section*.50}
 \contentsline {subsubsection}{\numberline {3}Property}{36}{section*.51}
 \contentsline {subsubsection}{\numberline {4}A Universal System}{38}{section*.52}
-\contentsline {paragraph}{\numberline {a}Decision Making}{38}{section*.53}
-\contentsline {paragraph}{\numberline {b}Value and Fairness}{39}{section*.54}
+\contentsline {paragraph}{\numberline {a}Decision Making}{39}{section*.53}
+\contentsline {paragraph}{\numberline {b}Value and Fairness}{40}{section*.54}
 \contentsline {paragraph}{\numberline {c}Economic Analysis}{41}{section*.55}
 \contentsline {paragraph}{\numberline {d}Universality}{42}{section*.56}
 \contentsline {subsubsection}{\numberline {5}A Note on Conflict and War}{42}{section*.57}

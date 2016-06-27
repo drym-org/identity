@@ -713,6 +713,7 @@ In any case, our a priori edifice of truth is a key structure in founding truth 
 			\item I am aware that identities are partially orderable in terms of genesis and cessation. (\emph{Axiom of Bodhitree -- Causation / Prat\={i}tyasamutp\={a}da}\footnote{Pratityasamutpada, translated as ``dependent origination'' -- the buddhist doctrine of causation. Like so many other buddhist concepts, pratityasamutpada possesses the quality of what may be called ``radical generality,'' applying not only to phenomena in the physical world, but to thoughts, feelings, impressions and actions, seamlessly across the mind/world interface. It appears also to apply to abstract philosophical considerations of being (e.g. in ``The Twelve Nidanas,'' which, coincidentally, can be viewed as an epistemic hierarchy) that are neither mental nor physical in nature.})
 			\item I am aware that identities are partially orderable in terms of universal relationships. (\emph{Axiom of Bodhitree -- Forms/Mithya/Taxonomy}\footnote{From Plato's ``Theory of Forms,'' which conceived ``true'' reality to be ideal entities of which manifest entities are imperfect approximations. It seems plausible that this is the ancestral idea from which the more precise notion of a `universal' was later developed (by Plato himself and by others). In any case, we will take this conception to correspond to universals (standing in for the requirement to be ``ideal'') and additionally, in combining this with the Vedantic mithya mentioned earlier, imagine these universals to be ordered in a hierarchy -- essentially a taxonomy. On another note, the conception of the forms bears a resemblance to the Jain \emph{anekantavada} and it's possible there is a connection between them. While the latter holds that, presupposing an underlying truth, all perspectives on that truth are necessarily incomplete and approximate (e.g. the story of the ``Blind Men and the Elephant,'' which, incidentally, appears to have originated in anekantavada), Plato's forms conceives that even in the case where an underlying truth may not be presupposed (e.g. agreeably different elephants), that \emph{there is an underlying truth}, of an ``ideal'' nature (e.g. an ``ideal'' elephant), and that the perceived instances are only approximations of that underlying truth. See also the suggested connection between Plato's Allegory of the Cave and the buddhist \emph{trisvabhava} in the notes on \autoref{sec:awamem} for a more detailed discussion of this manner of link.})
 		\end{enumerate}
+	\item Of many possible causal orderings I may select a subset which manifests, subject to constraints that provide definition to the self. (\emph{Axiom of Will})
 	\item Some identities resemble the self in their causal properties. (\emph{Axiom of Living Being/Others})
 	\item \begin{enumerate}
 			\item There are some identities that others are aware of. (\emph{Axiom of World})
@@ -741,7 +742,8 @@ A provisional dependence hierarchy of the axioms is depicted in Fig.~\ref{fig:ax
 	\node (pp5) at (-5, -5) {[\textbf{5}]};
 	\node (pp6) at (-5, -6) {[\textbf{6}]};
 	\node (pp7) at (-5, -7) {[\textbf{7}]};
-	\node (pp7) at (-5, -8) {[\textbf{8}]};
+	\node (pp8) at (-5, -8) {[\textbf{8}]};
+	\node (pp9) at (-5, -9) {[\textbf{9}]};
 
 	\node (p0) at (0, 0) {\textsf{Tao}};
 	\node (p1) at (0, -1) {\textsf{Relativity}};
@@ -756,10 +758,11 @@ A provisional dependence hierarchy of the axioms is depicted in Fig.~\ref{fig:ax
 	\node (p5a) at (-3,-5) {\textsf{Infinity}};
 	\node (p5b) at (1,-5) {\textsf{Forms}};
 	\node (p5c) at (3,-5) {\textsf{Causation}};
-	\node (p6) at (-1,-6) {\textsf{Others}};
-	\node (p7) at (0,-7) {\textsf{World/Empathy}};
-	\node (p8a) at (-2,-8) {\textsf{Strong Empathy}};
-	\node (p8b) at (2,-8) {\textsf{Mind}};
+	\node (p6) at (-1,-6) {\textsf{Will}};
+	\node (p7) at (-1,-7) {\textsf{Others}};
+	\node (p8) at (0,-8) {\textsf{World/Empathy}};
+	\node (p9a) at (-2,-9) {\textsf{Strong Empathy}};
+	\node (p9b) at (2,-9) {\textsf{Mind}};
 
 	\begin{scope}[every path/.style={->}]
 		\draw (p0) -- (p1);
@@ -767,39 +770,41 @@ A provisional dependence hierarchy of the axioms is depicted in Fig.~\ref{fig:ax
 		\draw (p1) -- (p2b);
 		\draw (p2a) -- (p3a);
 		\draw (p2a) -- (p3b);
+		\draw (p2a) -- (p9a);
 		\draw (p2b) -- (p3a);
 		\draw (p2b) -- (p3b);
+		\draw (p2b) -- (p8);
+		\draw (p2b) -- (p9b);
+		\draw (p3a) -- (p4d);
+		\draw (p3a) -- (p5a);
+		\draw (p3a) -- (p6);
 		\draw (p3b) -- (p4a);
 		\draw (p3b) -- (p4b);
-		\draw (p3a) -- (p5a);
-		\draw (p3a) -- (p4d);
-		\draw (p3b) -- (p5c);
-		\draw (p3a) -- (p6);
-		\draw (p3b) -- (p6);
-		\draw (p4a) -- (p5a);
-		\draw (p4b) -- (p5a);
-		\draw (p5c) -- (p6);
-		\draw (p6) -- (p7);
-		\draw (p2b) -- (p7);
-		\draw (p7) -- (p8a);
-		\draw (p7) -- (p8b);
-		\draw (p2a) -- (p8a);
-		\draw (p2b) -- (p8b);
-		\draw (p3b) -- (p8b);
 		\draw (p3b) -- (p4c);
 		\draw (p3b) -- (p4d);
+		\draw (p3b) -- (p5c);
+		\draw (p3b) -- (p7);
+		\draw (p3b) -- (p9b);
+		\draw (p4a) -- (p5a);
+		\draw (p4a) -- (p5c);
+		\draw (p4b) -- (p5a);
+		\draw (p4b) -- (p5c);
 		\draw (p4c) -- (p5b);
 		\draw (p4d) -- (p5b);
-		\draw (p4a) -- (p5c);
-		\draw (p4b) -- (p5c);
 		\draw (p4d) -- (p5c);
-		\draw (p5b) -- (p6);
+		\draw (p5b) -- (p7);
+		\draw (p5c) -- (p6);
+		\draw (p5c) -- (p7);
+		\draw (p6) -- (p7);
+		\draw (p7) -- (p8);
+		\draw (p8) -- (p9a);
+		\draw (p8) -- (p9b);
 	\end{scope}
 \end{tikzpicture}
 \caption{\label{fig:axiomtree}Epistemic Priority}
 \end{figure}
 
-Epistemic priority is useful in that it allows us to think precisely about precedence of ideas. In particular, it provides a firm basis for our earlier suggestion that consciousness need not be justified in relation to a presupposed brain, since the latter occurs arguably at a lower epistemic priority, and certainly not at a higher one. Also significantly, it may be seen that by virtue of being ``conventional,'' current proposed foundations of mathematics including ZFC are dialectical and thus found mathematics and all derivative bodies of knowledge at an epistemic priority $\geq 7$. Likewise, ``empirical'' (i.e. our dialectical) scientific method operates at epistemic priorities $\geq 3$ (and once again, $\geq 7$ if we require it to conform to traditional dialectical agreement), while dhyana as a direct investigation of consciousness proceeds at priorities $0 - 2$ (while also reducing to $\geq 7$ if results are communicated dialectically). This does not speak to \emph{validity} in any sense -- it only provides criteria by which different types of knowledge may be related. It may be possible for lower priority knowledge to be justified in terms of higher priority knowledge, but the reverse endeavor is not well-founded.
+Epistemic priority is useful in that it allows us to think precisely about precedence of ideas. In particular, it provides a firm basis for our earlier suggestion that consciousness need not be justified in relation to a presupposed brain, since the latter occurs arguably at a lower epistemic priority, and certainly not at a higher one. Also significantly, it may be seen that by virtue of being ``conventional,'' current proposed foundations of mathematics including ZFC are dialectical and thus found mathematics and all derivative bodies of knowledge at an epistemic priority $\geq 8$. Likewise, ``empirical'' (i.e. our dialectical) scientific method operates at epistemic priorities $\geq 3$ (and once again, $\geq 8$ if we require it to conform to traditional dialectical agreement), while dhyana as a direct investigation of consciousness proceeds at priorities $0 - 2$ (while also reducing to $\geq 8$ if results are communicated dialectically). This does not speak to \emph{validity} in any sense -- it only provides criteria by which different types of knowledge may be related. It may be possible for lower priority knowledge to be justified in terms of higher priority knowledge, but the reverse endeavor is not well-founded.
 
 \subsection{Additional Notes}
 
@@ -1035,7 +1040,7 @@ When we sleep, we cease taking sensory input from the physical world, and the mi
 
 But so many other dreams make so much sense to us as we sleep, and then suddenly at the instant of waking they seem to confound description. This phenomenon could be because the thoughts that experience them are more primitive aspects of ourselves, and the worlds they inhabit may be quite different from the physical world. Therefore, the models (i.e. identity trees) used by them to describe their experience may be alien to experience in the physical world, and these models would be unlikely to correspond fully to words we use. For example, words like ``mother,'' ``neighbor,'' ``sky,'' or ``tree'' correspond to identities in the physical world. But in the minds within the mind, subsets of trees corresponding to these words may be employed to capture experiences relevant in those worlds, which would only be primordial aspects of physical world-concepts. So some aspect of ``neighbor'' may in a thought be used to describe an experience, but when we wake into the physical world, ``neighbor'' no longer captures that concept and we find our language inadequate to describe the notion. Such a dream quickly fades from expressibility. The same reasoning could also explain why memories from early childhood and infancy cannot be recollected, even by young children. Those experiences do not correspond to models (and words) used later in life.
 
-Finally on a more abstract level, the epistemic hierarchy entailed in dreams seems to be similar if not identical to that of waking reality (this can be seen by reading through the affirmations in \autoref{sec:epipri} and considering their applicability to dreams). This is further reflected in that the above characterization of dreams is formally equivalent to the characterization of the waking world, which is in line with the experience of being unable to distinguish dream from waking from within the context of a dream. The qualitative evaluation of dreams as ``unreal'' is an inevitable result of dream reality being ``bounded'' -- being preceded and succeeded -- by waking reality, and thus being subject to privileged evaluation in the latter context, in which it is itself simply an identity -- ``the dream'' -- in the concerned mind, and subject to relational categorization. Therefore, perhaps all that can really be said objectively is that a relation of ``bounding'' exists between waking reality and dream reality. This relation is transitive, as is evident in the experience of a dream within a dream. In the framework of epistemic priority, dream reality appears to be differentiated from waking reality at a priority level of $\ge \textbf{8}$. The proposition that waking reality is not so bounded by a greater reality can only be an axiom (i.e. it is neither provable mathematically nor establishable dialectically) with some assignable priority, as an alternative to which, an infinite regress of sublatable realities\footnote{Any such realities would nevertheless be asserted to exist at priorities $\ge \textbf{8}$.} must be assumed.
+Finally on a more abstract level, the epistemic hierarchy entailed in dreams seems to be similar if not identical to that of waking reality (this can be seen by reading through the affirmations in \autoref{sec:epipri} and considering their applicability to dreams). This is further reflected in that the above characterization of dreams is formally equivalent to the characterization of the waking world, which is in line with the experience of being unable to distinguish dream from waking from within the context of a dream. The qualitative evaluation of dreams as ``unreal'' is an inevitable result of dream reality being ``bounded'' -- being preceded and succeeded -- by waking reality, and thus being subject to privileged evaluation in the latter context, in which it is itself simply an identity -- ``the dream'' -- in the concerned mind, and subject to relational categorization. Therefore, perhaps all that can really be said objectively is that a relation of ``bounding'' exists between waking reality and dream reality. This relation is transitive, as is evident in the experience of a dream within a dream. In the framework of epistemic priority, dream reality appears to be differentiated from waking reality at a priority level of $\ge \textbf{9}$. The proposition that waking reality is not so bounded by a greater reality can only be an axiom (i.e. it is neither provable mathematically nor establishable dialectically) with some assignable priority, as an alternative to which, an infinite regress of sublatable realities\footnote{Any such realities would nevertheless be asserted to exist at priorities $\ge \textbf{9}$.} must be assumed.
 
 \subsubsection{Music} \label{sec:music}
 

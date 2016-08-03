@@ -31,7 +31,7 @@
 \contentsline {paragraph}{\numberline {g}The `Acts-through' relationship}{18}{section*.29}
 \contentsline {paragraph}{\numberline {h}Bodhitree-aware Nomenclature}{19}{section*.30}
 \contentsline {section}{\numberline {VI}Interpretation}{19}{section*.31}
-\contentsline {subsection}{\numberline {A}Currency}{19}{section*.32}
+\contentsline {subsection}{\numberline {A}Currency}{20}{section*.32}
 \contentsline {subsection}{\numberline {B}Identity and the Brain}{21}{section*.33}
 \contentsline {subsubsection}{\numberline {1}The Self}{21}{section*.34}
 \contentsline {subsubsection}{\numberline {2}Language}{22}{section*.35}
@@ -47,22 +47,22 @@
 \contentsline {section}{\numberline {VII}Commentary and Conjecture}{30}{section*.45}
 \contentsline {subsection}{\numberline {A}On the Experience of Living}{30}{section*.46}
 \contentsline {subsection}{\numberline {B}On Natural Phenomena}{31}{section*.47}
-\contentsline {subsection}{\numberline {C}On Human Institutions}{33}{section*.48}
+\contentsline {subsection}{\numberline {C}On Human Institutions}{34}{section*.48}
 \contentsline {subsubsection}{\numberline {1}Social and Political Systems}{34}{section*.49}
 \contentsline {subsubsection}{\numberline {2}Economic Systems}{35}{section*.50}
 \contentsline {subsubsection}{\numberline {3}Property}{36}{section*.51}
-\contentsline {subsubsection}{\numberline {4}A Universal System}{38}{section*.52}
+\contentsline {subsubsection}{\numberline {4}A Universal System}{39}{section*.52}
 \contentsline {paragraph}{\numberline {a}Decision Making}{39}{section*.53}
 \contentsline {paragraph}{\numberline {b}Value and Fairness}{40}{section*.54}
 \contentsline {paragraph}{\numberline {c}Economic Analysis}{41}{section*.55}
 \contentsline {paragraph}{\numberline {d}Universality}{42}{section*.56}
-\contentsline {subsubsection}{\numberline {5}A Note on Conflict and War}{42}{section*.57}
+\contentsline {subsubsection}{\numberline {5}A Note on Conflict and War}{43}{section*.57}
 \contentsline {subsection}{\numberline {D}On Religious and Mystical Traditions}{43}{section*.58}
 \contentsline {subsubsection}{\numberline {1}Dharmic Tradition}{43}{section*.59}
 \contentsline {subsubsection}{\numberline {2}Abrahamic Tradition}{45}{section*.60}
 \contentsline {subsubsection}{\numberline {3}Additional Notes}{46}{section*.61}
 \contentsline {section}{\numberline {VIII}Future Directions}{47}{section*.62}
-\contentsline {section}{\numberline {IX}Acknowledgements}{48}{section*.63}
+\contentsline {section}{\numberline {IX}Acknowledgements}{49}{section*.63}
 \contentsline {section}{\numberline {}References}{49}{section*.64}
 \appendix 
-\contentsline {section}{\numberline {A}Algebra From Actions}{56}{section*.65}
+\contentsline {section}{\numberline {A}Algebra From Actions}{57}{section*.65}

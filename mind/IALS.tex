@@ -713,8 +713,11 @@ In any case, our a priori edifice of truth is a key structure in founding truth 
 			\item I am aware that identities are partially orderable in terms of genesis and cessation. (\emph{Axiom of Bodhitree -- Causation / Prat\={i}tyasamutp\={a}da}\footnote{Pratityasamutpada, translated as ``dependent origination'' -- the buddhist doctrine of causation. Like so many other buddhist concepts, pratityasamutpada possesses the quality of what may be called ``radical generality,'' applying not only to phenomena in the physical world, but to thoughts, feelings, impressions and actions, seamlessly across the mind/world interface. It appears also to apply to abstract philosophical considerations of being (e.g. in ``The Twelve Nidanas,'' which, coincidentally, can be viewed as an epistemic hierarchy) that are neither mental nor physical in nature.})
 			\item I am aware that identities are partially orderable in terms of universal relationships. (\emph{Axiom of Bodhitree -- Forms/Mithya/Taxonomy}\footnote{From Plato's ``Theory of Forms,'' which conceived ``true'' reality to be ideal entities of which manifest entities are imperfect approximations. It seems plausible that this is the ancestral idea from which the more precise notion of a `universal' was later developed (by Plato himself and by others). In any case, we will take this conception to correspond to universals (standing in for the requirement to be ``ideal'') and additionally, in combining this with the Vedantic mithya mentioned earlier, imagine these universals to be ordered in a hierarchy -- essentially a taxonomy. On another note, the conception of the forms bears a resemblance to the Jain \emph{anekantavada} and it's possible there is a connection between them. While the latter holds that, presupposing an underlying truth, all perspectives on that truth are necessarily incomplete and approximate (e.g. the story of the ``Blind Men and the Elephant,'' which, incidentally, appears to have originated in anekantavada), Plato's forms conceives that even in the case where an underlying truth may not be presupposed (e.g. agreeably different elephants), that \emph{there is an underlying truth}, of an ``ideal'' nature (e.g. an ``ideal'' elephant), and that the perceived instances are only approximations of that underlying truth. See also the suggested connection between Plato's Allegory of the Cave and the buddhist \emph{trisvabhava} in the notes on \autoref{sec:awamem} for a more detailed discussion of this manner of link.})
 		\end{enumerate}
-	\item Of many possible causal orderings I may select a subset which manifests, subject to constraints that provide definition to the self. (\emph{Axiom of Will})
-	\item Some identities resemble the self in their causal properties. (\emph{Axiom of Living Being/Others})
+	\item \begin{enumerate}
+		\item Of many possible causal orderings I may select a subset which manifests, subject to certain constraints. (\emph{Axiom of Will})
+		\item Some causal orderings are preferable to others. (\emph{Axiom of Desire}\footnote{Desire may be definable mathematically as a field (in the physical sense) on the space of causal orderings.})
+		\end{enumerate}
+	\item Some identities are such that the constraints on their causal properties resemble those on the Will. (\emph{Axiom of J\={i}va\footnote{The Sanskrit \emph{j\={i}va} roughly translates as ``living being,'' and is to be understood here as an abstraction for the conscious entity that is taken to ``live'' or exist in a particular dialectical world.}/Others})
 	\item \begin{enumerate}
 			\item There are some identities that others are aware of. (\emph{Axiom of World})
 			\item Others are aware of identities. (\emph{Empathy})
@@ -728,6 +731,10 @@ In any case, our a priori edifice of truth is a key structure in founding truth 
 \end{enumerate}
 
 Note that items 5(b), 8(b) and 9(c) above are not axioms but, rather, conventions or logical consequences of other axioms (the foundations for logical inference must also be set within the above scheme; we leave that for future development). For example, 9(c) is a consequence of 8(a) and 9(b). As a general rule, we may say that the epistemic priority of a proposition is equal to that of the lowest priority axiom employed in its proof, which in this case is $9$.
+
+\begin{proposition}[``Occam's Razor'']
+	Given two possible conceptions of an element of reality, favor the one with the higher epistemic priority.
+\end{proposition}
 
 A provisional dependence hierarchy of the axioms is depicted in Fig.~\ref{fig:axiomtree}.
 
@@ -758,7 +765,8 @@ A provisional dependence hierarchy of the axioms is depicted in Fig.~\ref{fig:ax
 	\node (p5a) at (-3,-5) {\textsf{Infinity}};
 	\node (p5b) at (1,-5) {\textsf{Forms}};
 	\node (p5c) at (3,-5) {\textsf{Causation}};
-	\node (p6) at (-1,-6) {\textsf{Will}};
+	\node (p6a) at (-1,-6) {\textsf{Will}};
+	\node (p6b) at (2.5,-6) {\textsf{Desire}};
 	\node (p7) at (-1,-7) {\textsf{Others}};
 	\node (p8) at (0,-8) {\textsf{World/Empathy}};
 	\node (p9a) at (-2,-9) {\textsf{Strong Empathy}};
@@ -777,7 +785,7 @@ A provisional dependence hierarchy of the axioms is depicted in Fig.~\ref{fig:ax
 		\draw (p2b) -- (p9b);
 		\draw (p3a) -- (p4d);
 		\draw (p3a) -- (p5a);
-		\draw (p3a) -- (p6);
+		\draw (p3a) -- (p6a);
 		\draw (p3b) -- (p4a);
 		\draw (p3b) -- (p4b);
 		\draw (p3b) -- (p4c);
@@ -793,9 +801,10 @@ A provisional dependence hierarchy of the axioms is depicted in Fig.~\ref{fig:ax
 		\draw (p4d) -- (p5b);
 		\draw (p4d) -- (p5c);
 		\draw (p5b) -- (p7);
-		\draw (p5c) -- (p6);
+		\draw (p5c) -- (p6a);
+		\draw (p5c) -- (p6b);
 		\draw (p5c) -- (p7);
-		\draw (p6) -- (p7);
+		\draw (p6a) -- (p7);
 		\draw (p7) -- (p8);
 		\draw (p8) -- (p9a);
 		\draw (p8) -- (p9b);
@@ -1338,7 +1347,7 @@ As discussed in \autoref{sec:theself}, actions of a hive identity in the world (
 
 \subsubsection{Economic Systems}
 
-In the Wealth of Nations\cite{adamsmith}, Adam Smith identifies three broad divisions in society: landlords, laborers, and merchants. Of these three, Smith observes that the interests of the former two are aligned with that of society (whether they know it or not), while those of the merchants are not necessarily so, and are indeed sometimes opposed to those of society\cite{rothschild}. A good portion of the Wealth of Nations is engaged in discussing the ramifications of this possible misalignment. Of course it goes without saying that the interests of merchants are not necessarily aligned with those of other merchants. The question of interests and incentives identified here is an important one that has engaged economists right up to the present day. Let us focus our energies toward a precise understanding of the issue. In order to achieve this, it will be necessary to frame the problem at a higher level of abstraction.
+In the Wealth of Nations\cite{adamsmith}, Adam Smith identifies three broad divisions in society: landlords, laborers, and merchants. Of these three, Smith observes that the interests of the former two are aligned with that of society (whether they know it or not), while those of the merchants are not necessarily so, and are indeed sometimes opposed to those of society\cite{rothschild}\footnote{The origin of economic interest -- its epistemic basis -- is ``desire'' as established via the Axiom of Desire (\autoref{sec:epipri}). This can be seen in that pure objective utility would not give rise to an economic incentive if the actor is not aware of or convinced of this utility, and neither would the existence of an economic incentive necessarily imply objective utility. Thus, interestingly enough, economic interest appears to have a pre-dialectical basis.}. A good portion of the Wealth of Nations is engaged in discussing the ramifications of this possible misalignment. Of course it goes without saying that the interests of merchants are not necessarily aligned with those of other merchants. The question of interests and incentives identified here is an important one that has engaged economists right up to the present day. Let us focus our energies toward a precise understanding of the issue. In order to achieve this, it will be necessary to frame the problem at a higher level of abstraction.
 
 Let us assume that all members of society may indulge in any activities at any time. That is, they may be landlords in an abstract sense, of having possessions recognized as their property in society; or they may be laborers, in the sense that they engage in the direct execution of some tasks in the course of their daily lives; and they may be merchants, in that they may have projects and designs that they undertake over a relatively long timespan. Whether Smith's three-fold characterization is the best one is irrelevant for the purposes for which we intend to use it. The important notion is that for some subset of activities of this generic person, his interests are aligned with or independent of those of society, and for some subset of activities these interests are either partially or diametrically misaligned with those of society. Let us keep this in mind as we evaluate common economic systems in this connection.
 

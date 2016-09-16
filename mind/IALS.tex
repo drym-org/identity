@@ -11,6 +11,7 @@
 \usepackage{color}      % use if color is used in text
 \usepackage{subfigure}  % use for side-by-side figures
 \usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+\usepackage{xcolor}
 \usepackage{tikz}
 %\usepackage{tikz,fullpage}
 \usetikzlibrary{arrows,%
@@ -107,7 +108,9 @@
 
 ``Identity architecture shows us what things ultimately are, and how they come together. It seems that Siddhartha Gautama (the Buddha), anticipating the essence of the present work by over two thousand years, told us what that thing is that they come together as. Awareness of that thing is the experience of Nirvana -- enlightenment -- the freedom from the cycle of birth and rebirth.''
 
-A recursive, tree-based model of identity is developed as a new mathematical object and framework. The model is grounded in the notion of an ``identity context'' which is related to the Grothendieck Universe of set theory and can serve as an abstract category that can be specialized to arbitrary mathematical and nonmathematical objects. An axiomatic basis for the model entailing a notion of ``epistemic priority'' is introduced as a possible alternative to the ZFC axioms of set theory, and it is suggested that this basis has desirable features absent in ZFC. The traditional classification of knowledge as \emph{a priori} and \emph{empirical} is revisited, and a further subdivision and augmentation suggested based on buddhist \emph{citta-matra} (Consciousness-Only) principles. A natural basis for a particular general manifestation of formal undecidability is introduced, and together with Kantian ``noumenal'' undecidability, implications for limitations and extensions of dialectical scientific method are motivated. The model is applied to the formalization of privacy as a very general notion, to the functioning of ``the brain,'' to motivating a novel political and economic system including formalization and generalization of notions of private and public property, to natural phenomena motivating that space and time are emergent rather than foundational, and to the origin and nature of religious traditions.
+A recursive, tree-based model of identity is developed as a new mathematical object and framework. The model is grounded in the notion of an ``identity context'' which is related to the Grothendieck Universe of set theory and can serve as an abstract category that can be specialized to arbitrary mathematical and nonmathematical objects. A foundational framework of ``epistemic levels'' based on Hofstadter's \emph{strange loop} is introduced, and it is suggested that such a foundation has significant advantages over a conventional system such as ZFC as a foundation for mathematics in particular, but which also provides a much more general epistemic foundation subsuming empirical (including scientific) investigation in the same terms. Identity context is identified with the epistemic notion of ``subject'' which is further identified with the Advaita notion of \emph{Brahman}. It is shown that this identification provides a natural resolution to the age-old Problem of Universals. The traditional classification of knowledge as \emph{a priori} and \emph{empirical} is revisited, and a further subdivision and augmentation suggested based on Buddhist \emph{citta-matra} (Consciousness-Only) principles. A natural basis for a particular general manifestation of formal undecidability is introduced, and together with Kantian ``noumenal'' undecidability, implications for limitations and extensions of dialectical scientific method are motivated.
+
+The model is applied to the formalization of privacy as a very general notion; to the functioning of ``the brain;'' to motivating a novel political and economic system providing strong interest-alignment guarantees and including a formalization and generalization of notions of private and public property; to natural phenomena motivating that space and time are emergent rather than foundational; and to the origin and nature of religious and spiritual traditions.
 
 \end{abstract}
 
@@ -512,7 +515,7 @@ Muller\cite{muller} proposes a unification of all forms of entropy (information)
 	I = \log\biggl(\frac{1}{|G|} \sum_{g \in G} S^{g}\biggr) ;
 \end{equation}
 
-where $I$ is the information conveyed (e.g. in bits, if the base of the logarithm is chosen to be $2$), and the parenthetical expression is the number of orbits under the action of the group $G$ on a set $S$, given by Burnside's lemma. If the action of an identity $a$ on an identity $b$ can be interpreted as a group action (i.e. a group homomorphism to the automorphisms of $b$), then the applicability of Burnside's Lemma would immediately follow to give us a candidate amount of entropy conveyed from $a$ to $b$, in the sense of Muller. But if the action is not a group action, then the amount of information conveyed may need to be derived from some natural group characterization of the image of the action (possibly involving free groups or Grothendieck groups\cite{grogroup}). Alternatively, it's possible such an information-theoretic characterization may be accomplished using ``logical entropy'' as described by Ellerman\cite{ellerman} or by following the program described in Devlin\cite{devlin}.
+where $I$ is the information conveyed (e.g. in bits, if the base of the logarithm is chosen to be $2$), and the parenthetical expression is the number of orbits under the action of the group $G$ on a set $S$, given by Burnside's lemma. If the action of an identity $a$ on an identity $b$ can be interpreted as a group action (i.e. a group homomorphism to the automorphisms of $b$), then the applicability of Burnside's Lemma would immediately follow to give us a candidate amount of entropy conveyed from $a$ to $b$, in the sense of Muller. But if the action is not a group action, then the amount of information conveyed may need to be derived from some natural group characterization of the image of the action (possibly involving free groups or Grothendieck groups\cite{grogroup}). Alternatively, it's possible such an information-theoretic characterization may be accomplished using ``logical entropy'' as described by Ellerman\cite{ellerman} or by following the program described in Devlin\cite{devlin}\footnote{As a general pointer to the right conception here, the information content of an identity must be a function of what it \emph{is}. Thus, the information must be given by a function defined on the action, and the richer the algebraic structure of the identity, the greater would be its information content. Functorially transforming the identity into a more degenerate context would result in loss of information, while transforming into a richer context would preserve the information content. For instance mapping the context of a basketball game to the context of sounds emanating from the basketball stadium, would result in a loss of information (unless this context happens to be \emph{equivalent} to the original one which seems unlikely) that could in principle be characterized algebraically. Such a characterization would also give us the theoretical limits on the extent to which details of various things could be ``learned'' from such transformed representations, with applications to statistical learning theory.}.
 
 \textit{For the remainder of this document, we will generally speak in terms of ``absolute'' contexts for which the constituents are fixed and each constituent is aware of all actions performed within that context. Although in nature contexts are to be considered relative to each observer as described above, employing such an ``absolute'' characterization will allow us to explore idealized properties of identities and contexts without getting lost in the dynamical details.}
 
@@ -639,9 +642,9 @@ Western philosophy has traditionally delineated two forms of knowledge: (1) \emp
 
 Still, the relationship between consciousness and experience is a subtle one, and it is worthwhile to investigate the evolution of thought on this particular point. Descartes\cite{descartes} explored this relationship by famously engaging in (what is now called) ``Cartesian doubt'' -- doubting everything, taking nothing for granted, and attempting to build one's entire edifice of knowledge from first principles. In doing so, he would observe that there were varying degrees of certainty that one could have about different types of knowledge: in particular, thought, he held, was more certainly ``true'' than the objects of the world. The argument (which would later be called ``the cogito'') that it is through thought that one infers one's existence in the world, ``I think, therefore I am,'' was the touchstone of his work.
 
-A position of this sort is to be found in the Upanishads (foundational works in the Indian philosophical tradition). But instead of settling on a generalized conception of ``thought'' as the basis for reality as cogito does, the Upanishadic position was to take consciousness itself as the prime certainty, treating thought as simply another manifestation within consciousness qualitatively not much different from sensory perceptions. To mirror cogito's framing, it may be said that this position views ``I am'' to be the highest certainty\footnote{It is often stated as such, e.g. in \cite{brihadaranyaka}, but for the most part this view is foundational and tacitly assumed in subsequent development.}, and all other things as contingent in relation to it.
+A position of this sort is to be found in the Upanishadic/Shramanic philosophical tradition (associated with ancient India). But instead of settling on a generalized conception of ``thought'' as the basis for reality as the cogito does, the Upanishadic position, for instance, was to take consciousness itself as the prime certainty, treating thought as simply another manifestation within it qualitatively not much different from sensory perceptions. To mirror cogito's framing, it may be said that this position views ``I am'' to be the highest certainty\footnote{It is often stated as such, e.g. in \cite{brihadaranyaka}, but for the most part this view is foundational and tacitly assumed in subsequent development.}, and all other things as contingent in relation to it.
 
-Although a subtle distinction, this turns out to have made all the difference; indeed, it turns the entire edifice of what we assume to constitute reality on its head. Formerly, as indeed in the present mainstream scientific viewpoint, consciousness is a phenomenon to be explained in terms of a presupposed substantial world -- how, we ask, does consciousness arise from a brain? But under the ``Consciousness First'' inversion, consciousness, possessing greater epistemic certainty than substance, need not be justified in relation to the latter. It is material things -- brains, for example -- that must be justified in relation to consciousness. What, we may ask, is the nature of a brain -- both as a substantial entity as well as an abstract one -- in relation to consciousness?
+Although a subtle distinction, this turns out to have made all the difference\footnote{Or perhaps it made the difference it did simply because it arose much earlier and thus has undergone more development, in retrospect, especially arising as it did at a time when ``philosophy'' did not live in science's shadow nor, indeed, in religion's shadow.}; indeed, it turns the entire edifice of what we assume to constitute reality on its head. Formerly, as indeed in the present mainstream scientific viewpoint, consciousness is a phenomenon to be explained in terms of a presupposed substantial world -- how, we ask, does consciousness arise from a brain? But under the ``Consciousness First'' inversion, consciousness, possessing greater epistemic certainty than substance, need not be justified in relation to the latter. It is material things -- brains, for example -- that must be justified in relation to consciousness. What, we may ask, is the nature of a brain -- both as a substantial entity as well as an abstract one -- in relation to consciousness?
 
 As a natural consequence of this inversion, philosophers in the Upanishadic tradition were evidently driven to study consciousness itself, directly, and they developed a systematic technique in order to do so -- the practice of \emph{dhy\={a}na}, or meditation\footnote{It is quite likely that either the practice of dhyana itself or some other similar contemplative practice preceded the philosophical inversion being discussed, and may have quite possibly led to it. It has also been suggested\cite{bronkhorst} that dhyana specifically (as opposed to other contemplative, ascetic practices) was discovered by Buddha.}. The direct study of consciousness is outside the scope of dialectical method (and by extension empirical\footnote{In the conventional, more-limited sense of `empirical' that we redefine as `dialectical' in the following section.} science) due in part to the dialectical undecidability (\autoref{cor:decidability}) that is inherent in such a study, but also due to other reasons which will be elaborated shortly. Given this, dhyana is a natural approach to the problem -- for when a phenomenon is to be studied ``scientifically'' it must first be isolated. This is precisely what dhyana achieves with regard to consciousness; all phenomena, perceptions, thoughts -- everything that is not consciousness itself -- are eliminated from experience in the practice of dhyana, so that what remains is consciousness alone, and one may then conduct experiments, so to speak, by perturbation of one's state of being by intuitive motion (or lack thereof). It is a little more than this, however, for eliminating phenomena from conscious experience does not merely isolate consciousness; it also brings into direct experience the very basis upon which those phenomena -- and reality more broadly -- are defined. Thus, dhyana is an epistemic notion in reality, a conceptual state of being, \textit{before it is anything else}.
 
@@ -649,7 +652,9 @@ Still, a priori, this need not get us anywhere. There seems to be no obvious bas
 
 \subsection{Categories of Knowledge} \label{sec:catkno}
 
-In addition to the two categories of knowledge identified earlier, we may consider a third: knowledge derived via meditative insight. Buddhists appear to have referred to such knowledge as \emph{\={a}rya gy\={a}na}\cite{lankavatara}, meaning ``noble knowledge'' (often translated as ``Noble Wisdom'')\footnote{It is actually \emph{\={a}rya j\~{n}\={a}na}. We use the derivative ``gy'' found in modern Indic languages in place of ``j\~{n}'' as it is easier to pronounce.}. Additionally, consistent with this characterization, the Upanishads enumerate four ``states of consciousness'': (1) \emph{jagrat}, or waking, (2) \emph{svapna}, or dream, (3) \emph{sushupti}, or deep (dreamless) sleep, and (4) \emph{turiya}, literally the ``fourth'' state\cite{mandukya}. To achieve a similar level of comprehensiveness, and unifying these with the Western classification identified earlier, we sustain the categories: (1) empirical knowledge; derived from experience, and (2) a priori knowledge; not derived directly from experience but nevertheless known. Further, we propose that of these, empirical knowledge may be further subdivided into three categories: (1) dialectical knowledge\footnote{From dialectical in the sense of `dialogue': an abstract characterization of a type of knowledge (e.g. of the usual, waking world) that is defined in relation to more than one mind (e.g. in particular, other minds in addition to just that of the subject).}; the conventional ``empirical'' kind, derived from the conventional senses in the waking world and amenable to dialectical method, (2) dream knowledge; derived in dreams, and (3) aryagyanic knowledge; derived via intuitive, meditative apprehension. In line with Kant's broad conception of the a priori realm, we consider this realm to represent that in which all other types of knowledge may be related and synthesized. This conception is depicted in Fig.~\ref{fig:typesofknowledge}.
+In addition to the two categories of knowledge identified earlier, we may consider a third: knowledge derived via meditative insight. Buddhists appear to have referred to such knowledge as \emph{\={a}rya gy\={a}na}\cite{lankavatara}, meaning ``noble knowledge'' (often translated as ``Noble Wisdom'')\footnote{It is actually \emph{\={a}rya j\~{n}\={a}na}. We use the derivative ``gy'' found in modern Indic languages in place of ``j\~{n}'' as it is easier to pronounce.}. Additionally, consistent with this characterization, the Upanishads enumerate four ``states of consciousness'': (1) \emph{jagrat}, or waking, (2) \emph{svapna}, or dream, (3) \emph{sushupti}, or deep (dreamless) sleep, and (4) \emph{turiya}, literally the ``fourth'' state\cite{mandukya}.
+
+To achieve a similar level of comprehensiveness, and relating these to the Western classification identified earlier, we propose to do away with the category of `a priori' knowledge, not so much because such knowledge may be taken to derive from experience, but rather on the grounds that such knowledge that we consider a priori is still \emph{experienced} by us. There is nevertheless a dichotomy here that is the source of the original binary classification, which we will identify and address in another way. Thus we sustain the category of empirical knowledge and maintain that all knowledge is empirical by virtue of being experienced in our being. We subdivide this category (which we may now do away with entirely as there is no longer a complementary category) into four types: (1) dialectical knowledge\footnote{From dialectical in the sense of `dialogue': an abstract characterization of a type of knowledge (e.g. of the usual, waking world) that is defined in relation to more than one mind (e.g. in particular, other minds in addition to just that of the subject).}; the conventional ``empirical'' kind, experienced via the conventional senses in the waking world and amenable to dialectical method, (2) dream knowledge; experienced in dreams, (3) transcendent knowledge; knowledge that is predialectical and yet effable dialectically, taken to correspond to common experience even if not shared experience (e.g. thoughts, feelings), and (4) aryagyanic knowledge; derived via intuitive, meditative apprehension. This conception is depicted in Fig.~\ref{fig:typesofknowledge}, and will be given a concrete foundation when we develop the framework of epistemic levels in the following section.
 
 \begin{figure}[htp]
 	\centering
@@ -660,15 +665,13 @@ In addition to the two categories of knowledge identified earlier, we may consid
 			\SetVertexNoLabel
 			\Vertex[x=0,y=0,LabelOut=true]{Q}
 		}
-		{
-			\tikzset{VertexStyle/.append style = {shape=circle,style=densely dashed,minimum size=2.6cm,inner sep=0pt}}
-			\Vertex[x=0,y=0,L=\large \textsf{a priori}]{Q'}
-		}
-		\draw (0,1.3) -- (0,3.8);
-		\draw (1.126,-0.65) -- (3.291,-1.9);
-		\draw (-1.126,-0.65) -- (-3.291,-1.9);
-		\node at (2,1.5) {\large \textsf{dialectical}};
-		\node at (-2.2,1.2) {\large \textsf{dream}};
+		\draw (0,0) -- (2.687,2.687);
+		\draw (0,0) -- (2.687,-2.687);
+		\draw (0,0) -- (-2.687,2.687);
+		\draw (0,0) -- (-2.687,-2.687);
+		\node at (0,2.35) {\large \textsf{dialectical}};
+		\node at (-2.2,0) {\large \textsf{dream}};
+		\node at (2.1,0) {\large \textsf{transcendent}};
 		\node at (0,-2.35) {\large \textsf{aryagyanic}};
 		%\node at (-1.7,-0.1) {\large \textsf{em-}};
 		%\node at (-0.2,1.5) {\large \textsf{pi-}};
@@ -678,62 +681,783 @@ In addition to the two categories of knowledge identified earlier, we may consid
 	\caption{\label{fig:typesofknowledge}Types of Knowledge}
 \end{figure}
 
-The ``Consciousness First'' viewpoint was developed over a fruitful period of over a thousand years into what may be considered to be its logical conclusion: that it is not simply that consciousness has precedence over substance, but indeed that there is nothing else besides consciousness. This position is found in the \emph{citta-matra} (Consciousness-only or Mind-only) doctrine of Yogacara buddhism, and also in the conception of \emph{Brahman} in Advaita Vedanta as the Ultimate element -- \emph{sat-cit-ananda} (`existence-consciousness-bliss') -- that suffuses all reality\cite{waite}. Without commenting on the nuances of the doctrines of brahman or citta-matra, we assert that this general view -- ``Consciousness Only'' -- is the one we are inclined to adopt. That is to say, we take the position that \emph{consciousness is the ``stuff'' of nature and reality, and identity architecture either partially or completely accounts for its structure}\footnote{While ``consciousness'' is a useful descriptor to express this general idea of a ``medium'' within which we experience reality or the ``ground'' of reality, the definitional foundation in epistemic priority (developed in the following section) does not necessitate an independent conception of consciousness as such.}
+The ``Consciousness First'' viewpoint was developed over a fruitful and uninterrupted period of over a thousand years\footnote{And a further thousand years culminating in Zen and Tibetan Buddhism, making the Shramanic-Theravada-Mahayana-Ch\'{a}n-Zen/Tibetan Buddhist line possibly the longest uninterrupted philosophical tradition in recorded history.} into what may be considered to be its logical conclusion: that it is not simply that consciousness has precedence over substance, but indeed that there is nothing else besides consciousness. This position is found in the \emph{citta-matra} (Consciousness-only or Mind-only) doctrine of Yogacara buddhism, and also in the conception of \emph{Brahman} in Advaita Vedanta as the Ultimate element -- \emph{sat-cit-ananda} (`existence-consciousness-bliss') -- that suffuses all reality\cite{waite}. Without commenting on the nuances of the doctrines of brahman or citta-matra, we assert that this general view -- ``Consciousness Only'' -- is the one we are inclined to adopt. That is to say, we take the position that \emph{consciousness is the ``stuff'' of nature and reality, and identity architecture either partially or completely accounts for its structure}\footnote{While ``consciousness'' is a useful descriptor to express this general idea of a ``medium'' within which we experience reality or the ``ground'' of reality, the definitional foundation in epistemic priority (developed in the following section) does not necessitate an independent conception of consciousness as such.}
 
 Such ideas, while ostensibly philosophical, are also submitted as applying to the reality that is accessible to empirical investigation (in the broadened sense of empirical proposed above). Still, pushing as they do the boundaries of what is considered to be science, we feel it imperative to examine the foundations of what we consider to be knowledge and the standards by which different types of knowledge may be assessed. In doing so, we will examine what it means to know something, to what extent it can be asserted that something is known, and what sorts of questions are well-posed in an epistemic sense. Before we continue, we introduce a notion from buddhist philosophy known as \emph{ida\d{m}pratyayat\={a}} (translated as ``this/that conditionality''\footnote{This principle has such staggering applicability that a good English name for it might be ``Buddha's hammer,'' since in relation to it, ``every problem is a nail.''}). This notion entails the position that it is impossible to define anything in a vacuum; things are only defined in relation to something else. It is an abstract principle of relativity\footnote{Note that if we apply idampratyayata to the position that ``consciousness is the only reality,'' we must concede that consciousness is not well-defined except in relation to some complementary reality, and so an independently existing ``consciousness'' cannot be said to exist as such. This appears roughly to be the \emph{\.{s}\={u}nyat\={a}} (``emptiness'') position of Madhyamaka buddhism.}. For example, ``something'' and ``nothing'' are only definable in mutual reference to each other, and not independently\footnote{Additionally, it may be seen that ``nothing'' is simply an anonymous identity in relation to a given set of identities, that is to say a set of ``somethings,'' and is thus not conceived in an absolute sense.}.
 
-\subsection{Epistemic Priority} \label{sec:epipri}
+\subsection{Epistemic Levels and Priority} \label{sec:epipri}
 
-The notion of `truth' is subtle, and manifests differently in the a priori and dialectical realms. In the former, it has the character of being mathematical in nature, axiomatically founded, and logically proved. That is, propositions are demonstrated as true by way of logical inference from propositions that have already been demonstrated as true using the same mechanism. At the foundation we are forced to admit axioms -- propositions that are \emph{defined} to be true and are not provable. Without loss of abstraction, we could take these foundations of a priori truth to be the axioms of set theory together with axioms for logical inference. The most commonly adopted set-theoretic axioms are the ten Zermelo-Fraenkel-Skolem axioms including the Axiom of Choice, collectively known as the ZFC axioms. Set theory is built up from these ten axioms, and with additional axioms, higher structures are introduced such as groups, fields, topologies, and so on. All of these mathematical structures and their properties are `true' by virtue of logical consistency with the axioms.
+The notion of `truth' is subtle, and traditionally manifests differently when conceived in relation to the ``a priori'' and ``empirical'' realms. In the former, it has the character of being mathematical in nature, axiomatically founded, and logically proved. That is, propositions are demonstrated as true by way of logical inference from propositions that have already been demonstrated as true using the same mechanism. At the foundation we are forced to admit axioms -- propositions that are \emph{defined} to be true and are not provable. Without loss of abstraction, we could take these foundations of a priori truth to be the axioms of set theory together with axioms for logical inference. The most commonly adopted set-theoretic axioms are the ten Zermelo-Fraenkel-Skolem axioms including the Axiom of Choice, collectively known as the ZFC axioms. Set theory is built up from these ten axioms, and with additional axioms, higher structures are introduced such as groups, fields, topologies, and so on. All of these mathematical structures and their properties are `true' by virtue of logical consistency with the axioms.
 
-In the dialectical realm, truth applies not to propositions themselves (which are constructed in the a priori realm and are therefore subject to the notion of truth in that realm) but to the \emph{correspondence} between a priori true models and the things they purport to model. Kant in his conception of ``noumena'' -- things as they are in themselves, prior to perception and categories of human understanding -- suggested that the noumena are in some sense forever outside our understanding: to the extent that they exist independently of our perception, nothing can be said about them that does not involve our (relational) understanding of them. This is a subtle idea with many interpretations. In one interpretation, the notion appears to describe something that exists without relation to anything else, which, by admitting idampratyayata, is not a well-defined conception. But noumenon is also interpreted in a different sense, as a \emph{limiting} conception which is the basis for the perceived entity. As Kant says, ``though we cannot know these objects as things in themselves, we must yet be in a position at least to think them as things in themselves; otherwise we should be landed in the absurd conclusion that there can be appearance without anything that appears.''\cite{kant} This is a key idea in relation to the dialectical world, that while our knowledge of noumena may be taken to increase to any arbitrary extent, there is no basis for the assertion that our a priori models are \emph{true} about them. We may say that dialectical truth is \emph{noumenal} in this sense. This noumenal undecidability may be seen, for example, in the inability of ``induction by enumeration'' to establish that, just because a correspondence between a model and a phenomenon has been observed to hold in $N$ instances, that it must necessarily hold on the $N+1$th instance\cite{russell}. On the other hand, it can be argued that we may conclude from a single instance of failure that the correspondence is false. Thus we may only determine whether our a priori models are \emph{false} or \emph{undecidable} (i.e. not yet shown to be false) in their correspondence with noumena\footnote{Although, the observation that a correspondence is false itself constitutes a dialectical assertion, and thus seemingly subject to the same undecidability as the original noumenal correspondence under consideration. This ``Hofstadter loop'' in scientific method is no doubt of importance and ought to be further specified in future work. Also along these lines, as intimated earlier it is likely that the mind should be treated as a context provided by the Axiom of Worlds, and in particular, the `world' (considered as a whole) exists as an identity, i.e. a thought, in the mind. It would then seem to be the case that noumenal undecidability of the dialectical world follows from mind/world undecidability with the world being treated as a mind in the mind.}. In the latter case, the truth of the correspondence may be adopted as an \emph{axiom}. This may be seen as justification for Popper's\cite{popper} falsifiability as an essential requirement in (dialectical) scientific investigation, that due to the noumenal nature of truth in the dialectical realm, \emph{dialectical} theories that are not falsifiable are forever outside our already constrained powers to evaluate.
+In the ``empirical'' realm, truth applies not to propositions themselves (which are constructed in the a priori realm and are therefore subject to the notion of truth in that realm) but to the \emph{correspondence} between a priori true models and the things they purport to model. Kant in his conception of ``noumena'' -- things as they are in themselves, prior to perception and categories of human understanding -- suggested that the noumena are in some sense forever outside our understanding: to the extent that they exist independently of our perception, nothing can be said about them that does not involve our (relational) understanding of them. This is a subtle idea with many interpretations. If we take the notion to describe something that exists inherently ``out there'' without relation to anything else, then, by admitting idampratyayata, it is not a well-defined conception. Alternatively it may be interpreted in a \emph{limiting} sense as the basis for the perceived entity. As Kant says, ``though we cannot know these objects as things in themselves, we must yet be in a position at least to think them as things in themselves; otherwise we should be landed in the absurd conclusion that there can be appearance without anything that appears.''\cite{kant} This is a key idea in relation to the dialectical world, that while our characterization of noumena may develop to arbitrary sophistication (which, somewhat ironically, takes us ever further from the noumena, as will be seen), there is at no point a basis for the assertion that our a priori models are \emph{true} about them. We may say that dialectical truth is \emph{noumenal} in this sense.
 
-In any case, our a priori edifice of truth is a key structure in founding truth and knowledge, to whatever extent these may be conceived. How the axioms upon which it is founded are chosen is therefore an important point. At present the axioms are conventional in nature, conforming to common sense and intuition, and largely possessing a self-evident quality that makes them unobjectionable. Still, in the event a contradiction were ever discovered, what would be the criteria on which to judge which axioms to keep? There are none. We may say that all of the axioms have roughly the same ``epistemic priority,'' that is, they are equals in their role as constituting the foundation of mathematics, and more generally, of a priori truth. Perhaps as an alternative to this, our epistemic foundations may be laid a different way such that, in a Cartesian sense, different priorities may be assigned to axioms as having greater or lesser certainty than others. We sketch one such possible axiomatic basis below. Note that by their very nature these axioms must take the form of ``affirmations.'' Note also that the axioms are not independent but are, rather, roughly cumulative. The numbers alongside correspond to their apparent priority.
+This noumenal undecidability may be seen, for example, in the inability of ``induction by enumeration'' to establish that, just because a correspondence between a model and a phenomenon has been observed to hold in $N$ instances, that it must necessarily hold on the $N+1$th instance\cite{russell}. On the other hand, neither can we conclude from an instance of failure that the correspondence is \emph{false}, as such an assertion of falseness would be subject to the same undecidability as the original noumenal correspondence under consideration\footnote{A precise characterization of the nature of phenomena, models, and experiment in terms of epistemic levels is left for future work. There is a ``Hofstader loop'' entailed here, with a self-reference required for characterization of phenomena, then another for characterization of the experiments, and then another for characterization of that, and so on, which should account for any inherent undecidability properties. There also appears to be a qualitative difference between ``false'' results and ``true'' results (which no doubt gave rise to the ``falsification'' paradigm of Popper\cite{popper}) which may arise from such a specification.}. Thus from a logical perspective the correspondence of ``a priori'' models to ``empirical'' perceptions is \emph{undecidable}, and the most that we can hope for is a structural relationship in the form of an adjunction. Such layered structural relationships form the basis of knowledge, a basis which, as will be developed below, treats ``a priori'' and ``empirical'' in a generalized way as pertaining to any pair of contexts existing in such a relationship.
+
+But we are getting ahead of ourselves, and in the present state of affairs the idealized a priori edifice of truth is a key structure in founding truth and knowledge to whatever extent these may be conceived. We may therefore inquire of this state of affairs how the axioms upon which it is founded are selected. At present we find that the axioms are conventional in nature, conforming to common sense and intuition, and largely possessing a self-evident quality that makes them unobjectionable. Still, in the event a contradiction were ever discovered, what would be the criteria on which to judge which axioms to keep? There are none. We may say that all of the axioms have roughly the same ``epistemic priority,''\footnote{This section was formerly called ``Epistemic Priority,'' but suffered from terminological awkwardness deriving from the discrepancy between the linguistic sense of ``higher'' priority and the mathematical sense of numerical magnitude being higher. In private conversation, Balkrishna Shetty in passing suggested using ``levels'' rather than ``priorities.'' This allows us to speak uniformly of higher or lower levels, eliminating the linguistic awkwardness. This was not the reason for his suggestion, however, which was rather that a treatment as levels potentially allows a metamathematical treatment, e.g. in terms of inclusion of higher epistemic levels within lower levels conceived as sets. The content is in the process of being translated to use this new terminology, and vestiges may yet remain, while the metamathematical program has largely been begun in the ``strange loop'' conception of such epistemic levels.} that is, they are equals in their role as constituting the foundation of mathematics, and more generally, of a priori truth.
+
+Perhaps as an alternative to this, our epistemic foundations may be laid a different way such that, in a Cartesian sense, different priorities may be assigned to axioms as having greater or lesser certainty than others. We sketch one such possible basis below. While these are similar to axioms in the usual sense in that they provide mathematical primitives and relations, there is a suggestion here that, as the characterizations apply to conscious reality taken as a unified whole without qualitative division between a priori and empirical (\autoref{sec:catkno}), and further since they are based on readily experiencable, elemental features of this reality (some of which would be considered `a priori' in the traditional characterization and yet are treated in `empirical' terms here), the proposed foundation is not axiomatic in the usual sense -- of being ``idealized'' and separate from, incidentally applicable to, the empirical world -- but has a direct epistemic basis. In this sense, the extent to which this foundation is reducible to conventional mathematical foundations should give us the precise measure of ``the unreasonable effectiveness of mathematics in the natural sciences.''\cite{wigner}
+
+Note that by their very nature these axioms must take the form of ``affirmations.'' Note also that the axioms are not independent but cumulative -- each level in the sequence contains all constructions discerned up to that point. The numbers alongside the axioms correspond to their apparent priority.
 
 \begin{enumerate}[label={[\textbf{\arabic*}]},start=0]
-	\item The ineffable. (\emph{Tao} / \emph{Tathat\={a}}\footnote{Tathat\={a} is the buddhist notion translated as ``suchness'' or ``reality as it is,'' and appears to be the notion we are reaching for. The relationship to noumena seems to be that while the latter's conception presupposes a subject in a world of things in themselves, the former presupposes nothing, preceding the categories of subject and object. Since this notion is ``pre-intellectual'' it is unspeakable and cannot be described without reduction in epistemic priority. Thus the tantalizing possibility presents itself that this is the very notion referred to as ``the Tao'' by Lao-Tzu\cite{taoteching}. This latter notion is notorious for being vague, but the present exegesis would explain why it could not be anything other than vague in description, while at the same time being rather precise in its conception. It would indeed be the case, for instance, that ``the Tao that can be told is not the eternal Tao'' -- due to the reduction in priority. The etymological similarity of `Tao' to the Sanskrit \emph{tat} is also suggestive of the possibility of equivalence. In this connection, Pirsig\cite{pirsig} also identifies Tao as a pre-intellectual notion, although he suggests an identification with his conception of ``Quality.''})
-	\item Differentiation / Relational existence / Relativity. (\emph{Ida\d{m}pratyayat\={a}}\footnote{The Jain anekantavada (``iridescence'' / context-dependence) seems to either share this epistemic level, or is at another level precedent to subject and object. It is likely that the ``radically general'' principles discussed elsewhere in the present work occupy these foundational levels.})
+	\item The ineffable. (\emph{Tao} / \emph{Tathat\={a}})
+
+		Tathat\={a} is the buddhist notion translated as ``suchness'' or ``reality as it is,'' and appears to be the notion we are reaching for. The relationship to noumena seems to be that while the latter's conception presupposes a subject in a world of things in themselves, the former presupposes nothing, preceding the categories of subject and object. Since this notion is ``pre-intellectual'' it is unspeakable and cannot be described without reduction in epistemic priority. Thus we propose that this is the very notion referred to as ``the Tao'' by Lao-Tzu\cite{taoteching}. This latter notion is notorious for being vague, but the present exegesis would explain why it could not be anything other than vague in description, while at the same time being rather precise in its conception. It would indeed be the case, for instance, that ``the Tao that can be told is not the eternal Tao'' -- due to the reduction in priority. The etymological similarity of `Tao' to the Sanskrit \emph{tat} is also suggestive of the possibility of equivalence\footnote{In this connection, Pirsig\cite{pirsig} also identifies Tao as a pre-intellectual notion, although he suggests an identification with his conception of ``Quality.''}.
+
+	\item Awareness of awareness \ldots (\emph{Axiom Schema of Self / Strange Loop})
+
+		\begin{figure}[htp]
+			\centering
+			\begin{tikzpicture}[scale=0.35,transform shape]
+				\GraphInit[vstyle=Normal]
+				\SetVertexNoLabel
+				{
+					\tikzset{VertexStyle/.style = {draw=black,dashed,shape=circle,minimum size=7.6cm,inner sep=0pt}}
+					\Vertex[x=0,y=0,LabelOut=true]{Q}
+					\tikzset{VertexStyle/.style = {draw=black,dashed,shape=circle,minimum size=2.903cm,inner sep=0pt}}
+					\Vertex[x=0,y=-1.451,LabelOut=true]{R}
+					\tikzset{VertexStyle/.style = {draw=black,dashed,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.006,LabelOut=true]{S}
+					\tikzset{VertexStyle/.style = {draw=black,dashed,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.218,LabelOut=true]{T}
+					\tikzset{VertexStyle/.style = {draw=black,dashed,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.299,LabelOut=true]{U}
+				}
+			\end{tikzpicture}
+			\caption{\label{fig:epipri1}Priority 1}
+		\end{figure}
+
+		This is Hofstadter's\cite{geb} strange loop, which turns out to be foundational in characterizing reality, as will be seen in the role it plays in these epistemic axioms. Neither subject nor object nor anything existent is available at this level; it is an elemental self-referential principle\footnote{Passages like Brihadaranyaka Upanishad 1.4.1 and the mysterious utterance in Exodus 3:14 KJV seem to suggest that ancient spiritual traditions (or perhaps a single ancestral tradition) were in some way aware of the foundational status of self-reference.}.
+
 	\item \begin{enumerate}
-			\item I am / I am aware / I am conscious. (\emph{Axiom of Context/Subject}\footnote{In light of the fact that the `subject' is what identities, as objects, are defined in relation to (see following axiom), we identify subject with identity context at this stage. It does appear true that identities are only defined in relation to a subject, and conceiving the subject as an identity context provides a surprising but satisfying model for this foundational element of being. Further down in the hierarchy the notions of `world' and `mind' arise. Although these both correspond to identity contexts, they are seen to be nested within this original subjective context. That is, mind and world arise as a ``cleaving'' of the subject (context) into two contexts which, as developed in \autoref{sec:matmod}, exist in an adjunctive relationship.})
-			\item I am aware of something / of identities. (\emph{Axiom of Identity/Object}\footnote{Subject and object co-arise in mutual relationship to one another via idampratyayata, and thus share the same epistemic priority.})
+			\item I am / I am aware / I am conscious. (\emph{Axiom of Context/Subject/Brahman})
+			\item I am aware of something / of objects. (\emph{Axiom of Object})
+			\item Differentiation / Relational existence / Relativity. (\emph{Ida\d{m}pratyayat\={a}})
 		\end{enumerate}
+
+		\begin{figure}[htp]
+			\centering
+			\begin{tikzpicture}[scale=0.35,transform shape]
+				\GraphInit[vstyle=Normal]
+				\SetVertexNoLabel
+				{
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=7.6cm,inner sep=0pt}}
+					\Vertex[x=0,y=0,LabelOut=true]{Q}
+					\tikzset{VertexStyle/.style = {draw=black,dashed,shape=circle,minimum size=2.903cm,inner sep=0pt}}
+					\Vertex[x=0,y=-1.451,LabelOut=true]{R}
+					\tikzset{VertexStyle/.style = {draw=black,dashed,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.006,LabelOut=true]{S}
+					\tikzset{VertexStyle/.style = {draw=black,dashed,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.218,LabelOut=true]{T}
+					\tikzset{VertexStyle/.style = {draw=black,dashed,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.299,LabelOut=true]{U}
+				}
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.4cm,inner sep=0pt}}
+				\Vertex[x=-2.6,y=-0.1]{A}
+				\Vertex[x=0.2,y=3]{B}
+				\Vertex[x=2.8,y=-0.4]{C}
+				\Vertex[x=-1.2,y=1.9]{F}
+			\end{tikzpicture}
+			\caption{\label{fig:epipri2}Priority 2}
+		\end{figure}
+
+		Subject and object arise via self-reference in Tao. They arise in mutual contrast with one another and thus share the same priority. In light of the fact that the `subject' is what identities, as objects, are defined in relation to, we identify subject with identity context at this stage\footnote{Although, it appears that we may not yet identify object with identity at this stage, as identity is not merely an object (entailing an action) but also includes an associated context as the mind, which we do not yet possess the epistemic equipment to define. Thus it may be that what we are admitting at this level is the \emph{magma} of abstract algebra (see \hyperref[app:algact]{appendix}), which we refer to simply as ``object'' since, per idampratyayata, an object without an action is undefined. For consistent interpretation of terminology, we will say that ``identity'' is, as defined in \autoref{sec:matmod}, an object (entailing an action) together with a mind and an associated adjunction. However, as an identity always has an associated object, we freely employ the richer term ``identity'' in places throughout this work where it may suffice to talk in terms of ``objects.'' The latter is actually favored by the formulation of ``Occam's Razor'' presented later in this section, as ``object with a mind in isomorphism with the world'' occurs at a higher epistemic level than ``object,'' though such an identity and ``object'' are essentially equivalent at the higher level. The terminology will be more satisfactorily resolved in a future revision.}. It does appear true that identities are only defined in relation to a subject, and conceiving the subject as an identity context provides a surprising but satisfying model for this foundational element of being\footnote{Further down in the hierarchy the notions of `world' and `mind' arise. Although these both correspond to identity contexts, they are seen to be nested within this original subjective context. That is, mind and world arise as a ``cleaving'' of the subject (context) into two contexts which, as developed in \autoref{sec:matmod}, exist in an adjunctive relationship.}.
+
+		It is tough to say whether relativity (\emph{idampratyayata}) should precede self-reference or the other way around. In favor of relativism, it is only by the differentiation of the ineffable ground that anything may be discerned and become effable, and therefore even the notion of self-reference as an effable quality of reality must be predicated on its relational definability. On the other hand in favor of self-reference, the capacity to \emph{characterize} something presupposes the capacity to \emph{regard} it, i.e. a self-reference in reality is required before any properties such as, arguably, relativism, may be discerned. For now, we place the self-reference/strange loop principle first, on the grounds that it does not entail a \emph{definition} of anything, but rather gives us a framework within which definitions may be constructed. In particular, we may take something to be \emph{defined} when it is conceived as an identity in relation to a context, which, in the case of the strange loop axiom, is arguably not the case since identity and context emerge with subject and object, which now serve as the substantive basis for the principle of \emph{ida\d{m}pratyayat\={a}}.
+
+		Context is that which identities are defined in relation to; but identities only have properties and are differentiated in relation to an identity that is anonymous in relation to them. Thus context \emph{is} an anonymous identity, and more specifically a brahman. It is remarkable that we've ended up here, as this is the core doctrine at the heart of Advaita philosophy, that Brahman -- `the' \emph{nirgu\d{n}a} (property-less) Brahman -- is the ground of all there is and which is non-different from us. The primordial brahman entailed in the present axiom does appear to be the final (or rather the initial) effable brahman and is in that sense ultimate in relation to us.
+
+		At the same time, this principle in its formal conception as specified in \autoref{sec:anoide} is not independently defined without reference to the non-anonymous identities that are apparent in relation to it, or without reference to another brahman in relation to which it is non-anonymous (a conception which is undefined in relation to us in the present case, see ``Parable of the Fish'' in \autoref{sec:natanoide}). Thus, subject and object \emph{co-arise} in mutual reference to one another. As far as we can tell, it is debate on this specific conception that lies at the heart of the Buddhism/Vedanta split, possibly further compounded by the subtle distinction between ``self'' in the sense of a personified ``subject,'' of impersonal ``self-reference,'' and ineffable ``tat.'' In any event, the substance of the present axiom may be summed up as \emph{context = subject = brahman}.
+
 	\item \begin{enumerate}
-			\item I am aware that I am aware \ldots (\emph{Axiom Schema of Self})
 			\item I am aware of relationships that exist between identities. (\emph{Axiom of Relation})
+			\item I am aware of epistemic levels. (\emph{Axiom of Infinity/Epistemic Level})
 		\end{enumerate}
+
+		\begin{figure}[htp]
+			\centering
+			\begin{tikzpicture}[scale=0.35,transform shape]
+				\GraphInit[vstyle=Normal]
+				\SetVertexNoLabel
+				{
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=7.6cm,inner sep=0pt}}
+					\Vertex[x=0,y=0,LabelOut=true]{Q}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=2.903cm,inner sep=0pt}}
+					\Vertex[x=0,y=-1.451,LabelOut=true]{R}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.006,LabelOut=true]{S}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.218,LabelOut=true]{T}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.299,LabelOut=true]{U}
+				}
+				{
+					% 2nd loop
+					{
+						% epistemic levels
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=2.903cm,inner sep=0pt}}
+						\Vertex[x=4.105,y=4.105,LabelOut=true]{Q'}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+						\Vertex[x=4.105,y=3.550,LabelOut=true]{R'}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+						\Vertex[x=4.105,y=3.338,LabelOut=true]{S'}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+						\Vertex[x=4.105,y=3.257,LabelOut=true]{T'}
+						\draw[rotate around={90:(4.105,4.105)}, line width=0.5pt] (5.105,4.105) ellipse (0.12cm and 0.30cm);
+						\draw[rotate around={90:(3.505,3.905)}, line width=0.5pt] (4.505,3.905) ellipse (0.12cm and 0.30cm);
+						\draw[rotate around={90:(4.305,3.605)}, line width=0.5pt] (5.305,3.605) ellipse (0.12cm and 0.30cm);
+					}
+					{
+						% epistemic towers
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+						\Vertex[x=5.674,y=5.674,LabelOut=true]{Q''}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+						\Vertex[x=5.674,y=5.462,LabelOut=true]{R''}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+						\Vertex[x=5.674,y=5.381,LabelOut=true]{S''}
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.774,5.874) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.824,5.874) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.874,5.874) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.924,5.874) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.974,5.874) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (6.024,5.874) ellipse (0.0458cm and 0.1146cm);
+						\draw[line width=0.1pt] (5.3594,5.774) -- (5.3594,6.024);
+						\draw[line width=0.1pt] (5.5886,5.774) -- (5.5886,6.024);
+						\draw[line width=0.1pt] (5.6594,5.824) -- (5.6594,6.074);
+						\draw[line width=0.1pt] (5.8886,5.824) -- (5.8886,6.074);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.824,5.574) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.874,5.574) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.924,5.574) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.974,5.574) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (6.024,5.574) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (6.074,5.574) ellipse (0.0458cm and 0.1146cm);
+						%\draw (6,-0.097) -- (6,1.903);
+						%\draw (7,-0.097) -- (7,1.903);
+
+						% epistemic tower
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (7.5,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (7.3,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (7.1,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (6.9,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (6.7,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (6.5,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (6.3,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (6.1,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (5.9,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (5.7,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (5.5,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw (6,-0.097) -- (6,1.903);
+						%\draw (7,-0.097) -- (7,1.903);
+					}
+					{
+						% complexes and beyond
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+						\Vertex[x=6.273,y=6.273,LabelOut=true]{R'''}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+						\Vertex[x=6.273,y=6.192,LabelOut=true]{S'''}
+					}
+					{
+						% beyond
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+						\Vertex[x=6.502,y=6.502,LabelOut=true]{S''''}
+					}
+				}
+
+				% outer context
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.7cm,inner sep=0pt}}
+				\Vertex[x=-6.807,y=-0.262]{A'}
+				\Vertex[x=0.524,y=7.854]{B'}
+				\Vertex[x=7.330,y=-1.047]{C'}
+				\Vertex[x=-3.142,y=4.974]{F'}
+				% inner context
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.4cm,inner sep=0pt}}
+				\Vertex[x=-2.6,y=-0.1]{A}
+				\Vertex[x=0.2,y=3]{B}
+				\Vertex[x=2.8,y=-0.4]{C}
+				\Vertex[x=-1.2,y=1.9]{F}
+				\tikzstyle{EdgeStyle}=[densely dashed, line width=0.5pt]
+				\Edge[](F)(B)
+				\Edge[](F)(C)
+				\Edge[](F)(A)
+			\end{tikzpicture}
+			\caption{\label{fig:epipri3}Priority 3}
+		\end{figure}
+
+		`Relation' (itself) is the brahman in the context of all specific relations and thus co-arises with these discernible relations at this level.
+
+		The empirical fact that we are able to regard an epistemic level as an entity in its own right gives us the \emph{Axiom of Infinity}. The fact that this yields an `infinite' identity has not been substantiated at this stage -- it's likely that even though levels become available to us as identities here, that we still are unaware that there is anything infinite involved. The realization that levels contain an infinite number of identities will probably emerge higher up in the hierarchy and we leave it for future development\footnote{It will probably be related to existing axiomatic foundations of numbers such as Peano's Axioms or Von Neumann ordinals. At the level where it is established, we would take it from then on that each level includes the infinity of all possible constructions in relation to the brahman of that level.}.
+
+		As the subject is an identity context, and as it is a ``self'' arising via the self-referential principle, we admit:
+
+		\begin{proposition}[Self is a Context]
+			A self is an identity context.
+		\end{proposition}
+
+		The new context of epistemic levels as identities does not exist in the existing self-reference sequence. This can be roughly seen in that, as `level' itself is the brahman in relation to instances of levels, a level $L_{1}$ containing a level $L_{2}$ as an identity defined in relation to it \emph{as a level} would mean that `level' is non-anonymous in $L_{1}$ and therefore not the brahman, a contradiction. Thus, the new context exists along an ``orthogonal dimension'' to the original sequence of contexts.
+
+		As this new dimension is now available to us, we consider that the primordial self-referential principle applies along it, so that this single axiom can be taken to yield another infinite self-referential sequence -- a strange loop orthogonal to the original one. Thus, in addition to the parallel axis of `levels' instead of (elemental) `identities', we also have an infinite number of other parallel axes including `towers' of levels (which would include, for instance, the entire original tower as an identity\footnote{Any tower in such a context of epistemic towers would only be effable up to the present level reached along the original axis.}), `complexes' of towers\footnote{Epistemic complexes appear to provide the epistemic basis for the notion of `hive identity'.}, and so on. This process could be generalized (i.e. along further orthogonal `dimensions', such as one that regards the ``lateral'' sequence we have just constructed) to yield epistemic constructions corresponding to higher-order infinities and inaccessible cardinals in a way analogous to Grothendieck Universes in set theory, which we leave for future work. In all such development, careful attention should be paid to the manner in which ``priority'' may be assigned to the constructions. We point out that in this scheme, the resulting ``universe'' of mathematics is specified in relation to an epistemic, empirical basis that is directly accessible to the practitioner, and derived results and conclusions can be taken to apply to actual (perhaps aryagyanic) elements of conscious reality. Additionally, as each construction entails a priority, a mathematical universe of a given richness also has an assigned priority. This resolves existing issues with set theoretic foundations wherein utilitarian and aesthetic considerations are all we may resort to to assess validity and admissibility.
+
+		From this point on, the very fact of our becoming aware of the constructions of each epistemic level can be seen to give rise to the \emph{next} orthogonal strange loop.
+
+		A pair of contexts on a strange loop that exist at levels $N$ and $N + 1$ may be said to encapsulate a relationship that is roughly the ``model'' of the modern philosophical / scientific outlook. Specifically, the objects in the two contexts exist in a noumena-phenomena relationship, with the latter also corresponding to a priori knowledge and the former corresponding to the ``external'' world that is taken to be the source of empirical knowledge. Studying this relationship with an understanding of this correspondence could shed light on questions of broad interest that have already been identified in these terms, such as the nature and constraints of scientific method.
+
 	\item \begin {enumerate}
-			\item I am aware that there is the genesis of identities. (\emph{Axiom of Genesis})
-			\item I am aware that there is the cessation of identities. (\emph{Axiom of Cessation})
-			\item I am aware that identities can be grouped into classes based on identities (``properties'') that manifest in them (\emph{Axiom of Universals/Equivalence})
-			\item I am aware that identities are partially orderable in terms of relationships that exist between them (\emph{Axiom of Order})
+			\item I am aware that relations can be categorized into various types. (\emph{Axiom of Relation Types})
+			\item I am aware that identities can be grouped into classes based on identities (``properties'') that manifest in them (\emph{Universals/Equivalence})
+			\item I am aware that identities are partially orderable in terms of relationships that exist between them (\emph{Order})
+			\item I am aware of a relationship between successive epistemic levels (\emph{Mind/World Adjunction})
+			\item I am aware that I am aware of epistemic levels, towers, complexes \ldots (\emph{Strange loop 3})
 		\end{enumerate}
+
+		\begin{figure}[htp]
+			\centering
+			\begin{tikzpicture}[scale=0.35,transform shape]
+				\GraphInit[vstyle=Normal]
+				\SetVertexNoLabel
+				{
+					\tikzset{VertexStyle/.style = {draw=black,line width=0.01pt,shape=circle,minimum size=7.6cm,inner sep=0pt}}
+					\Vertex[x=0,y=0,LabelOut=true]{Q}
+					\tikzset{VertexStyle/.style = {draw=black,line width=0.01pt,shape=circle,minimum size=2.903cm,inner sep=0pt}}
+					\Vertex[x=0,y=-1.451,LabelOut=true]{R}
+					\tikzset{VertexStyle/.style = {draw=black,line width=0.01pt,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.006,LabelOut=true]{S}
+					\tikzset{VertexStyle/.style = {draw=black,line width=0.01pt,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.218,LabelOut=true]{T}
+					\tikzset{VertexStyle/.style = {draw=black,line width=0.01pt,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.299,LabelOut=true]{U}
+				}
+				% outer context
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.7cm,inner sep=0pt}}
+				\Vertex[x=-6.807,y=-0.262]{A'}
+				\Vertex[x=0.524,y=7.854]{B'}
+				\Vertex[x=7.330,y=-1.047]{C'}
+				\Vertex[x=-3.142,y=4.974]{F'}
+				\tikzstyle{EdgeStyle}=[dotted, line width=0.1pt]
+				\Edge[](F')(B')
+				\Edge[](F')(C')
+				\Edge[](F')(A')
+				% inner context
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.4cm,inner sep=0pt}}
+				\Vertex[x=-2.6,y=-0.1]{A}
+				\Vertex[x=0.2,y=3]{B}
+				\Vertex[x=2.8,y=-0.4]{C}
+				\Vertex[x=-1.2,y=1.9]{F}
+				\tikzstyle{EdgeStyle}=[post, line width=0.5pt]
+				\Edge[](F)(B)
+				\Edge[](F)(C)
+				\draw[rotate around={145:(-1.9,0.9)}, densely dashed, line width=0.5pt] (-1.9,0.9) ellipse (0.49cm and 1.750cm);
+				{
+					% 2nd loop
+					{
+						% epistemic levels
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=2.903cm,inner sep=0pt}}
+						\Vertex[x=4.105,y=4.105,LabelOut=true]{Q'}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+						\Vertex[x=4.105,y=3.550,LabelOut=true]{R'}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+						\Vertex[x=4.105,y=3.338,LabelOut=true]{S'}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+						\Vertex[x=4.105,y=3.257,LabelOut=true]{T'}
+						\draw[rotate around={90:(4.105,4.105)}, line width=0.5pt] (5.105,4.105) ellipse (0.12cm and 0.30cm);
+						\draw[rotate around={90:(3.505,3.905)}, line width=0.5pt] (4.505,3.905) ellipse (0.12cm and 0.30cm);
+						\draw[rotate around={90:(4.305,3.605)}, line width=0.5pt] (5.305,3.605) ellipse (0.12cm and 0.30cm);
+					}
+					{
+						% epistemic towers
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+						\Vertex[x=5.674,y=5.674,LabelOut=true]{Q''}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+						\Vertex[x=5.674,y=5.462,LabelOut=true]{R''}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+						\Vertex[x=5.674,y=5.381,LabelOut=true]{S''}
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.774,5.874) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.824,5.874) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.874,5.874) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.924,5.874) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.974,5.874) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (6.024,5.874) ellipse (0.0458cm and 0.1146cm);
+						\draw[line width=0.1pt] (5.3594,5.774) -- (5.3594,6.024);
+						\draw[line width=0.1pt] (5.5886,5.774) -- (5.5886,6.024);
+						\draw[line width=0.1pt] (5.6594,5.824) -- (5.6594,6.074);
+						\draw[line width=0.1pt] (5.8886,5.824) -- (5.8886,6.074);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.824,5.574) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.874,5.574) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.924,5.574) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (5.974,5.574) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (6.024,5.574) ellipse (0.0458cm and 0.1146cm);
+						\draw[rotate around={90:(5.674,5.674)}, line width=0.1pt] (6.074,5.574) ellipse (0.0458cm and 0.1146cm);
+						%\draw (6,-0.097) -- (6,1.903);
+						%\draw (7,-0.097) -- (7,1.903);
+
+						% epistemic tower
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (7.5,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (7.3,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (7.1,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (6.9,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (6.7,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (6.5,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (6.3,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (6.1,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (5.9,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (5.7,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw[rotate around={90:(6.5,0.897)}, line width=0.5pt] (5.5,0.897) ellipse (0.20cm and 0.50cm);
+						%\draw (6,-0.097) -- (6,1.903);
+						%\draw (7,-0.097) -- (7,1.903);
+					}
+					{
+						% complexes and beyond
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+						\Vertex[x=6.273,y=6.273,LabelOut=true]{R'''}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+						\Vertex[x=6.273,y=6.192,LabelOut=true]{S'''}
+					}
+					{
+						% beyond
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+						\Vertex[x=6.502,y=6.502,LabelOut=true]{S''''}
+					}
+				}
+				{
+					% 3rd loop
+					{
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=2.903cm,inner sep=0pt}}
+						\Vertex[x=-4.105,y=4.105,LabelOut=true]{QQ}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+						\Vertex[x=-4.105,y=3.550,LabelOut=true]{RR}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+						\Vertex[x=-4.105,y=3.338,LabelOut=true]{SS}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+						\Vertex[x=-4.105,y=3.257,LabelOut=true]{TT}
+						\draw[rotate around={90:(4.105,4.105)}, line width=0.5pt] (5.105,4.105) ellipse (0.12cm and 0.30cm);
+						\draw[rotate around={90:(3.505,3.905)}, line width=0.5pt] (4.505,3.905) ellipse (0.12cm and 0.30cm);
+						\draw[rotate around={90:(4.305,3.605)}, line width=0.5pt] (5.305,3.605) ellipse (0.12cm and 0.30cm);
+					}
+					{
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+						\Vertex[x=-5.674,y=5.674,LabelOut=true]{Q''}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+						\Vertex[x=-5.674,y=5.462,LabelOut=true]{R''}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+						\Vertex[x=-5.674,y=5.381,LabelOut=true]{S''}
+					}
+					{
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+						\Vertex[x=-6.273,y=6.273,LabelOut=true]{R'''}
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+						\Vertex[x=-6.273,y=6.192,LabelOut=true]{S'''}
+					}
+					{
+						\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+						\Vertex[x=-6.502,y=6.502,LabelOut=true]{S''''}
+					}
+				}
+
+			\end{tikzpicture}
+			\caption{\label{fig:epipri4}Priority 4}
+		\end{figure}
+
+		Types of relations such as `reflexive', `symmetric', `left-total', `transitive', etc. become apparent here. With these types available, they may be combined at the same epistemic level (in the axis of levels) to yield compound relations such as equivalence classes and partial orders.
+
+		An interesting question is \emph{how} we become aware of these types at all. If only identities can be considered as conceptually definable (and nothing else), as is the contention being developed here, then how is it that these `types' are conceivable even though they are clearly not identities yet? If the initial brahman in the original strange loop is ineffable, then how is it that the identities defined in relation to it are not? It appears that we are differentiating one ineffable class from another which seems problematic. Must we accept this merely on an axiomatic basis or is there something more natural?
+
+		Perhaps there is a better way: in the previous epistemic level we observed that epistemic levels are identities in an orthogonal strange loop. In the level before that one, we equated context with brahman, and thus we may form an identification of epistemic level (itself) with brahman. With this, we conclude that `the' brahman of the original strange loop is an identity in the orthogonal strange loop, and is thus no longer ineffable. The fact that it is effable doesn't mean that we know anything about it yet\footnote{This notion is reminiscent of the ``Hilbert Operator'' described in the first chapter of Godement\cite{godement}.} -- the ascending epistemic levels could be interpreted as the elaboration, the hierarchical construction of our knowledge of it.
+
+		\begin{defn}[Epistemic Ensemble]
+			Any hierarchical well-formed aggregate of epistemic constructions including (for instance) identities, levels, towers, and so on.
+		\end{defn}
+
+		\begin{proposition}
+			An epistemic ensemble is an identity in a context on some strange loop\footnote{An epistemic ensemble is also a context on some strange loop, by virtue of the result at a preceding level that the brahman on one axis corresponds to an identity on another axis.}.
+		\end{proposition}
+
+		\begin{defn}[Mind and World]
+			An epistemic ensemble based on a particular epistemic level is called a \emph{mind}. The base level is called the \emph{world}. Mind and world are defined in relation to one another.
+		\end{defn}
+
+		\begin{proposition}[``Nayav\={a}da'']
+			The conceptions of a thing in a world in minds in relation to that world, while each being valid, need not be the same.
+		\end{proposition}
+
+		Nayavada\cite{nayavada} is the Jain principle that reality may only be characterized from subjective viewpoints or `nayas', which forms the basis of the core Jain doctrine of \emph{anekantavada} (``Iridescence'' of reality). We identify `naya' with identity context in the present development. The Jain doctrine of Sy\={a}dv\={a}da proposes that, due to Nayavada, one cannot make absolute evaluative statements about elements of reality as these apply only to one's conception of them, and thus, one should preface all evaluative statements with ``In some ways \ldots''
+
+		This doctrine evidently (and perhaps not surprisingly) was the subject of criticism\cite{anekantavada} for being unnecessarily circumspect, that in being unwilling to categorically deny other viewpoints it was unable to meaningfully advance any of its own. The essential insight that logical assertions are \emph{context-dependent} is clearly valid, however.
+
+		The Buddhist \emph{\'{s}\={u}nyat\={a}}\footnote{Yet another ``radically general'' notion.} and in particular the ``Fourfold Negation'' is also related and in some ways complementary to the syadvada position. This involves going through all four logical possibilities that may apply to an element of reality (``It is $X$,'' ``It is not $X$,'' ``It is both $X$ and not $X$,'' ``It is neither $X$ nor not $X$'' -- the possibilities together referred to as \emph{catu\d{s}ko\d{t}i} or ``The Four Corners'') and negating each of them in turn, thus in essence denying that dialectic is capable of expressing the thing that's really there, which, to whatever extent it is there, is relationally defined, in nayas one may say, and not inherent. Sunyata appears to differ from anekantavada in denying that the ``underlying elephant''\footnote{The story of the ``Blind Men and the Elephant.''} is well-defined aside from the relational conceptions, or that its epistemic status when definable differs from that of these conceptions. Coming back to an earlier observation, elements of reality may only be characterized in a context derived via self-reference. By nayavada, this context is a basis for logical assertions. The Fourfold Negation may now be viewed as equivalent to negating, sublating, transcending, this (and all) self-referential context(s), if we accept the proposition that the Catuskoti does exhaustively characterize ``characterizability.''
+
+		Logical foundations, once laid in the present framework, should help identify how exactly these views should be reconciled, and we leave that for future work (Priest\cite{priest} provides a modern treatment of the Fourfold Negation, which may be brought to bear), but it would seem that there is a relationship between context (where assertions are made) and epistemic level (which provides the equipment for our assertions) which would determine in what situations assertions are valid. For instance, it may be that categorical assertions can be made employing models at level $L_{1}$ about elements of reality that arise at level $L_{2} \iff L_{2} > L_{1}$. In particular, the level of dialectic (higher up than where we are presently, but it serves as a more natural example) yields a context -- a world -- that is \emph{defined} in relation to participant minds precisely to the extent of dialectical representability. The nuance here is that the categorical assertions that can be made in dialectic are not as strong as those that can be made in the mind or the `naya', and these former assertions could not at all (directly\footnote{The exception to this is that employing the higher-level medium of dialectic to communicate models which \emph{may be constructed at a predialectical level} does seem to successfully facilitate the transmission of predialectical knowledge, and this can be said to form the basis of all predialectical, so-called ``spiritual'' traditions. Shankara\cite{shankara} addresses this ability of dialectic, while being indirect, to nevertheless sometimes succeed at communicating transcendent knowledge in the story of ``The Tenth Boy,'' where ten boys upon swimming across a river undertake to count themselves, and the boy doing the counting only counts nine. Upon being told that he is the tenth, he ``realizes'' it.}) address elements that arise prior to dialectic. For instance, a valid dialectical assertion may resemble something like ``I believe $X$ of the object $Y$ that we both perceive in the world, and my understanding is that you believe $Z$ of $Y$. Although I don't necessarily see your point of view, I believe that there is some valid (even if not ``correct'') reasoning that is the basis for your conception. I am also aware that my conception of your conception is only equivalent to your conception up to the limits of dialectic, and a true equivalence cannot be asserted. Nevertheless, you and I categorically agree on the following features $X \cap Z$ of $Y$, up to the aforementioned limits of dialectical representability of these features, which we may thus take to be the \emph{definition} of $Y$ in the (our) world.'' Of course, with a clear understanding of the limits of dialectic, we may simply define elements of the world in terms of dialectical agreement, as we do, without annotating them with all of these qualifications!
+
+		As is evident from such considerations at this stage, we may admit at this level the \emph{Mind/World Adjunction} formally defined in \autoref{sec:matmod}. It is arguable that the present observations only arise at the level of dialectic (several levels up from where we are at the moment). But on the grounds that the epistemic machinery required to construct these conceptions seems to exist at this stage (e.g. in the ``axis of levels''), we favor this epistemic basis over the ``observational'' basis that we may perhaps notice these things only in the context of dialectic. By virtue of our assertion that all identities interact causally (and only causally), it must be the case that the mind/world adjunction arises through causal interaction, and most likely, causal -- ``functorial'' -- interaction between \emph{contexts} in the axis of context.
+
+		Due to the difficulties of representing more than $3$ dimensions on paper, we will not depict subsequent strange loops, but it is to be understood that they continue to arise, one at each level.
+
+	\item I am aware that identities are partially orderable in terms of functional interactions. (\emph{Axiom of Causation / Prat\={i}tyasamutp\={a}da})
+
+		\begin{figure}[htp]
+			\centering
+			\begin{tikzpicture}[scale=0.35,transform shape]
+				\GraphInit[vstyle=Normal]
+				\SetVertexNoLabel
+				{
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=7.6cm,inner sep=0pt}}
+					\Vertex[x=0,y=0,LabelOut=true]{Q}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=2.903cm,inner sep=0pt}}
+					\Vertex[x=0,y=-1.451,LabelOut=true]{R}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.006,LabelOut=true]{S}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.218,LabelOut=true]{T}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.299,LabelOut=true]{U}
+				}
+				% outer context
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.7cm,inner sep=0pt}}
+				\Vertex[x=-6.807,y=-0.262]{A'}
+				\Vertex[x=0.524,y=7.854]{B'}
+				\Vertex[x=7.330,y=-1.047]{C'}
+				\Vertex[x=-3.142,y=4.974]{F'}
+				\tikzstyle{EdgeStyle}=[post, dotted, line width=0.1pt]
+				\Edge[](F')(B')
+				\Edge[](F')(C')
+				\draw[rotate around={145:(-4.974,2.356)}, dotted, line width=0.5pt] (-4.974,2.356) ellipse (1.282cm and 4.581cm);
+				% inner context
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.4cm,inner sep=0pt}}
+				\Vertex[x=-0.3,y=2.7]{A}
+				\Vertex[x=-1,y=1.7]{B}
+				\Vertex[x=1,y=1.7]{C}
+				\Vertex[x=-2,y=2.7]{H}
+				\Vertex[x=2,y=2.7]{I}
+				\Vertex[x=0,y=0.7]{F}
+				\Vertex[x=0.3,y=2.7]{G}
+				\tikzstyle{EdgeStyle}=[post, line width=0.5pt]
+				\Edge[](A)(B)
+				\Edge[](G)(C)
+				\Edge[](H)(B)
+				\Edge[](I)(C)
+				\Edge[](B)(F)
+				\Edge[](C)(F)
+			\end{tikzpicture}
+			\caption{\label{fig:epipri5}Priority 5}
+		\end{figure}
+
+		Pratityasamutpada, translated as ``dependent origination'' -- the buddhist doctrine of causation. Like so many other buddhist concepts, pratityasamutpada possesses the quality of what may be called ``radical generality,'' applying not only to phenomena in the physical world, but to thoughts, feelings, impressions and actions, seamlessly across the mind/world interface. It appears also to apply to abstract philosophical considerations of being (e.g. in ``The Twelve Nidanas,'' which, coincidentally, can be viewed as an epistemic hierarchy) that are neither mental nor physical in nature. For the most part, it seems this radical generality is provided a basis in that identities as the causal agents definitionally apply to all effable elements of conscious reality, without discrimination between thoughts and things.
+
+		\emph{All} interaction between identities is causal. As cause and effect \emph{co-arise} and no instance of one may be defined without reference to an instance of another, we may infer that the identity of interest here is a relation rather than a primitive identity, and specifically, it would seem, a \emph{function}. Since all relation types are available to us at this level and since, further, function is a type of relation, we admit at this level \emph{i-morphism}, (proposed as) the most abstract form of function (\autoref{sec:matmod}), and \emph{identity action}, a specific i-morphism that provides a candidate model for causation.
+
+		Now that we have primitive objects, contexts, the mind/world adjunction, and identity action, we now conceive of \emph{identity} itself at this level. Note that as the conception of identity involves both objects and contexts, it cannot exist on the original strange loop as contexts are not conceivable there. Thus, identity arises on the second, orthogonal strange loop, and we retain the definition for it provided in \autoref{sec:matmod}.
+
+		The relationship of causation to ``time'' seems to be that the latter provides a directional bias to the former, that while causal interactions of all kinds are possible, a particular ordering is favored. We could introduce this principle on a higher epistemic level as an empirical observation, but it's probable that, with the algebraic model for causation available to us at the present level, we may derive a preferred directionality from algebraic properties of the identity action in relation to a given context, e.g. from recurrence properties on the space of causal evolutions definable on a context, at the present level.
+
+		\begin{defn}[Equality]
+			``Two'' identities that share all (relational) universal properties are the \emph{same} identity. We may address the provisional separateness by a special relation denoted as $a = b$. (\emph{Equality})
+		\end{defn}
+
+		This notion of equality reflects the parsimonious ``Shunyata'' perspective that we may not assert anything beyond the relational definitions available to us, or equivalently, that equality is only definable in relation to a brahman. For two identities that are colloquially ``the same'' but are actually two in number, they are not ``equal'' under this definition since they do not share \emph{all} relational properties. In particular, they may be distinguished by their (relative) physical locations. In this situation, the two identities are merely \emph{isomorphic} under the relevant definable actions, and we may say that they are \emph{equivalent} in relation to $X$, if $X$ is anonymous in relation to them.
+
 	\item \begin{enumerate}
-			\item I am aware that the sequence of affirmations in 3(a) does not terminate. (\emph{Axiom of Infinity})
-			\item ``Two'' identities that share all (relational) universal properties are the \emph{same} identity. We may address the provisional separateness by a special relation denoted as $a = b$. (\emph{Equality}\footnote{Note that for two identities that are colloquially ``the same'' but are actually two in number, they are not ``equal'' under this definition since they do not share \emph{all} relational properties. In particular, they may be distinguished by their (relative) physical locations. In this situation, the two identities are merely \emph{isomorphic} under the relevant definable actions.})
-			\item I am aware that identities are partially orderable in terms of genesis and cessation. (\emph{Axiom of Bodhitree -- Causation / Prat\={i}tyasamutp\={a}da}\footnote{Pratityasamutpada, translated as ``dependent origination'' -- the buddhist doctrine of causation. Like so many other buddhist concepts, pratityasamutpada possesses the quality of what may be called ``radical generality,'' applying not only to phenomena in the physical world, but to thoughts, feelings, impressions and actions, seamlessly across the mind/world interface. It appears also to apply to abstract philosophical considerations of being (e.g. in ``The Twelve Nidanas,'' which, coincidentally, can be viewed as an epistemic hierarchy) that are neither mental nor physical in nature.})
-			\item I am aware that identities are partially orderable in terms of universal relationships. (\emph{Axiom of Bodhitree -- Forms/Mithya/Taxonomy}\footnote{From Plato's ``Theory of Forms,'' which conceived ``true'' reality to be ideal entities of which manifest entities are imperfect approximations. It seems plausible that this is the ancestral idea from which the more precise notion of a `universal' was later developed (by Plato himself and by others). In any case, we will take this conception to correspond to universals (standing in for the requirement to be ``ideal'') and additionally, in combining this with the Vedantic mithya mentioned earlier, imagine these universals to be ordered in a hierarchy -- essentially a taxonomy. On another note, the conception of the forms bears a resemblance to the Jain \emph{anekantavada} and it's possible there is a connection between them. While the latter holds that, presupposing an underlying truth, all perspectives on that truth are necessarily incomplete and approximate (e.g. the story of the ``Blind Men and the Elephant,'' which, incidentally, appears to have originated in anekantavada), Plato's forms conceives that even in the case where an underlying truth may not be presupposed (e.g. agreeably different elephants), that \emph{there is an underlying truth}, of an ``ideal'' nature (e.g. an ``ideal'' elephant), and that the perceived instances are only approximations of that underlying truth. See also the suggested connection between Plato's Allegory of the Cave and the buddhist \emph{trisvabhava} in the notes on \autoref{sec:awamem} for a more detailed discussion of this manner of link.})
-		\end{enumerate}
-	\item \begin{enumerate}
+		\item I am aware that identities (including contexts, and towers, and complexes \ldots) in their causal properties are partially orderable in terms of universal relationships. (\emph{Axiom of Bodhitree})
 		\item Of many possible causal orderings I may select a subset which manifests, subject to certain constraints. (\emph{Axiom of Will})
-		\item Some causal orderings are preferable to others. (\emph{Axiom of Desire}\footnote{Desire may be definable mathematically as a field (in the physical sense) on the space of causal orderings; both ``causal orderings'' as well as ``function'' (in the mathematical sense) should already exist at the present priority.})
+		\item Some causal orderings are preferable to others. (\emph{Axiom of Desire})
 		\end{enumerate}
-	\item Some identities are such that the constraints on their causal properties resemble those on the Will. (\emph{Axiom of J\={i}va\footnote{The Sanskrit \emph{j\={i}va} roughly translates as ``living being,'' and is to be understood here as an abstraction for the conscious entity that is taken to ``live'' or exist in a particular dialectical world.}/Others})
-	\item \begin{enumerate}
-			\item There are some identities that others are aware of. (\emph{Axiom of World})
-			\item Others are aware of identities. (\emph{Empathy})
-		\end{enumerate}
+
+		\begin{figure}[htp]
+			\centering
+			\begin{tikzpicture}[scale=0.35,transform shape]
+				\GraphInit[vstyle=Normal]
+				\SetVertexNoLabel
+				{
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=7.6cm,inner sep=0pt}}
+					\Vertex[x=0,y=0,LabelOut=true]{Q}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=2.903cm,inner sep=0pt}}
+					\Vertex[x=0,y=-1.451,LabelOut=true]{R}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.006,LabelOut=true]{S}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.218,LabelOut=true]{T}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.299,LabelOut=true]{U}
+				}
+				% outer context
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.7cm,inner sep=0pt}}
+				\Vertex[x=-0.785,y=7.069]{A'}
+				\Vertex[x=-2.618,y=4.451]{B'}
+				\Vertex[x=2.618,y=4.451]{C'}
+				\Vertex[x=-5.236,y=7.069]{H'}
+				\Vertex[x=5.236,y=7.069]{I'}
+				\Vertex[x=0.785,y=7.069]{G'}
+				\tikzstyle{EdgeStyle}=[post, line width=0.5pt]
+				\tikzset{VertexStyle/.style = {draw=black,densely dotted,shape=circle,minimum size=0.7cm,inner sep=0pt}}
+				\Vertex[x=0,y=1.833]{F'}
+				\tikzstyle{EdgeStyle}=[post, dotted, line width=0.1pt]
+				\Edge[](A')(B')
+				\Edge[](G')(C')
+				\Edge[](H')(B')
+				\Edge[](I')(C')
+				\tikzstyle{EdgeStyle}=[-, dotted, line width=0.1pt]
+				\Edge[](B')(F')
+				\Edge[](C')(F')
+				% inner context
+				\tikzset{VertexStyle/.style = {draw=black,fill=black,shape=circle,minimum size=0.6cm,inner sep=0pt}}
+				\Vertex[x=0,y=2.7]{A}
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.4cm,inner sep=0pt}}
+				\Vertex[x=-1,y=1.7]{B}
+				\Vertex[x=1,y=1.7]{C}
+				\Vertex[x=-2,y=0.7]{D}
+				\Vertex[x=2,y=0.7]{G}
+				\Vertex[x=-2,y=2.7]{H}
+				\Vertex[x=2,y=2.7]{I}
+				\Vertex[x=0,y=0.7]{F}
+				\tikzstyle{EdgeStyle}=[post, line width=0.5pt]
+				\Edge[](A)(B)
+				\Edge[](A)(C)
+				\Edge[](H)(B)
+				\Edge[](I)(C)
+				\Edge[](B)(D)
+				\Edge[](C)(G)
+				\Edge[](B)(F)
+				\Edge[](C)(F)
+				\Edge[](H)(C)
+				\Edge[](I)(B)
+				\Edge[](A)(F)
+				\draw[rotate around={135:(-1,1.7)}, densely dashed, line width=0.5pt] (-1,1.7) ellipse (0.49cm and 1.950cm);
+			\end{tikzpicture}
+			\caption{\label{fig:epipri6}Priority 6}
+		\end{figure}
+
+		The observation that the causal properties of identities appear to follow universal relationships gives us the \emph{bodhitree}. Empowering the ``privacy'' intuition developed in \autoref{sec:topstr}, we may say that identities ought to form an acyclic graph in terms of these universal relationships. Each identity in this graph has a \emph{context} of privileged information associated with it. As identities exist on the second strange loop rather than on the axis of objects, the bodhitree could not be conceived on the axis of objects either as it is a richer conception than identity. Therefore, the bodhitee perhaps is definable on the second strange loop also. That universal relationships exist amongst contexts follows from the same principle as on the object axis since contexts are identities in the axis of context. Indeed, this may be intuitively, empirically sustained in that some contexts contain representations of all identities in other contexts, i.e. these ``superset'' contexts define the universal that all ``contained'' contexts conform to. Yet, the axis of context does not represent the visceral experience of causally ``being'' an identity in the provisional bodhitree. Thus, it is perhaps the case that, as hive identities are also to be entailed in this bodhitree construction, that the bodhitree must be simultaneously conceived against the axes of object, context, towers, complexes, and so on. The bodhitree, therefore, appears to be represented on a \emph{third} orthogonal-dimensional strange loop.
+
+		\begin{defn}[Bodhitree]
+			An acyclic graph whose nodes are identities, such that the causal properties (on the axis of object) and the minds (on the axis of context) of ancestors have an algebraic relationship to those respectively of descendants that is roughly of universal-particular type.
+		\end{defn}
+
+		The exact (mathematical) nature of this ``symmetric'' algebraic relationship is to be specified in future work.
+
+		It is interesting to observe at this juncture that subject and object arose on the first strange loop, identity on the second, and bodhitree on the third. Given the ``naturality'' and broad applicability of these abstractions, one wonders what are the abstractions that arise on the fourth strange loop, and beyond. In this sense, organizing our knowledge in terms of epistemic levels and the semantic, empirical qualities that can be attributed to such levels and the relationships between them, gives us a kind of ``periodic table'' of abstractions, suggesting to us where we should be looking for foundational, familiar-and-yet-invisible abstractions that characterize reality, and how to think about them so that they become ``visible.''
+
+		As we are able to represent hierarchical contextual relationships at this stage we admit \emph{genesis}, the recursive process defined in \autoref{sec:dynamics} by which causal interactions are represented in different contexts.
+
+		The Will here derives from the empirical fact that we experience a subset of a large (perhaps infinite) number of possible causal trajectories, and the fact that our experience of the manifestation of this subset is that we are participant in ``choosing'' it. This gives us a formal epistemic foundation for framing questions related to the will, and in particular it isn't hard to convince oneself that while questions of ``free will'' are likely unanswerable in conventional formulations, on the other hand in the present development we may define such questions in terms of \emph{epistemic precedence}. Does the Will precede some other element of reality that we would define ``free will'' in relation to (such as dialectic)? If so, then in this sense we do have free will; if not, then not. So that we do not lose sight of our goal, however, we emphasize that the objective with the present development is to build foundations rather than to answer such questions as it may incidentally, inevitably address. That is, we do not presume to pre-define which questions are worthwhile; rather, the most epistemically parsimonious foundation would suggest to us which are the right questions, and how we may frame questions of long-standing interest in a well-founded way.
+
+		Desire may be definable mathematically as a field (in the physical sense) on the space of causal orderings; both ``causal orderings'' as well as ``function'' (in the mathematical sense) should already exist at the present priority. Regardless of the actual model, the point is that within the present development, we may mathematically model such predialectical notions of reality in an epistemically well-founded way.
+
+	\item Some identities are such that the constraints on their causal properties resemble those on the Will. (\emph{Axiom of J\={i}va/Others})
+
+		\begin{figure}[htp]
+			\centering
+			\begin{tikzpicture}[scale=0.35,transform shape]
+				\GraphInit[vstyle=Normal]
+				\SetVertexNoLabel
+				{
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=7.6cm,inner sep=0pt}}
+					\Vertex[x=0,y=0,LabelOut=true]{Q}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=2.903cm,inner sep=0pt}}
+					\Vertex[x=0,y=-1.451,LabelOut=true]{R}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.006,LabelOut=true]{S}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.218,LabelOut=true]{T}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.299,LabelOut=true]{U}
+				}
+				% outer context
+				\tikzset{VertexStyle/.style = {draw=black,fill=gray!50,shape=circle,minimum size=1.05cm,inner sep=0pt}}
+				\Vertex[x=0,y=7.069]{A'}
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.7cm,inner sep=0pt}}
+				\Vertex[x=-2.618,y=4.451]{B'}
+				\Vertex[x=2.618,y=4.451]{C'}
+				\Vertex[x=-5.236,y=1.833]{D'}
+				\Vertex[x=5.236,y=1.833]{G'}
+				\Vertex[x=-5.236,y=7.069]{H'}
+				\Vertex[x=5.236,y=7.069]{I'}
+				\tikzset{VertexStyle/.style = {draw=black,densely dotted,shape=circle,minimum size=0.7cm,inner sep=0pt}}
+				\Vertex[x=0,y=1.833]{F'}
+				\tikzstyle{EdgeStyle}=[post, dotted, line width=0.1pt]
+				\Edge[](A')(B')
+				\Edge[](A')(C')
+				\Edge[](H')(B')
+				\Edge[](I')(C')
+				\Edge[](B')(D')
+				\Edge[](C')(G')
+				\Edge[](H')(C')
+				\Edge[](I')(B')
+				\Edge[](A')(F')
+				\tikzstyle{EdgeStyle}=[-, dotted, line width=0.1pt]
+				\Edge[](B')(F')
+				\Edge[](C')(F')
+				\draw[rotate around={135:(-2.618,4.451)}, dotted, line width=0.5pt] (-2.618,4.451) ellipse (1.283cm and 5.106cm);
+				% inner context
+				\tikzset{VertexStyle/.style = {draw=black,fill=black,shape=circle,minimum size=0.6cm,inner sep=0pt}}
+				\Vertex[x=0,y=2.7]{A}
+				\Vertex[x=3,y=1.7]{J}
+				\Vertex[x=-2,y=2.7]{H}
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.4cm,inner sep=0pt}}
+				\Vertex[x=-1,y=1.7]{B}
+				\Vertex[x=1,y=1.7]{C}
+				\Vertex[x=-2,y=0.7]{D}
+				\Vertex[x=2,y=0.7]{G}
+				\Vertex[x=2,y=2.7]{I}
+				\Vertex[x=0,y=0.7]{F}
+				\tikzstyle{EdgeStyle}=[post, line width=0.5pt]
+				\Edge[](A)(B)
+				\Edge[](A)(C)
+				\Edge[](H)(B)
+				\Edge[](I)(C)
+				\Edge[](B)(D)
+				\Edge[](C)(G)
+				\Edge[](B)(F)
+				\Edge[](C)(F)
+				\Edge[](H)(C)
+				\Edge[](I)(B)
+				\Edge[](A)(F)
+				\Edge[](J)(G)
+			\end{tikzpicture}
+			\caption{\label{fig:epipri7}Priority 7}
+		\end{figure}
+
+		The Sanskrit \emph{j\={i}va} roughly translates as ``living being,'' and is to be understood here as an abstraction for the conscious entity that is taken to ``live'' or exist in a particular dialectical world. This notion of the living being in a particular world is \emph{defined} by the empirical constraints on the Will in selecting from causal space. The particular experience of these constraints as a ``being'' co-arises with the evaluation of other identities that evidently conform to the same causal constraints -- giving us the general notion of \emph{jiva} one instance of which is reified in the causal constraints we experience. Note that while we may most naturally associate the ``human'' with this jiva, in fact jiva is different in different worlds. In some worlds even though our causal interactions are ``channelled'' through the human, if the human is not defined in that world (e.g. interaction on technological platforms such as the internet, but the real world is full of examples which are simply more subtle -- driving a car, for instance, or less obviously, wearing shoes) then the jiva in that world is not the human, but whatever identity may happen to represent the constraints of that world. Interestingly enough, jiva is not definable in predialectical levels and if it were, such a jiva would be non-human as well (or more precisely, pre-human). Thus, although it seems very natural to think of ourselves as humans, we are in fact causally humans in a subset, possibly even a small and shrinking subset, of our experience of reality. Furthermore the fact that jiva arises at the present level rather than at a more foundational level suggests that ``identification'' of ourselves with the jiva is not well-founded -- substantiating another core ``Eastern'' tenet developed apparently as early as the Vedas, and possibly even earlier. In the Vedanta tradition this false identification is a major component in the development of the doctrine of \emph{maya}.
+
+		Vedanta philosophy may be said to (and is professed to) essentially encode the assertions that $atman \ne jiva$ and $atman = brahman$, where ``atman'' refers to the ``essential nature'' of a being. In similarly pithy terms, we may provisionally characterize Buddhism as encoding something like $atman \ne jiva$ and $atman \ne brahman$. Jainism, that any subset of these assertions may be true, depending on the context from which those assertions are made, to which the Buddhist, especially the Zen Buddhist, might add, ``one must not make such assertions from any context'' giving us \emph{anatman}, the denial of essential nature, ``undoing'' the premise of the question of what essential nature is. It is arguable that what anatman denies is effability rather than essential nature. But these do not in the end appear to be different, as the latter being a characterization violates the denial of effability and thus is denied.
+
+		It is conceivable, however, that the ``Tenth Boy'' exception\footnote{see earlier footnote on this.} could be generalized to apply not only to dialectic / predialectic but to any pair of consecutive epistemic levels, giving us a general mechanism by which phenomenal elaboration of reality, while taking us ever further from the noumena, may simultaneously engender ``inner realization'' of them, thus, perhaps, giving us some manner of a plumb line into ineffability\footnote{See also Schopenhauer\cite{schopenhauer} for an apparently similar view on the epistemic basis of noumena as being accessible ``within'' the observer.}.
+
+		All of these viewpoints appear to be characterizable in or at least complementarily relatable to the terms of the present epistemic hierarchy.
+
+	\item There are some objects that others are aware of, some that they are not aware of. (\emph{Dialectic})
+
+		\begin{figure}[htp]
+			\centering
+			\begin{tikzpicture}[scale=0.35,transform shape]
+				\GraphInit[vstyle=Normal]
+				\SetVertexNoLabel
+				{
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=7.6cm,inner sep=0pt}}
+					\Vertex[x=0,y=0,LabelOut=true]{Q}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=2.903cm,inner sep=0pt}}
+					\Vertex[x=0,y=-1.451,LabelOut=true]{R}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=1.109cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.006,LabelOut=true]{S}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.424cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.218,LabelOut=true]{T}
+					\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.162cm,inner sep=0pt}}
+					\Vertex[x=0,y=-2.299,LabelOut=true]{U}
+				}
+				% outer context
+				\tikzset{VertexStyle/.style = {draw=black,fill=gray!50,shape=circle,minimum size=1.05cm,inner sep=0pt}}
+				\Vertex[x=0,y=7.069]{A'}
+				\Vertex[x=7.854,y=4.451]{J'}
+				\Vertex[x=-5.236,y=7.069]{H'}
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.7cm,inner sep=0pt}}
+				\Vertex[x=-2.618,y=4.451]{B'}
+				\Vertex[x=2.618,y=4.451]{C'}
+				\Vertex[x=-5.236,y=1.833]{D'}
+				\Vertex[x=5.236,y=1.833]{G'}
+				\Vertex[x=5.236,y=7.069]{I'}
+				\tikzstyle{EdgeStyle}=[post, dotted, line width=0.1pt]
+				\Edge[](A')(B')
+				\Edge[](A')(C')
+				\Edge[](H')(B')
+				\Edge[](I')(C')
+				\Edge[](B')(D')
+				\Edge[](C')(G')
+				\Edge[](H')(C')
+				\Edge[](I')(B')
+				\Edge[](J')(G')
+				% inner context
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=1.1cm,inner sep=0pt}}
+				\Vertex[x=0,y=2.5]{A}
+				\Vertex[x=3,y=1.3]{J}
+				\Vertex[x=-2,y=2.3]{H}
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.4cm,inner sep=0pt}}
+				\Vertex[x=-1,y=1.3]{B}
+				\Vertex[x=1,y=1.3]{C}
+				\Vertex[x=-2,y=0.3]{D}
+				\Vertex[x=2,y=0.3]{G}
+				\Vertex[x=2,y=2.3]{I}
+				\Vertex[x=0,y=0.3]{F}
+				\tikzstyle{EdgeStyle}=[post, line width=0.5pt]
+				\Edge[](H)(B)
+				\Edge[](B)(F)
+				\Edge[](C)(F)
+				\Edge[](I)(B)
+				\Edge[](A)(F)
+				% jiva-mind
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.05cm,line width=0.1pt,inner sep=0pt}}
+				\Vertex[x=0,y=2.891]{A''}
+				\Vertex[x=0.434,y=2.746]{J''}
+				\Vertex[x=-0.289,y=2.891]{H''}
+				\Vertex[x=0.289,y=2.891]{I''}
+				\Vertex[x=-0.145,y=2.746]{B''}
+				\Vertex[x=0.145,y=2.746]{C''}
+				\Vertex[x=-0.289,y=2.601]{D''}
+				\Vertex[x=0.289,y=2.601]{G''}
+				\Vertex[x=0,y=2.601]{F''}
+				\tikzstyle{EdgeStyle}=[line width=0.1pt]
+				\Edge[](A'')(B'')
+				\Edge[](A'')(C'')
+				\Edge[](H'')(B'')
+				\Edge[](I'')(C'')
+				\Edge[](B'')(D'')
+				\Edge[](C'')(G'')
+				\Edge[](B'')(F'')
+				\Edge[](C'')(F'')
+				\Edge[](I'')(B'')
+				\Edge[](A'')(F'')
+				\Edge[](J'')(G'')
+				% mind 2
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.05cm,line width=0.1pt,inner sep=0pt}}
+				\Vertex[x=-2,y=2.691]{A'''}
+				\Vertex[x=-1.566,y=2.546]{J'''}
+				\Vertex[x=-2.289,y=2.691]{H'''}
+				\Vertex[x=-1.711,y=2.691]{I'''}
+				\Vertex[x=-2.145,y=2.546]{B'''}
+				\Vertex[x=-1.855,y=2.546]{C'''}
+				\Vertex[x=-2.289,y=2.401]{D'''}
+				\Vertex[x=-1.711,y=2.401]{G'''}
+				\Vertex[x=-2,y=2.401]{F'''}
+				\tikzstyle{EdgeStyle}=[line width=0.1pt]
+				\Edge[](A''')(B''')
+				\Edge[](H''')(B''')
+				\Edge[](B''')(D''')
+				\Edge[](B''')(F''')
+				\Edge[](C''')(F''')
+				\Edge[](I''')(B''')
+				\Edge[](A''')(F''')
+				% mind 3
+				\tikzset{VertexStyle/.style = {draw=black,shape=circle,minimum size=0.05cm,line width=0.1pt,inner sep=0pt}}
+				\Vertex[x=3,y=1.691]{A''''}
+				\Vertex[x=3.434,y=1.546]{J''''}
+				\Vertex[x=2.711,y=1.691]{H''''}
+				\Vertex[x=3.289,y=1.691]{I''''}
+				\Vertex[x=2.855,y=1.546]{B''''}
+				\Vertex[x=3.145,y=1.546]{C''''}
+				\Vertex[x=2.711,y=1.401]{D''''}
+				\Vertex[x=3.289,y=1.401]{G''''}
+				\Vertex[x=3,y=1.401]{F''''}
+				\tikzstyle{EdgeStyle}=[line width=0.1pt]
+				\Edge[](A'''')(C'''')
+				\Edge[](H'''')(B'''')
+				\Edge[](I'''')(C'''')
+				\Edge[](C'''')(G'''')
+				\Edge[](B'''')(F'''')
+				\Edge[](C'''')(F'''')
+				\Edge[](I'''')(B'''')
+				\Edge[](J'''')(G'''')
+			\end{tikzpicture}
+			\caption{\label{fig:epipri8}Priority 8/9}
+		\end{figure}
+
+		As defined lower in the epistemic hierarchy, a world is any ``base'' level in relation to an epistemic ensemble which is called the mind. The level at which dialectic arises is a context that functions as the world in relation to a number of \emph{constituent} identities. Each identity entails an epistemic ensemble (its mind) and is associated with an object (the jiva) in that dialectical world. In general, abstractions that become available to us lower in the hierarchy take on richer overtones at higher levels, and at the level of dialectic in particular many of these abstractions -- such as anekantavada, identity, bodhitree -- infuse the rich, familiar complexity that we think of as everyday reality, forming the basis for all of our collective endeavors, of society and science.
+
 	\item \begin{enumerate}
 			\item Others are aware. (\emph{Strong Axiom of Empathy})
-			\item There are identities that others are not aware of. (\emph{Axiom of Mind})
-			\item Others are aware of identities that I am not aware of. (\emph{Other Minds})
+			\item Others are aware of objects that I am not aware of. (\emph{Other Minds})
 		\end{enumerate}
 	%\setcounter{enumi}{5}
 \end{enumerate}
 
-Note that items 5(b), 8(b) and 9(c) above are not axioms but, rather, conventions or logical consequences of other axioms (the foundations for logical inference must also be set within the above scheme; we leave that for future development). For example, 9(c) is a consequence of 8(a) and 9(b). As a general rule, we may say that the epistemic priority of a proposition is equal to that of the lowest priority axiom employed in its proof, which in this case is $9$.
+As a general rule, we may say that the epistemic level of a proposition is equal to that of the highest level axiom employed in its proof.
 
 \begin{proposition}[``Occam's Razor'']
-	Given two possible conceptions of an element of reality, favor the one with the higher epistemic priority.
+	Given two possible conceptions of an element of reality, favor the one on the lower epistemic level.
 \end{proposition}
 
 A provisional dependence hierarchy of the axioms is depicted in Fig.~\ref{fig:axiomtree}.
@@ -813,29 +1537,43 @@ A provisional dependence hierarchy of the axioms is depicted in Fig.~\ref{fig:ax
 \caption{\label{fig:axiomtree}Epistemic Priority}
 \end{figure}
 
-Epistemic priority is useful in that it allows us to think precisely about precedence of ideas. In particular, it provides a firm basis for our earlier suggestion that consciousness need not be justified in relation to a presupposed brain, since the latter occurs arguably at a lower epistemic priority, and certainly not at a higher one. Also significantly, it may be seen that by virtue of being ``conventional,'' current proposed foundations of mathematics including ZFC are dialectical and thus found mathematics and all derivative bodies of knowledge at an epistemic priority $\geq 8$. Likewise, ``empirical'' (i.e. our dialectical) scientific method operates at epistemic priorities $\geq 3$ (and once again, $\geq 8$ if we require it to conform to traditional dialectical agreement), while dhyana as a direct investigation of consciousness proceeds at priorities $0 - 2$ (while also reducing to $\geq 8$ if results are communicated dialectically). This does not speak to \emph{validity} in any sense -- it only provides criteria by which different types of knowledge may be related. It may be possible for lower priority knowledge to be justified in terms of higher priority knowledge, but the reverse endeavor is not well-founded.
+Organizing knowledge on epistemic levels allows us understand the origin of the familiar constructions of reality, to discern precisely its component abstractions both familiar and latent, and to think precisely about precedence of ideas. In particular, it provides a firm basis for our earlier suggestion that consciousness need not be justified in relation to a presupposed brain, since the latter arises on a higher epistemic level: though dependent on conception of the term, the former arises no later than effability, level $1$\footnote{``Consciousness'' is useful mainly as a characterization of a \emph{phenomenon} that is taken to be relatable to other phenomena such as everyday objects and brains. Epistemic levels inspire another view in which consciousness is no longer such a phenomenon and thus the terminology becomes more arbitrary.}. Also significantly, it may be seen that by virtue of being ``conventional,'' current proposed foundations of mathematics including ZFC are dialectical and thus found mathematics and all derivative bodies of knowledge at an epistemic level $\geq 8$. Likewise, ``empirical'' (i.e. our dialectical) scientific method operates on levels $\geq 3$ (and once again, $\geq 8$ if we require it to conform to traditional dialectical agreement), while dhyana as a direct investigation of consciousness proceeds on levels down to $0$ (while also reducing to $\geq 8$ if results are communicated dialectically). This does not speak to \emph{validity} in any sense -- it only provides criteria by which different types of knowledge may be related. It may be possible for higher-level knowledge to be justified in terms of lower-level knowledge, but the reverse endeavor is not well-founded.
 
 \begin{defn}[Conventional and Transcendent]
-	An element of reality is called \emph{conventional} if its epistemic priority is (numerically) greater than or equal to that of dialectic. An element of reality is called \emph{predialectical} or \emph{transcendent} if its epistemic priority is (numerically\footnote{This variance between the linguistic sense of ``higher'' priority and the mathematical sense of numerical magnitude being higher is awkward and should probably be addressed. In private conversation, Balkrishna Shetty in passing suggested using ``levels'' rather than ``priorities.'' This would allow us to speak uniformly of higher or lower levels, eliminating the linguistic awkwardness, and will probably be adopted in a future revision. This was not the reason for his suggestion, however, which was rather that a treatment as levels potentially allows a metamathematical treatment, e.g. in terms of inclusion of higher epistemic levels within lower levels conceived as sets.}) less than that of dialectic.
+	An element of reality is called \emph{conventional} if its epistemic level is greater than or equal to that of dialectic. An element of reality is called \emph{predialectical} or \emph{transcendent} if its epistemic level is lower than that of dialectic.
 \end{defn}
 
-\begin{proposition}[Assignment of Priority]
-	If a model for an element of reality $e$ exists, then the priority of $e$ is equal to that of the model. If $e$ is not accounted for in any model that is already available, $e$ must be adopted as an axiom with priority $p + 1$ where $p$ is the priority of the lowest priority (i.e. numerically greatest) axiom necessary to its conception\footnote{As the system of epistemic priority applies to all knowledge including empirical and in particular dialectical elements of reality, this criterion on addition of axioms could be brought to bear as a formal way to evaluate the status of notions like ``fine tuning'' and the ``anthropic principle'' in physics.}.
+\begin{proposition}[Epistemic Level is a Context]
+	With the exception of levels 0-1, each epistemic level is a self, and therefore is an identity context. In particular, all conventional elements of knowledge, and many transcendent elements of knowledge, are identities in some epistemic level.
+\end{proposition}
+
+\begin{proposition}[Assignment of Level]
+	If a model for an element of reality $e$ exists, then the level of $e$ is equal to that of the model. If $e$ is not accounted for in any model that is already available, $e$ must be adopted as an axiom on level $p + 1$ where $p$ is the level of the highest-level axiom necessary to its conception\footnote{As the system of epistemic priority applies to all knowledge including empirical and in particular dialectical elements of reality, this criterion on addition of axioms could be brought to bear as a formal way to evaluate the status of notions like ``fine tuning'' and the ``anthropic principle'' in physics.}.
 \end{proposition}
 
 \begin{proposition}[Applicability of models]
-	An element of reality $e_{1}$ with priority $p(e_{1})$ is applicable as a model\footnote{`Model' will need to be defined precisely once the foundations for logical inference are laid in terms of epistemic priority.} for an element of reality $e_{2}$ axiomatically admissible with priority $p(e_{2})$ $\iff$ $p(e_{1}) < p(e_{2})$.
+	An element of reality $e_{1}$ at level $p(e_{1})$ is applicable as a model\footnote{`Model' will need to be defined precisely once the foundations for logical inference are laid on epistemic levels.} for an element of reality $e_{2}$ axiomatically admissible on level $p(e_{2})$ $\iff$ $p(e_{1}) < p(e_{2})$.
 \end{proposition}
 
 \begin{corollary}[Inapplicability of ZFC-based mathematics]
-	Despite the arising of several mathematical primitives prior to dialectic including identity, context, relation, function, partial order, and equivalence classes, mathematics based on ZFC by virtue of being conventional is not naively applicable to transcendent elements of reality.
+	Despite the arising of several mathematical primitives prior to dialectic including object, context, relation, function, partial order, and equivalence classes, mathematics based on ZFC by virtue of being conventional is not naively applicable to transcendent elements of reality.
 \end{corollary}
+
+\subsection{On Universals} \label{sec:onuni}
+
+There seem to be two dominant qualitative relationships between identities. First, there is the cause-effect relationship. That is, pertaining to identities that, through interactions with other identities, \emph{cause} the genesis of identities which are its \emph{effects}. The second kind corresponds to the notion of `universals' in philosophy; that is, general notions of which particular things are specific instances. For example, mangoes, lemons, and tomatoes exist in the world, but the abstract notion of a `fruit' does not, even though all mangoes, lemons, and tomatoes are construed to be instances of it. Philosophers since ancient times have wondered about the epistemic status of the universals -- where do they exist? What is their nature?
+
+First it is necessary to understand what we mean by the assertion that ``mangoes exist in the world.'' Really what we're saying here is that, in regarding a particular identity context that we define as the world, we perceive a particular thing -- in the mind -- as a mango. Thus \emph{the mango itself does not exist in the world}; the definitional context in which it exists is the mind. We may recast the problem: sure, one might say, we'll accept this framing of the problem, nevertheless, the specific mango does actually exist in the mind, while `fruit' does not. In fact we can go further than this, and observe that neither does `mango' (itself) appear to exist in the mind. It seems that only the \emph{particular} mango does.
+
+Now, to build intuition, we observe that, even though `mango' itself doesn't appear to exist anywhere and thus is apparently undefined and cannot have properties that we could articulate, it is nevertheless the case that, in a basket containing various fruits, we are able to pick out the mangoes and differentiate them from other fruits. How are we able to do this if, for instance, we have never seen this particular fruit basket -- including those particular mangoes -- before? Surely this implies that `mango' itself has properties even though, allegedly, it does not exist in the mind?
+
+The resolution is that mango is the \emph{brahman} in the context of mangoes, and fruit is likewise the \emph{brahman} in the context of all fruits. That is, as our intuitions have led us to suspect, `fruit' itself does in fact not have any properties -- but the context in which it is ineffable in this manner is the context of all particular fruits (i.e. the epistemic level at which fruits emerge). That is, `fruit' and particular fruits are defined in mutual reference to one another and not independently, and in this context, `fruit' is anonymous and ineffable. Similarly `mango' and all particular mangoes are defined in mutual reference to one another, and `mango' is anonymous and ineffable in this context (which appears to be one epistemic level above fruit since discerning mango involves a self-reference on the context of all fruits). Yet, at the epistemic level where `mango' and mangoes arise, so do all other categories of fruits. An ``infimum'' context is constructible here -- on the axis of `levels' since contexts are available as identities there and may be composed -- without further ascension in epistemic levels. This new context is essentially equivalent to the original `fruit' context but is enriched with the universals now available to us. In this enriched context of fruits -- one epistemic level up from the original context of fruits -- \emph{mango is not anonymous}. Indeed, in this context, mango is an identity whose descendants are all particular mangoes. In other words, `mango' and `lemon' and `tomato' do exist in this context. It could be argued that these identities are not tangible the way specific mangoes are, but as we've already seen, specific mangoes are already intangible representations in the mind and do not exist, as mangoes, in the world, and for that matter, there is no basis for something being ``tangible'' or ``intangible'' in any context in an absolute sense. Likewise, `fruit' has properties in a similarly enriched context of `food' (at the same epistemic level as `fruit'), where we can distinguish fruits from other foodstuffs; `food' in turn has properties and may be distinguished from non-foods in an enriched context of `organic matter', and so on.
 
 \subsection{Additional Notes}
 
 The following are uncategorized, inchoate notes of a philosophical nature that are recorded here as they may be found to be clarifying.
 
-\paragraph{The Ultimate Primitive} \label{sec:ultpri} Plato conceived that the world of the senses is subsidiary to a more pure reality of `the forms.' He imagined that particular things perceived by the senses (e.g. a particular cat) are imperfect approximations of the pure, unique, eternal forms (e.g. an ideal cat), and that these forms alone are truly real. We may consider Plato's forms to typify a conception of an ultimate primitive in terms of specification of \emph{inherent nature}.
+\paragraph{The Ultimate Primitive} \label{sec:ultpri} Plato conceived that the world of the senses is subsidiary to a more pure reality of `the forms.' He imagined that particular things perceived by the senses (e.g. a particular cat) are imperfect approximations of the pure, unique, eternal forms (e.g. an ideal cat), and that these forms alone are truly real\footnote{The conception of the forms bears a resemblance to the Jain \emph{anekantavada} and it's possible there is a connection between them. While the latter holds that, presupposing an underlying truth, all perspectives on that truth are necessarily incomplete and approximate (e.g. the story of the ``Blind Men and the Elephant,'' which, incidentally, appears to have its origin in anekantavada), Plato's forms conceives that even in the case where an underlying truth may not be presupposed (e.g. agreeably different elephants), that \emph{there is an underlying truth}, of an ``ideal'' nature (e.g. an ``ideal'' elephant), and that the perceived instances are only approximations of that underlying truth. See also the suggested connection between Plato's Allegory of the Cave and the buddhist \emph{trisvabhava} in the notes on \autoref{sec:awamem} for a more detailed discussion of this manner of link.}. We may consider Plato's forms to typify a conception of an ultimate primitive in terms of specification of \emph{inherent nature}.
 
 Another conception of an ultimate primitive is one of pure causation, perhaps most developed in some strands of early buddhism which conceived all reality to be in flux, an eternal stream of ``becoming,'' with no well-defined persistent entities. Thus this ultimate primitive is purely \emph{functional}.
 
@@ -848,8 +1586,6 @@ Identities provide yet another conception of an ultimate primitive, which can be
 Summarizing, we may say that the dharmas are the unspeakable, elemental reality underlying particular things; and forms, causation, and identity architecture are the effable projections of the dharmas.
 
 \paragraph{`Seamlessness' of Identity Architecture} Identity is a proposed formal model for the notion of a generalized `thing'. As a result, it applies universally. The upshot of this is that a development in a particular area can be translated into a development about identities more generally, which can once again be translated into a development in a different, ``unrelated'' domain. Insights in one field could translate into insights in all fields, and vice versa, via the translation into identities. For instance, the mechanics of evolution by natural selection in biological systems may be abstracted as a causal interaction in a bodhitree, and any results found for this bodhitree would apply to any other field where (and to the extent that) the dynamics can be reduced to a bodhitree that is topologically similar to the one derived for biological systems. This notion likely has a precise category-theoretic formulation, involving free and forgetful functors and so on, which may be developed in future work.
-
-\paragraph{On Universals} \label{sec:onuni} There seem to be two qualitative entities characterizable as ancestors in a bodhitree. First, there are causal ancestors. That is, identities that, through interactions with other identities, \emph{cause} the genesis of other identities which are its descendants. The second kind correspond to the notion of `universals' in philosophy; that is, general notions of which particular things are specific instances. For example, mangoes, lemons, and tomatoes exist in the world, but the abstract notion of a `fruit' does not, even though all mangoes, lemons, and tomatoes are conceived to be instances of it. Philosophers since ancient times have wondered about the epistemic status of the universals -- where do they exist? What is their nature? We could conceive `fruit' as corresponding to an identity which is an ancestor of particular, ``real,'' fruits encountered in the world. Now, if the particular fruits exist in the world context, which context does `fruit' exist in? A possible answer is that both `fruit' as well as the definability of such a bodhitree exist in the (any) mind context associated with the world, rather than in the world itself, following from an Axiom of Worlds intuition coupled with the evident fact that human minds are, in fact, able to conceive of an abstract fruit though such a conception does not exist in the world. This conception motivates the generalization that in any context treated as a world, universals in relation to that context exist in minds in that world, and universals in relation to those minds exist in minds within those minds. This conception also suggests that the dichotomy between ``causal'' and ``universal'' ancestors derives from the former existing in the world, and the latter existing in the mind, and suggesting further that universals may participate in causal interaction in the mind, which seems to be true\footnote{Identity ancestors ``acting through'' descendants in the manner that people act through organizations (as described in \autoref{sec:topstr}) does not obviously fit either universals acting through particulars or causal ancestors acting through effects. Further refinement in the mathematical models will likely reveal the exact conception of and relationship between these types of entities.}.
 
 \paragraph{The `Acts-through' relationship} As discussed above philosophy has traditionally been interested in the relationship between particular things and `universal' properties which they may share. The object-oriented paradigm in computer programming may be viewed as a recent exploration along these lines. In this paradigm, for modeling purposes, a distinction is made between the relationships `is-a' and `has-a'. We may consider an `acts-through' relationship as possibly being more clarifying as a general conception. That is, while a square `is-a' rectangle, no one would say that an orchestra `is-a' human being. And yet, with identities the important consideration seems to be whether an identity can \emph{act as} another identity or not (this is essentially the idea of `polymorphism' in object-oriented programming). In this example, if a human being is needed for some purpose, one may just as well use an orchestra since an orchestra can do anything that a generic human being could. But the reverse is not true, if an orchestra is needed, a human being could not serve that role. The relationship here is that the human being `acts through' the orchestra. Similarly, a rectangle `acts through' a square. This relationship is expressed as an ancestor `acting through' a descendant in a bodhitree\footnote{Ancestors `acting through' descendants is equivalently framed as descendants `acting as' ancestors, but the former provides some clarity on economic considerations of fairness developed in \autoref{sec:humins}.}, subject to any mathematical constraints or modifications imposed by the model.
 
@@ -1228,11 +1964,11 @@ But once we conceive of things they become thoughts, and whatever may exist out 
 
 We can begin to speculate on such a characterization. As a start, the mechanism of genesis can be construed as an ``algebraic'' or ``computational'' basis for natural phenomena (a computational approach to natural phenomena has been considered previously, for example as described in \cite{greatideas} and \cite{wolfram}). Objects in the universe, as already indicated, can be seen as identities, and phenomena as their actions. As an example of this, in solids, changes in temperature cause rapid and complex changes in atomic motion, but the emergent experience of this motion is barely perceptible and for the most part the solid is still ``the same'' in its large-scale interactions. The complexity of interactions resulting from atomic motion can be said to be encapsulated in a ``terminal mind'' that is small relative to the scale of the macroscopic identity, and whose contribution to the emergent macroscale action of the solid varies tractably. This can be seen as rather a general principle applying to all emergent phenomena in relation to component interactions, in particular providing a formal framework within which to justify division of scientific endeavor into different fields of study at different scales, as we do in our extant divisions of physics, chemistry, biology, sociology, and so on.
 
-The `actual' existence of space and time has been a subject of investigation in philosophy since the beginning. On the one hand it is tempting to assume their existence, but on the other, such an assumption constitutes a strong claim about reality, one that philosophers have felt the need to either justify with equally strong arguments, or abandon. According to \cite{waite}, Shankara held that space and time are creations of Maya (i.e. the epistemic representation) and are thus ``unreal.'' Kant expressed a similar view, that space and time are \emph{Anschauung}, literally ways of ``looking at'' reality\cite{russell}, and are a priori (i.e. in the mind) rather than empirical. Einstein is partial to this view, proposing that conceiving reality as a unified field may make the need for a separate conception of space and time superfluous. He summarizes, ``space-time is not necessarily something to which one can ascribe a separate existence, independently of the actual objects of physical reality.''\cite{einstein} In favoring the buddhist \emph{citta-matra} position that consciousness is the `element' of nature/reality (see \autoref{sec:phicon}), and the \emph{sunyata} position that existence is definitionally relative, we are inclined towards such a denial of space and time. It seems economical (and thus appealing) to assume that identities, actions, and emergent contexts can suffice as a theoretical representation of the structure of reality, without necessitating an additional conception of time and space. Each point in ``space'' can be taken to specify a unique context at a particular point in ``time,'' with all identities in that context being characterized by instantaneous actions that vary continuously with ``motion'' in ``space'' (i.e. under certain algebraic actions, e.g. those corresponding to `motion' by the observer). The algebraic flow of causation may sufficiently explain phenomena without recourse to an additional independently-existing notion of ``time,'' which may be well-specified only as a relational quantity between two frames. If at any rate space and time must be assumed to actually exist, then at the very least, these assumptions should be framed as axioms with some assignable epistemic priority (\autoref{sec:epipri}).
+The `actual' existence of space and time has been a subject of investigation in philosophy since the beginning. On the one hand it is tempting to assume their existence, but on the other, such an assumption constitutes a strong claim about reality, one that philosophers have felt the need to either justify with equally strong arguments, or abandon. According to \cite{waite}, Shankara held that space and time are creations of Maya (i.e. the epistemic representation) and are thus ``unreal.'' Kant expressed a similar view, that space and time are \emph{Anschauung}, literally ways of ``looking at'' reality\cite{russell}, and are a priori (i.e. in the mind) rather than empirical. Einstein is partial to this view, proposing that conceiving reality as a unified field may make the need for a separate conception of space and time superfluous. He summarizes, ``space-time is not necessarily something to which one can ascribe a separate existence, independently of the actual objects of physical reality.''\cite{einstein} In favoring the buddhist \emph{citta-matra} position that consciousness is the `element' of nature/reality (see \autoref{sec:phicon}), and the \emph{sunyata} position that existence is definitionally relative, we are inclined towards such a denial of inherently-existent space and time. It seems economical (and thus appealing) to assume that identities, actions, and emergent contexts can suffice as a theoretical representation of the structure of reality, without necessitating an additional conception of time and space as separate entities. Each point in ``space'' can be taken to specify a unique context at a particular point in ``time,'' with all identities in that context being characterized by instantaneous actions that vary continuously with ``motion'' in ``space'' (i.e. under certain algebraic actions, e.g. those corresponding to `motion' by the observer). The algebraic flow of causation may sufficiently explain phenomena without recourse to an additional independently-existing notion of ``time,'' which may be well-specified only as a relational quantity between two frames.
 
-Another way to think about this is that in any context, there are identities that are well-defined in relation to it, i.e. which ``exist.'' For example, buildings, people, astronomical bodies may be taken to exist in this sense. The interactions of these identities occur at many levels, all of which have manifestations that we categorize as ``spatiotemporal.'' This suggests that most identities in conscious experience, in particular those that are dialectical, have a common identity ancestor\footnote{This ancestor, being of ``universal'' type (\autoref{sec:onuni}), may exist in some mind in relation to the dialectical contexts under consideration (e.g. a ``human'' mind), rather than exist in (i.e. be defined in relation to) these contexts themselves, if the intimations in \autoref{sec:onuni} are sustained.} whose interaction we would describe as spatiotemporal in this conventional sense (and which indeed would represent our \textit{definition} of spatiotemporal), and as such, we can think of spatiotemporal interaction as the interaction of the identities under consideration when transformed under a forgetful functor into the mind of this anonymous ancestor. There may be identities that do not interact spatiotemporally in this sense, i.e. which do not share the spatiotemporal ancestor with other conventional dialectical objects of reality.
+Another way to think about this is that in any context, there are identities that are well-defined in relation to it, i.e. which ``exist.'' For example, buildings, people, astronomical bodies may be taken to exist in this sense. The interactions of these identities occur at many levels, all of which apparently have manifestations that we categorize as ``spatiotemporal.'' This suggests that most identities in conscious experience, in particular those that are dialectical, have a common identity ancestor whose interaction we would describe as spatiotemporal in this conventional sense (and which indeed would represent our \textit{definition} of spatiotemporal), and as such, we can think of spatiotemporal interaction as the interaction of the identities under consideration when transformed under a forgetful functor into this anonymous ancestor treated as a context -- ``spacetime'' is thus the brahman of this context. This ancestor, being of ``universal'' type (\autoref{sec:onuni}) exists in the mind (defined as an epistemic ensemble in \autoref{sec:epipri}) of an observer in relation to the dialectical contexts under consideration treated as worlds, rather than in these worlds themselves. This fact allows us to understand why it is that we are able to transform the entire ``universe'' by actions we undertake by acts of the Will. The act of rotation of the observer in particular is philosophically problematic as distant, massive objects, if relatively conceived, would be moving at tremendous, superluminal velocities in relation to the observer. But with the understanding that the spatiotemporal transformation is occurring in the mind, at a predialectical level, at a level before mass and speed are defined, the difficulty is preempted.
 
-In light of this conception, entangled elementary particles could conceivably be modeled as such non-spatiotemporal identities, possibly as a hive identity where the ``separate'' particles may be seen to act as a single identity, while the states of the individual particles are simply undefined (in fact possibly undecidable, from \autoref{cor:decidability}) in the physical world. As there is no notion of ``space'' involved, the possibility of non-local correlations presents no difficulties.
+There may be identities that do not interact spatiotemporally in this sense, i.e. which do not share the spatiotemporal ancestor with other conventional dialectical objects of reality. Elementary particles could conceivably be modeled as such non-spatiotemporal identities. We already know that the position of elementary particles ``in'' spacetime is nebulously defined. We may rather say that elementary particles are \emph{non-spatiotemporal}, not sharing the spatiotemporal ancestor with ``classical'' elements of reality. Thus if entangled elementary particles appear to interact superluminally, as there is no notion of ``space'' involved, the possibility of such non-local correlations presents no immediate difficulties.
 
 In relativity theory a foundational idea is the principle of relativity -- that the laws of physics in a suitably defined reference frame are indistinguishable (e.g. by any experiment) from those in any other frame. This is a principle adopted largely on aesthetic grounds, but also due to the strength of its implied results and the simplicity of derivations enabled by it. Thus, the principle is adopted at least partially on utilitarian grounds. Alternatively, within the framework of epistemic priority, it may be seen that relativism (idampratyayata) arises at a very high priority. As a result, the framework provides an epistemic basis for favoring this principle. Not only that, but due to the priority of the principle and (perhaps consequently) due to its ``radically general'' nature, it may be seen that relativity of the \emph{physical} kind is only a particular manifestation of this much more general definitional relativism. A manifestation of this in the specification of identity architecture is that all identities are qualitatively equivalent and defined in relation to a context. It seems likely that the physical principle of relativity may be \emph{derived} from these foundational axioms that apply universally, via an appropriate transformation of identity actions.
 
@@ -1240,7 +1976,7 @@ It is conceivable that along this axis of development, physical reference frames
 
 The mechanism of genesis is inherently dynamical, and could possibly be applied to the characterization of dynamical systems and chaos. Any results derived here would be functorially transformable into results about social systems, biological systems, and even cognitive systems.
 
-Energy is an abstract, even philosophical concept in physics. It is considered to be present everywhere in all things while itself remaining formless, ineffable. These properties appear to describe an anonymous identity, and it is thus tempting to consider the latter as the underlying model. We then infer things in the universe to be the (non-anonymous) manifestations of the energy identity -- its descendants in a bodhitree. And by the mass-energy equivalence, everything that exists in the universe can indeed be said to be a manifestation of energy, just as all identities in a context are manifestations of, or defined in relation to, an anonymous identity (and more specifically, a brahman). A precise characterization of energy in the physical world, like money in human societies, in terms of anonymous identity, could be a worthwhile and integrating effort. It seems likely that full characterization in this regard would have to quantify the relationship to entropy as well, which it's possible will be facilitated by an information-theoretic development.
+Energy is an abstract, even philosophical concept in physics. It is considered to be present everywhere in all things while itself remaining formless, ineffable. These properties appear to describe a brahman, and it would be worthwhile to investigate how the mathematical invariants in interactions that we refer to as energy may be relatable to an underlying brahman. A precise characterization of energy in the physical world, like money in human societies, in terms of anonymous identity, could be a worthwhile and integrating effort. It seems likely that full characterization in this regard would have to quantify the relationship to entropy as well, which it's possible will be facilitated by an information-theoretic development. Any such result should be generalizable to apply to identities in any context.
 
 We close with the observation that identity architecture as a model is scale-invariant. As such, the same principles that apply at one scale are the ones that apply at any other scale (though possibly encoding radically different behavior). Identities could therefore conceivably underpin, and thereby constrain, theoretical models of phenomena in widely varying regimes such as the subatomic, molecular, and biological regimes, all the way up to human and cosmological scales of experience -- and presumably, beyond. Towards this end, we can envision our experience of nature as a (possibly non-denumerable, nonlinearly ordered) hierarchy of worlds that we inhabit to varying degrees. One such envisioning may be as follows: Cosmological $\rightarrow$ Filamental\footnote{Referring to filaments and galaxy clusters, thus far the largest known structures in the universe.} $\rightarrow$ Clusteral $\rightarrow$ Galactic $\rightarrow$ Stellar $\rightarrow$ Astronomical $\rightarrow$ Geological $\rightarrow$ Ecological $\rightarrow$ Sociological\footnote{including hive structures in the animal and plant kingdoms} $\rightarrow$ Biological\footnote{A forgetful functor from \textbf{Soc} to \textbf{Bio} could be said to result in the ``State of Nature'' discussed by political philosophers since Hobbes.} $\rightarrow$ Chemical $\rightarrow$ Physical $\rightarrow$ Noumenal\footnote{Kant's\cite{kant} ``noumenal world'' of ``things in themselves'' -- things without ascribed structure in relation to us; a useful limiting idealization.}; where each $\rightarrow$ is a forgetful functor that ``forgets hives'' in the preceding world. We could follow the convention from category theory in employing abbreviated boldface for each of these worlds, e.g. \textbf{Cos} or \textbf{Phys}. As conscious agents, we are able to embody nontrivial minds in a subset of these worlds, such as in the sociological and the ecological worlds. Interestingly, if two contexts at different scales entailing an ancestor-descendant relationship (e.g. protein interactions in a particular cell, and interactions between cosmological filaments) were found to be isomorphic, then the possibility of infinite semantic extent of the cosmos appears to follow.
 
@@ -1399,17 +2135,15 @@ Now with this notion under our belt, we return to the issue of freedom of use. F
 
 Now in regard to the freedom to use a thing itself in the world, it is necessary for the activity involving such use to be treated as a composite identity in the world with the article in question as a component. That is, the article in question forms part of the body of the activity-as-a-thing\footnote{Heidegger\cite{heidegger} suggested that objects in the world when employed by us as ``equipment'' fade from conscious experience as separate things. The conception that such objects together with the wielder form the body of a derivative identity offers a precise basis for this view.}. Among other things, this allows value from the activity to be channeled fairly, as will be discussed in the following section. The freedom to access and use an article of the world must be determined also by resolution of the world hive. In this case the resolution is not for exclusive use in the mind, but instead for exclusive use for a limited period or for a particular purpose in the world, i.e. which is publicly known, and furthermore, publicly conducted. For example, this may relate to use of shared public resources, or the permission to undertake a proposed project using public resources, such as construction or decoration of a public building or bridge for some purpose. Importantly, any member of the world is free to request or suggest such use of articles of the world (even anonymously), and all such activities involving things themselves in the world must be ``public'' in relation to the concerned hive (even if conducted anonymously). In geopolitical hives such as nations these sorts of activities are largely facilitated (if at all) by governments. Government today is a particular approximation of the self of a hive identity, and does not necessarily represent the correct, precise manner in which resolutions must be made. We will attempt a beginning specification of this process in the following section.
 
-Finally we observe that in the case of intangible things such as scientific contributions, ideas, computer software, literary and musical works, that these are easily reproducible and highly portable, making both freedom of use in the mind and freedom of use in the world trivial, and largely conforming to the ideal formal conception in identity architecture -- an eminently auspicious state of affairs. However at the present time these are artificially restricted by ``intellectual property'' law including copyrights and patents, in an attempt to facilitate fair appropriation of value. This is certainly a worthy goal, and it is thus not surprising that such systems may appear warranted. But in consideration of the above identification of the purpose of property, we see that this approach essentially seeks to achieve fair appropriation of value (item (3)) by sacrificing freedom of use (item (2)) and sometimes privacy (item (1))\footnote{Unlike traditional, tangible, property under oft-employed simplifying assumptions, the considerations here are ``mixed,'' sometimes applying to the ``owner'' and sometimes to ``users.'' This should be understood to reflect the broader confusion regarding ideas of property, rather than a flaw in the present argument.}, and arguably often the ``fair'' part of appropriation of value.
+Finally we observe that in the case of intangible things such as scientific contributions, ideas, computer software, literary and musical works, that these are easily reproducible and highly portable, making both freedom of use in the mind and freedom of use in the world trivial, and largely conforming to the ideal formal conception in identity architecture -- an eminently auspicious state of affairs. However at the present time these are artificially restricted by so-called ``intellectual property'' law including copyrights and patents, in an attempt to facilitate fair appropriation of value. This is certainly a worthy goal, and it is thus not surprising that such systems may appear warranted. But in consideration of the above identification of the purpose of property, we see that this approach essentially seeks to achieve fair appropriation of value (item (3)) by sacrificing freedom of use (item (2)) and sometimes privacy (item (1))\footnote{Unlike traditional, tangible, property under oft-employed simplifying assumptions, the considerations here are ``mixed,'' sometimes applying to the ``owner'' and sometimes to ``users.'' This should be understood to reflect the broader confusion regarding ideas of property, rather than a flaw in the present argument.}, and arguably often the ``fair'' part of appropriation of value.
 
-In recognition of these problems, an alternative proposal for intangibles is Stallman's ``copyleft,''\cite{stallmancopyleft} which entails a general system applied primarily to works of software in which such works are made freely (as in ``freedom'') available for use and modification with the proviso that any such modifications must be made available under the same conditions. This system succeeds in achieving freedom of use in mind and world (item (2)), but the requirement in the system for derivative works in a mind to be made available in the world constitutes a compromise on privacy (item (1)) in favor of minimal guarantees of fairness (item (3)): that although fair appropriation of value cannot be ensured, unfair exploitation will be structurally precluded. The system does not provide additional guarantees of fair appropriation of value from derivative works.
+In recognition of these problems, an alternative proposal for intangibles is Stallman's ``copyleft,''\cite{stallmancopyleft} which entails a general system (applied originally to works of software, but now used in many other types of copyrightable work) in which such works are made freely (as in ``freedom'') available for use and modification with the proviso that any such modifications must be made available under the same conditions. This system succeeds in achieving freedom of use in mind and world (item (2)), but the requirement in the system for derivative works in a mind to be made available in the world constitutes a compromise on privacy (item (1)) in favor of minimal guarantees of fairness (item (3)): that although fair appropriation of value cannot be ensured, unfair exploitation will be structurally precluded. The system does not provide additional guarantees of fair appropriation of value from derivative works.
 
 While such compromises may appear to be warranted in order to achieve the stated goals, we do not believe that they are necessary, and propose that they can be avoided if instead fair appropriation of value is facilitated as described in the following section.
 
 \subsubsection{A Universal System}
 
 The above discussion is intended to illustrate that common institutions in human society can be seen as approximations of identity architecture-based ones. With formal specification of the relevant models, we can begin to construct these models explicitly, replacing extant manifestations with more precise implementations. We can envision what such implementations would look like, so as to point the direction for further work in this area.
-
-%As we proceed in this conception, we identify three broad ideals to maximize: freedom, fairness, and truth; and where these may be in conflict, we propose to err on the side of fairness. This is justified in consideration that absolute freedom is not desirable since it imposes on the freedom of others, and absolute clarity of truth may be detrimental as motivated in the baker example of \autoref{sec:introduction}. Fairness is never in conflict with desirable outcomes. It is the eternal tiebreaker, the ultimate arbiter. As a clarification we point out that fairness is not the same as equality. Even ``equality of opportunity,'' while being fair, is not a comprehensive characterization of the much broader ideal of fairness.
 
 \paragraph{Decision Making} Let us first consider the nature of decision-making in an institution. The precise manner in which thoughts in a mind -- in general -- interact to produce actions of the self, that is to say to produce resolutions, remains to be specified in future work, with direct applicability to the operation of institutions. For now we can outline a possible mechanism for institutions which is likely to be an approximation of the ``correct'' general (i.e. mathematical) one, and which should ultimately be disregarded in favor of a specialization of that more general mechanism:
 
@@ -1468,7 +2202,7 @@ There are two possible resolutions in this scenario: The first is to somehow ach
 
 \subsubsection{The Bounds on Utopia}
 
-The system proposed above exhibits tantalizing qualities that may call to mind the age-old dream of a ``Utopia,'' the prospect of a perfect society that is all things to all people. To summarize these qualities: the proposed system achieves mutual alignment of interests between actors in any context, supporting an arbitrary number of nested contexts representable as a self-similar bodhitree (see \autoref{sec:awamem}), with context-dependent emergent norms, and a recursive alignment relation that achieves interest alignment ``at every level'' in this bodhitree, facilitated by employing the ``trick'' of dialectical inheritance attribution -- that is, a fractal world system with formal guarantees of privacy and positive economic feedback loops at every scale. Do we dare hope that these attributes enable a perfect society?
+The system proposed above exhibits tantalizing qualities that may call to mind the age-old dream of a ``Utopia,'' the prospect of a perfect society that is all things to all people. To summarize these qualities: the proposed system achieves mutual alignment of interests between actors in any context, supporting an arbitrary number of nested contexts representable as a self-similar bodhitree (see \autoref{sec:awamem}), with context-dependent emergent norms, and a recursive alignment relation that achieves interest alignment ``at every level'' in this bodhitree, facilitated by employing the ``trick'' of dialectical inheritance attribution -- that is, a fractal world system with formal guarantees of privacy and positive economic feedback loops at every scale. Do we dare hope that these attributes enable an ideal society?
 
 First, let us define precisely what we mean by ``Utopia.'' Definitions like ``a society where everyone is happy'' or ``a society where there is order'' are inadequate as they don't tell us anything about the mechanics of such a society. Slightly better is something like ``a society that is fair, where there is freedom, and where the pursuit of truth in all its forms is encouraged and undertaken'' which gives us some clues as to systemic requirements, but still doesn't suggest how those may be achieved. We propose the following more precise definition that should subsume such other conceptions: a Utopia is a society in which the following logical implication is systemically guaranteed:
 
@@ -1482,9 +2216,9 @@ In the general case, we may therefore conclude that, based on the relationship b
 
 And yet, the precedence of desire and the will over dialectic is the very sense in which we should define ``free will,'' and by extension the very ideals of freedom and the pursuit of happiness. A world in which dialectic preceded desire and the will would be one of order, of proceeding methodically from the known to the known unknown, perhaps a world even of contentment, and yet such a world would bind us by the limits of our own knowledge. Shackled by these collective presumptions about right and wrong, good and evil, better and worse, we would fashion for ourselves a Utopia of a sort, but a Utopia condemned never to assail the battlements of the dark fortress of the unknown unknown.
 
-Beyond the abstract sense in which this ``epistemic imprisonment'' is true, there is a more specific argument that may be brought to bear on why the impossibility of a dialectical Utopia is a good thing, and that is that what we hold to be truly ``good'' is likely to be only partially dialectical and predominantly transcendent. Pirsig\cite{pirsig} develops this position at length so we will not belabor the point, except to say that this transcendent origin would need to be placed precisely in the epistemic hierarchy.
+Beyond the abstract sense in which this ``epistemic imprisonment'' is true, there is a more specific argument that may be brought to bear on why the impossibility of a dialectical Utopia is a good thing, and that is that what we hold to be truly ``good'' is likely to be only partially dialectical and predominantly transcendent. Pirsig\cite{pirsig} develops this position at length so we will not belabor the point, except to say that this transcendent origin would need to be placed precisely in the epistemic hierarchy (\autoref{sec:epipri}).
 
-Notwithstanding this ``liberating'' quality of the predialectical origin of economic interest, we may still explore precisely to what extent we are limited in practice by the one-sided attainment of the above logical equivalence. Earlier we developed the idea of dialectical inheritance attribution as a ``trick'' that transformed economic self-interest in such a way as to provide guarantees on alignment of interests across all constituents -- an objectively-valued version of the original economic incentive. Can we distill a general operation here that may be universally applied? The operation we are looking for appears to be to transform the economic interest of an arbitrary constituent into that of the \emph{infimum} identity\footnote{That is, the ``opposite'' of the brahman which is the most generic anonymous identity in relation to the world. This infimum essentially corresponds to the ``everyone'' identity in relation to the specific world. This is closely related to Kant's ``categorical imperative,'' except that the ``universal law'' in this case is in relation to a context. That is, dialectical mirror can be thought of as a relativistic version of categorical imperative applied as a generalization of the social contract to any dialectical context.} of the world context -- a ``reflection in the mirror of dialectic'' if you will -- and then adopt a convention that facilitates this reflected interest. The ``Social Contract'' of Hobbes, Locke, and Rousseau is an instance of such a dialectical mirror. Another instance is a \emph{queue}, where if there is a limited resource in a world, constituents adopt the convention of forming a line so that the resource is consumed in first-come-first-served order. Rule of Law is another dialectical mirror, as are nuclear non-proliferation agreements across nations, as also are the codes of ``sportsmanlike conduct'' adopted by sportspeople. All of these take generic economic incentives operating in a context which may be misaligned, and define a convention such that those incentives are transformed to apply to a related activity for which the interests are in alignment. This ``dialectical mirror'' method of facilitating interest alignment is theoretically applicable in all cases where the economic incentive is shared by all constituents (even if any particular constituent engaging in the activity may not be ``objectively valued,'' e.g. consumption of a limited resource) although it is not clear whether an appropriate convention to achieve the transformation always exists. This is a result that should be proved one way or the other in future work.
+Notwithstanding this ``liberating'' quality of the predialectical origin of economic interest, we may still explore precisely to what extent we are limited in practice by the one-sided attainment of the above logical equivalence. Earlier we developed the idea of dialectical inheritance attribution as a ``trick'' that transformed economic self-interest in such a way as to provide guarantees on alignment of interests across all constituents -- an objectively-valued version of the original economic incentive. Can we distill a general operation here that may be universally applied? The operation we are looking for appears to be to transform the economic interest of an arbitrary constituent into that of the \emph{infimum} identity\footnote{That is, the ``opposite'' of the brahman which is the most generic anonymous identity in relation to the world. This infimum essentially corresponds to the ``everyone'' identity in relation to the specific world. This is closely related to Kant's ``categorical imperative,''\cite{kant2} except that the ``universal law'' in this case is in relation to a context. That is, dialectical mirror can be thought of as a relativistic version of categorical imperative applied as a generalization of the social contract to any dialectical context.} of the world context -- a ``reflection in the mirror of dialectic'' if you will -- and then adopt a convention that facilitates this reflected interest. The ``Social Contract'' of Hobbes, Locke, and Rousseau is an instance of such a dialectical mirror. Another instance is a \emph{queue}, where if there is a limited resource in a world, constituents adopt the convention of forming a line so that the resource is consumed in first-come-first-served order. Rule of Law is another dialectical mirror, as are nuclear non-proliferation agreements across nations, as also are the codes of ``sportsmanlike conduct'' adopted by sportspeople. All of these take generic economic incentives operating in a context which may be misaligned, and define a convention such that those incentives are transformed to apply to a related activity for which the interests are in alignment. This ``dialectical mirror'' method of facilitating interest alignment is theoretically applicable in all cases where the economic incentive is shared by all constituents (even if any particular constituent engaging in the activity may not be ``objectively valued,'' e.g. consumption of a limited resource) although it is not clear whether an appropriate convention to achieve the transformation always exists. This is a result that should be proved one way or the other in future work.
 
 \begin{conjecture}
 	If all constituents in a context want the same thing, a dialectical mirror for that activity is always constructible.
@@ -1497,6 +2231,8 @@ Identities correspond in history to human institutions, and few institutions hav
 \begin{proposition}
 	Religious texts -- in particular those of a prescriptive nature such as the Torah, the Bible, the Quran, and the Bhagavad Gita -- are dialectical mirrors.
 \end{proposition}
+
+Religious traditions may be said to have a twofold nature -- (1) a revelatory nature that is concerned with ``spiritual,'' predialectical matters, and (2) a social nature that is concerned with structuring the dialectical world so as to facilitate spiritual pursuits. In this regard identifying ``spiritual tradition'' with the former and ``religion'' with the latter may be a worthwhile categorization, with the latter then being characterizable as a dialectical mirror as above.
 
 Before we continue, we invoke the Jain doctrine of Anek\={a}ntav\={a}da: that ``truth and reality are perceived differently from diverse points of view, and no single point of view is the complete truth.''\footnote{While on the face of it this is simply an admirable and inclusive philosophy (and that is the mode in which it is intended here), anekantavada appears to be yet another one of those ``radically general'' devices that is taken to apply universally in reality and to reality itself, and which may yield non-obvious results in application. A good English name for this concept may be ``iridescent reality'' or, simply, ``Iridescence.''}\cite{anekantavada}
 
@@ -1835,7 +2571,7 @@ The ``organized'' religious traditions, including the institutions of the Church
 
 We observe that the practice of burqa in Islam, Kippah in Judaism, and of the wearing of the ``five K's'' and Dastar (turban) in Sikhism all serve a purpose derived from identity considerations (though they are different systems) -- with burqa, a selective disclosure of identity or privacy; with Kippah and the five K's, a representation of the hive identity constituted by all adherents and a suppression to anonymity of the individual.
 
-The doctrine sometimes called ``the Fall of Man'' is considered foundational to all Abrahamic faiths. This enigmatic chapter purportedly tells of the origins of mankind; that as a result of his indulgence in the fruits of a Tree (``of Knowledge of Good and Evil''), Man is banished from the Garden of Eden into the ``dominion of death.''\cite{genesisfallofman} But there is another tree in the garden -- the Tree of Life, partaking of which would once again reinstate eternal life. That tree is guarded thenceforth by a ``fiery sword.'' Its mention here, however, suggests the possibility that it is not denied us forever, and indeed the ways to once again attain this state are detailed in subsequent scripture in various moral precepts and lessons\footnote{There seems to be a sense in which conducting oneself is such a moral manner can actually ``work.'' Acting in such a manner and ``liberation'' of our awareness from human reality both appear to be consequences of not being overly invested (that is, possibly, invested beyond \textit{fair outcomes}) in ``Maya.'' As such, if we are able to put in place the fair systems described in the section on \hyperref[sec:humins]{Human Institutions}, it's possible that our awareness will naturally transcend `humanness.' Whether such a transcension would be the same as the buddhist Nirvana is unclear.}. In the Rig Veda and the Upanishads (foundational texts in the Dharmic tradition), there is a chapter about ``The Tree of Atman and Jiva''\cite{mundakaupanishad} where two birds, ``inseparable friends,'' are in a tree and one of them partakes of a ``sweet fig'' while the other does not. The indulgent one is said to be Jiva, the corporeal self. The silent observer is Atman, the ethereal Self, who knows his true nature as one with divinity. As a result of Jiva's indulgence, Man (represented as the combined nature of the two -- they are ``inseparable friends'' in Man) is doomed to death and despair. The two accounts are virtually identical -- especially in that they both convey the notion of the higher ``deathless'' plane, the one that Man leaves by indulgence in the ``dominion of death'' -- suggesting a common origin, almost certainly rooted in ancient `mystical' experience. Consistent with this suggestion of common basis, all major religious traditions have developed an attendant mystical philosophy: Vedanta in Hinduism, Sufism in Islam, Kabbalah in Judaism, Christian Mysticism and the Native American mystical traditions to name only a few.
+The doctrine sometimes called ``the Fall of Man'' is considered foundational to all Abrahamic faiths. This enigmatic chapter purportedly tells of the origins of mankind; that as a result of his indulgence in the fruits of a Tree (``of Knowledge of Good and Evil''), Man is banished from the Garden of Eden into the ``dominion of death.''\cite{genesisfallofman} But there is another tree in the garden -- the Tree of Life, partaking of which would once again reinstate eternal life. That tree is guarded thenceforth by a ``fiery sword.'' Its mention here, however, suggests the possibility that it is not denied us forever, and indeed the ways to once again attain this state are detailed in subsequent scripture in various moral precepts and lessons\footnote{There seems to be a sense in which conducting oneself is such a moral manner can actually ``work.'' Acting in such a manner and ``liberation'' of our awareness from human reality both appear to be consequences of not being overly invested (that is, possibly, invested beyond \textit{fair outcomes}) in ``Maya.'' As such, if we are able to put in place the fair systems described in the section on \hyperref[sec:humins]{Human Institutions}, it's possible that our awareness will naturally transcend `humanness.' Whether such a transcension would be the same as the buddhist Nirvana is unclear.}. In the Rig Veda and the Upanishads (foundational texts in the Dharmic tradition), there is a chapter about ``The Tree of Atman and Jiva''\cite{mundakaupanishad} where two birds, ``inseparable friends,'' are in a tree and one of them partakes of a ``sweet fig'' while the other does not. The indulgent one is said to be Jiva, the corporeal self. The silent observer is Atman, the ethereal Self, who knows his true nature as one with divinity. As a result of Jiva's indulgence, Man (represented as the combined nature of the two -- they are ``inseparable friends'' in Man) is doomed to death and despair. The two accounts are virtually identical -- especially in that they both convey the notion of the higher ``deathless'' plane, the one that Man leaves by indulgence in the ``dominion of death'' -- suggesting a common origin, almost certainly rooted in ancient `mystical' experience. Consistent with this suggestion of common basis, all major religious traditions have developed an attendant mystical philosophy: Vedanta in Hinduism, Sufism in Islam, Kabbalah in Judaism and Christian Mysticism to name only a few, not to mention the traditional African and the Native American mystical traditions the latter especially of which may have an independent historical origin, but a common epistemic one.
 
 Indeed, the omniscient and omnipotent Abrahamic divinity and the Vedantic Brahman could be seen as variations on a common underlying idea, since such an immanent being as the Brahman would naturally be omniscient and omnipotent with all existence transpiring in its mind (in the formal sense of this document). If this awareness is able to manifest a self then it could indeed be said to be a ``personal God'' as conceived in the Abrahamic faiths.
 

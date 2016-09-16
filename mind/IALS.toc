@@ -15,55 +15,55 @@
 \contentsline {subsection}{\numberline {B}Dynamics}{8}{section*.13}
 \contentsline {section}{\numberline {IV}Anonymous Identity}{9}{section*.14}
 \contentsline {subsection}{\numberline {A}An Illustrative Example}{9}{section*.15}
-\contentsline {paragraph}{\numberline {a}}{9}{section*.16}
-\contentsline {paragraph}{\numberline {b}}{9}{section*.17}
-\contentsline {paragraph}{\numberline {c}}{9}{section*.18}
+\contentsline {paragraph}{\numberline {a}}{10}{section*.16}
+\contentsline {paragraph}{\numberline {b}}{10}{section*.17}
+\contentsline {paragraph}{\numberline {c}}{10}{section*.18}
 \contentsline {subsection}{\numberline {B}Origin of Anonymous Identity}{10}{section*.19}
 \contentsline {subsection}{\numberline {C}Nature of Anonymous Identity}{10}{section*.20}
 \contentsline {section}{\numberline {V}Philosophical Conception}{12}{section*.21}
 \contentsline {subsection}{\numberline {A}The Relationship between Consciousness and Reality}{12}{section*.22}
 \contentsline {subsection}{\numberline {B}Categories of Knowledge}{13}{section*.23}
-\contentsline {subsection}{\numberline {C}Epistemic Priority}{14}{section*.24}
-\contentsline {subsection}{\numberline {D}Additional Notes}{17}{section*.25}
-\contentsline {paragraph}{\numberline {d}The Ultimate Primitive}{17}{section*.26}
-\contentsline {paragraph}{\numberline {e}`Seamlessness' of Identity Architecture}{18}{section*.27}
-\contentsline {paragraph}{\numberline {f}On Universals}{18}{section*.28}
-\contentsline {paragraph}{\numberline {g}The `Acts-through' relationship}{19}{section*.29}
-\contentsline {paragraph}{\numberline {h}Bodhitree-aware Nomenclature}{19}{section*.30}
-\contentsline {section}{\numberline {VI}Interpretation}{20}{section*.31}
-\contentsline {subsection}{\numberline {A}Currency}{20}{section*.32}
-\contentsline {subsection}{\numberline {B}Identity and the Brain}{21}{section*.33}
-\contentsline {subsubsection}{\numberline {1}The Self}{22}{section*.34}
-\contentsline {subsubsection}{\numberline {2}Language}{22}{section*.35}
-\contentsline {subsubsection}{\numberline {3}Cognition}{23}{section*.36}
-\contentsline {subsubsection}{\numberline {4}Awareness and Memory}{24}{section*.37}
-\contentsline {subsubsection}{\numberline {5}Dreams}{25}{section*.38}
-\contentsline {subsubsection}{\numberline {6}Music}{26}{section*.39}
-\contentsline {subsubsection}{\numberline {7}The Sense of Smell}{27}{section*.40}
-\contentsline {subsubsection}{\numberline {8}The Sense of Taste}{27}{section*.41}
-\contentsline {subsubsection}{\numberline {9}The Sense of Sight}{28}{section*.42}
-\contentsline {subsubsection}{\numberline {10}The Sense of Touch}{28}{section*.43}
-\contentsline {subsection}{\numberline {C}Privacy}{28}{section*.44}
-\contentsline {section}{\numberline {VII}Commentary and Conjecture}{30}{section*.45}
-\contentsline {subsection}{\numberline {A}On the Experience of Living}{30}{section*.46}
-\contentsline {subsection}{\numberline {B}On Natural Phenomena}{31}{section*.47}
-\contentsline {subsection}{\numberline {C}On Human Institutions}{34}{section*.48}
-\contentsline {subsubsection}{\numberline {1}Social and Political Systems}{34}{section*.49}
-\contentsline {subsubsection}{\numberline {2}Economic Systems}{35}{section*.50}
-\contentsline {subsubsection}{\numberline {3}Property}{37}{section*.51}
-\contentsline {subsubsection}{\numberline {4}A Universal System}{39}{section*.52}
-\contentsline {paragraph}{\numberline {a}Decision Making}{39}{section*.53}
-\contentsline {paragraph}{\numberline {b}Value and Fairness}{40}{section*.54}
-\contentsline {paragraph}{\numberline {c}Economic Analysis}{41}{section*.55}
-\contentsline {paragraph}{\numberline {d}Universality}{42}{section*.56}
-\contentsline {subsubsection}{\numberline {5}A Note on Conflict and War}{43}{section*.57}
-\contentsline {subsubsection}{\numberline {6}The Bounds on Utopia}{43}{section*.58}
-\contentsline {subsection}{\numberline {D}On Religious and Mystical Traditions}{45}{section*.59}
-\contentsline {subsubsection}{\numberline {1}Dharmic Tradition}{46}{section*.60}
-\contentsline {subsubsection}{\numberline {2}Abrahamic Tradition}{47}{section*.61}
-\contentsline {subsubsection}{\numberline {3}Additional Notes}{48}{section*.62}
-\contentsline {section}{\numberline {VIII}Future Directions}{49}{section*.63}
-\contentsline {section}{\numberline {IX}Acknowledgements}{51}{section*.64}
-\contentsline {section}{\numberline {}References}{51}{section*.65}
+\contentsline {subsection}{\numberline {C}Epistemic Levels and Priority}{14}{section*.24}
+\contentsline {subsection}{\numberline {D}On Universals}{26}{section*.25}
+\contentsline {subsection}{\numberline {E}Additional Notes}{27}{section*.26}
+\contentsline {paragraph}{\numberline {d}The Ultimate Primitive}{27}{section*.27}
+\contentsline {paragraph}{\numberline {e}`Seamlessness' of Identity Architecture}{28}{section*.28}
+\contentsline {paragraph}{\numberline {f}The `Acts-through' relationship}{28}{section*.29}
+\contentsline {paragraph}{\numberline {g}Bodhitree-aware Nomenclature}{28}{section*.30}
+\contentsline {section}{\numberline {VI}Interpretation}{29}{section*.31}
+\contentsline {subsection}{\numberline {A}Currency}{29}{section*.32}
+\contentsline {subsection}{\numberline {B}Identity and the Brain}{31}{section*.33}
+\contentsline {subsubsection}{\numberline {1}The Self}{31}{section*.34}
+\contentsline {subsubsection}{\numberline {2}Language}{32}{section*.35}
+\contentsline {subsubsection}{\numberline {3}Cognition}{33}{section*.36}
+\contentsline {subsubsection}{\numberline {4}Awareness and Memory}{34}{section*.37}
+\contentsline {subsubsection}{\numberline {5}Dreams}{34}{section*.38}
+\contentsline {subsubsection}{\numberline {6}Music}{35}{section*.39}
+\contentsline {subsubsection}{\numberline {7}The Sense of Smell}{37}{section*.40}
+\contentsline {subsubsection}{\numberline {8}The Sense of Taste}{37}{section*.41}
+\contentsline {subsubsection}{\numberline {9}The Sense of Sight}{37}{section*.42}
+\contentsline {subsubsection}{\numberline {10}The Sense of Touch}{38}{section*.43}
+\contentsline {subsection}{\numberline {C}Privacy}{38}{section*.44}
+\contentsline {section}{\numberline {VII}Commentary and Conjecture}{40}{section*.45}
+\contentsline {subsection}{\numberline {A}On the Experience of Living}{40}{section*.46}
+\contentsline {subsection}{\numberline {B}On Natural Phenomena}{41}{section*.47}
+\contentsline {subsection}{\numberline {C}On Human Institutions}{43}{section*.48}
+\contentsline {subsubsection}{\numberline {1}Social and Political Systems}{44}{section*.49}
+\contentsline {subsubsection}{\numberline {2}Economic Systems}{45}{section*.50}
+\contentsline {subsubsection}{\numberline {3}Property}{46}{section*.51}
+\contentsline {subsubsection}{\numberline {4}A Universal System}{48}{section*.52}
+\contentsline {paragraph}{\numberline {a}Decision Making}{49}{section*.53}
+\contentsline {paragraph}{\numberline {b}Value and Fairness}{49}{section*.54}
+\contentsline {paragraph}{\numberline {c}Economic Analysis}{51}{section*.55}
+\contentsline {paragraph}{\numberline {d}Universality}{52}{section*.56}
+\contentsline {subsubsection}{\numberline {5}A Note on Conflict and War}{52}{section*.57}
+\contentsline {subsubsection}{\numberline {6}The Bounds on Utopia}{53}{section*.58}
+\contentsline {subsection}{\numberline {D}On Religious and Mystical Traditions}{55}{section*.59}
+\contentsline {subsubsection}{\numberline {1}Dharmic Tradition}{55}{section*.60}
+\contentsline {subsubsection}{\numberline {2}Abrahamic Tradition}{57}{section*.61}
+\contentsline {subsubsection}{\numberline {3}Additional Notes}{58}{section*.62}
+\contentsline {section}{\numberline {VIII}Future Directions}{59}{section*.63}
+\contentsline {section}{\numberline {IX}Acknowledgements}{61}{section*.64}
+\contentsline {section}{\numberline {}References}{61}{section*.65}
 \appendix 
-\contentsline {section}{\numberline {A}Algebra From Actions}{60}{section*.66}
+\contentsline {section}{\numberline {A}Algebra From Actions}{70}{section*.66}
